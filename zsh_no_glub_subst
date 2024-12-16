@@ -1,0 +1,2 @@
+#setopt -o NO_GLOB_SUBST
+set -o NO_GLOB_SUBST
