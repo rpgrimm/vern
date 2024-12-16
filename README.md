@@ -32,8 +32,3 @@ To install `vern`, follow these steps:
    ```bash
    pip install -r requirements.txt
    ```
-   
-
-
-
-
