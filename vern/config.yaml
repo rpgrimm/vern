@@ -1,0 +1,8 @@
+settings:
+  debug: false
+  dpath: ~/.local/share/vern-dev/
+  model: "gpt-4o-mini"
+
+network:
+  host: localhost
+  port: 53035

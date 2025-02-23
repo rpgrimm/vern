@@ -1,0 +1,25 @@
+import argparse
+import config
+
+def parse_args():
+    parser = argparse.ArgumentParser(description='Send text to server.')
+    parser.add_argument("args", nargs="*", help="Multiple positional arguments")
+    parser.add_argument('-d', '--debug', action='store_true', help='Print debug messages')
+    parser.add_argument('--new-s', type=str, nargs=1, help='Start a new session with optional role')
+    parser.add_argument('--use-s', type=str, nargs=1, help='Use an existing session')
+    parser.add_argument('--rm-s', type=str, nargs=1, help='Remove an existing session')
+    parser.add_argument('--list-s', action='store_true', help='List existing sessions')
+    parser.add_argument('--system', type=str, nargs='+', help='Give the role system content')
+    parser.add_argument('-i', '--interactive', action='store_true', help='Drop to interactive prompt')
+    parser.add_argument('--no-markdown', action='store_true', help='Display response as raw markdown')
+    parser.add_argument('-s', '--save-responses', action='store_true', help='Save all responses as text', default=config.save_responses)
+    parser.add_argument('--stdin', action='store_true', help='Read input from stdin and send to server')
+    parser.add_argument("--list-m", action='store_true', help='List available models')
+    parser.add_argument("--model", type=str, help='Specify model to use')
+    parser.add_argument("--list-sys", action='store_true', help='List predefined systems')
+    parser.add_argument("--use-sys", type=str, help='Use a predefined roles')
+    parser.add_argument("--init", action='store_true')
+    parser.add_argument("--exit", action='store_true')
+    parser.add_argument("--oneshot", action='store_true', help='Use system role from session and don\'t send whole converation, just said command line query as oneshot')
+    parser.add_argument("--reset", action='store_true', help='Reset the session')
+    return parser.parse_args()
