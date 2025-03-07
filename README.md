@@ -76,32 +76,28 @@ vern>
 
 2. Use session 'code-generator' to find large files
    ```
- $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
+   $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
+   #!/bin/bash
 
- #!/bin/bash
+   if [ -z "$1" ]; then
+     echo "Usage: $0 <directory>"
+     exit 1
+   fi
 
- if [ -z "$1" ]; then
-   echo "Usage: $0 <directory>"
-   exit 1
- fi
+   find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
 
- find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
-
- $ chmod +x find_large_files.sh
- $ ./find_large_files.sh ~/Downloads
-7.5G    /home/rgrimm/Downloads/iso-img/iso/ArkOS_RG353M_v2.0_11182022.img
-5.8G    /home/rgrimm/Downloads/iso-img/Win10_22H2_English_x64v1.iso
-5.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-24.04-desktop-amd64.iso
-4.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-22.04.3-desktop-amd64.iso
-3.8G    /home/rgrimm/Downloads/iso-img/xubuntu-24.04-desktop-amd64.iso
-2.9G    /home/rgrimm/Downloads/iso-img/iso/lubuntu-23.04-desktop-amd64.iso
-2.9G    /home/rgrimm/Downloads/iso-img/iso/linuxmint-21.3-cinnamon-64bit.iso
-2.7G    /home/rgrimm/Downloads/iso-img/linuxmint-22-xfce-64bit.iso
-2.5G    /home/rgrimm/Downloads/iso-img/iso/Manjaro-ARM-RoninOS-rockpro64-22.12.img
-1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
-
-
-
+   $ chmod +x find_large_files.sh
+   $ ./find_large_files.sh ~/Downloads
+   7.5G    /home/rgrimm/Downloads/iso-img/iso/ArkOS_RG353M_v2.0_11182022.img
+   5.8G    /home/rgrimm/Downloads/iso-img/Win10_22H2_English_x64v1.iso
+   5.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-24.04-desktop-amd64.iso
+   4.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-22.04.3-desktop-amd64.iso
+   3.8G    /home/rgrimm/Downloads/iso-img/xubuntu-24.04-desktop-amd64.iso
+   2.9G    /home/rgrimm/Downloads/iso-img/iso/lubuntu-23.04-desktop-amd64.iso
+   2.9G    /home/rgrimm/Downloads/iso-img/iso/linuxmint-21.3-cinnamon-64bit.iso
+   2.7G    /home/rgrimm/Downloads/iso-img/linuxmint-22-xfce-64bit.iso
+   2.5G    /home/rgrimm/Downloads/iso-img/iso/Manjaro-ARM-RoninOS-rockpro64-22.12.img
+   1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
    ```
  1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
    ```
