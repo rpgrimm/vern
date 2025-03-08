@@ -99,7 +99,7 @@ vern>
    2.5G    /home/rgrimm/Downloads/iso-img/iso/Manjaro-ARM-RoninOS-rockpro64-22.12.img
    1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
    ```
- 1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
+1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
    ```
    ./client.py --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
    ```
@@ -129,7 +129,7 @@ their eyebrows!
    ```
    ./client.py --use-s world-historian give me another
    ```
-   Since it has persistence with a session id, you'll get another:
+Since it has persistence with a session id, you'll get another:
 ```
 Ah, let's dive into the world of ancient Egyptian fashion, shall we? Picture
 this: you're an ancient Egyptian getting ready for a night out on the Nile.
@@ -154,23 +154,18 @@ Ancient Egyptian life was truly a heady experience!
 ### Commenting code
 
 1.  wget pow.cpp from bitcoin core
-``` bash
-wget https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp
-```
-
+   ``` bash
+   wget https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp
+   ```
 2.  Create a new session
 ./client.py --new-s btc-code-helper take the code i provide and produce a new code file with the same code but with a lot of helpful comments for the reader
-
 
 3.  Pipe pow.cpp into client.py
 ``` bash
 cat pow.cpp | ./client.py --stdin --no-markdown --use-s btc-code-helper | tee pow-comments.cpp
 ```
-
 You should see
-```
-
-```cpp
+``` cpp
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2022 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
@@ -224,155 +219,139 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     // Calculate the new difficulty
     return CalculateNextWorkRequired(pindexLast, pindexFirst->GetBlockTime(), params);
 }
+*** snip ***
+```
+Full output: https://github.com/rpgrimm/vern/blob/main/demos/output_samples/bitcoin-hash-comments.md
 
-// Function to calculate the next work required based on the last block and the first block time
-unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nFirstBlockTime, const Consensus::Params& params)
-{
-    // If no retargeting is allowed, return the last block's difficulty
-    if (params.fPowNoRetargeting)
-        return pindexLast->nBits;
+### PDFs of recipes 
 
-    // Calculate the actual timespan between the first and last block
-    int64_t nActualTimespan = pindexLast->GetBlockTime() - nFirstBlockTime;
-
-    // Limit the adjustment step to prevent extreme difficulty changes
-    if (nActualTimespan < params.nPowTargetTimespan/4)
-        nActualTimespan = params.nPowTargetTimespan/4;
-    if (nActualTimespan > params.nPowTargetTimespan*4)
-        nActualTimespan = params.nPowTargetTimespan*4;
-
-    // Calculate the new difficulty target
-    const arith_uint256 bnPowLimit = UintToArith256(params.powLimit);
-    arith_uint256 bnNew;
-
-    // Special rule for Testnet4
-    if (params.enforce_BIP94) {
-        // Use the first block of the difficulty period to preserve real difficulty
-        int nHeightFirst = pindexLast->nHeight - (params.DifficultyAdjustmentInterval()-1);
-        const CBlockIndex* pindexFirst = pindexLast->GetAncestor(nHeightFirst);
-        bnNew.SetCompact(pindexFirst->nBits);
-    } else {
-        bnNew.SetCompact(pindexLast->nBits);
-    }
-
-    // Adjust the difficulty based on the actual timespan
-    bnNew *= nActualTimespan;
-    bnNew /= params.nPowTargetTimespan;
-
-    // Ensure the new difficulty does not exceed the proof of work limit
-    if (bnNew > bnPowLimit)
-        bnNew = bnPowLimit;
-
-    // Return the new difficulty in compact form
-    return bnNew.GetCompact();
-}
-
-// Function to check if the difficulty transition is permitted
-bool PermittedDifficultyTransition(const Consensus::Params& params, int64_t height, uint32_t old_nbits, uint32_t new_nbits)
-{
-    // Allow all transitions if minimum difficulty blocks are allowed
-    if (params.fPowAllowMinDifficultyBlocks) return true;
-
-    // Check if we are at a difficulty adjustment interval
-    if (height % params.DifficultyAdjustmentInterval() == 0) {
-        // Define the smallest and largest timespan for difficulty adjustment
-        int64_t smallest_timespan = params.nPowTargetTimespan/4;
-        int64_t largest_timespan = params.nPowTargetTimespan*4;
-
-        // Get the proof of work limit
-        const arith_uint256 pow_limit = UintToArith256(params.powLimit);
-        arith_uint256 observed_new_target;
-        observed_new_target.SetCompact(new_nbits);
-
-        // Calculate the largest difficulty target possible
-        arith_uint256 largest_difficulty_target;
-        largest_difficulty_target.SetCompact(old_nbits);
-        largest_difficulty_target *= largest_timespan;
-        largest_difficulty_target /= params.nPowTargetTimespan;
-
-        // Ensure the largest difficulty target does not exceed the proof of work limit
-        if (largest_difficulty_target > pow_limit) {
-            largest_difficulty_target = pow_limit;
-        }
-
-        // Compare the observed new target with the maximum new target
-        arith_uint256 maximum_new_target;
-        maximum_new_target.SetCompact(largest_difficulty_target.GetCompact());
-        if (maximum_new_target < observed_new_target) return false;
-
-        // Calculate the smallest difficulty target possible
-        arith_uint256 smallest_difficulty_target;
-        smallest_difficulty_target.SetCompact(old_nbits);
-        smallest_difficulty_target *= smallest_timespan;
-        smallest_difficulty_target /= params.nPowTargetTimespan;
-
-        // Ensure the smallest difficulty target does not exceed the proof of work limit
-        if (smallest_difficulty_target > pow_limit) {
-            smallest_difficulty_target = pow_limit;
-        }
-
-        // Compare the observed new target with the minimum new target
-        arith_uint256 minimum_new_target;
-        minimum_new_target.SetCompact(smallest_difficulty_target.GetCompact());
-        if (minimum_new_target > observed_new_target) return false;
-    } else if (old_nbits != new_nbits) {
-        // If not at a difficulty adjustment interval, the difficulty should not change
-        return false;
-    }
-    return true;
-}
-
-// Function to check proof of work during fuzz testing
-bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params& params)
-{
-    // Simplified validation for fuzz testing
-    if constexpr (G_FUZZING) return (hash.data()[31] & 0x80) == 0;
-    // Use the standard proof of work implementation
-    return CheckProofOfWorkImpl(hash, nBits, params);
-}
-
-// Function to derive the target from nBits and the proof of work limit
-std::optional<arith_uint256> DeriveTarget(unsigned int nBits, const uint256 pow_limit)
-{
-    bool fNegative;
-    bool fOverflow;
-    arith_uint256 bnTarget;
-
-    // Convert nBits to an arith_uint256 target
-    bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
-
-    // Check if the target is valid
-    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(pow_limit))
-        return {};
-
-    return bnTarget;
-}
-
-// Implementation of the proof of work check
-bool CheckProofOfWorkImpl(uint256 hash, unsigned int nBits, const Consensus::Params& params)
-{
-    // Derive the target from nBits
-    auto bnTarget{DeriveTarget(nBits, params.powLimit)};
-    if (!bnTarget) return false;
-
-    // Check if the hash is less than or equal to the target
-    if (UintToArith256(hash) > bnTarget)
-        return false;
-
-    return true;
-}
+1.  Start new session with role for latex recipe generation
+```
+$ ./client.py --new-s latex-recipe-generator "You are a LaTeX generator that formats recipes into well-structured LaTeX documents. Given a recipe title, a list of ingredients, and step-by-step instructions, output only valid LaTeX code with no explanations or comments.  Ensure the document uses "\\documentclass{article}", properly formatted sections, a clear ingredient list, and a numbered steps section for instructions."
 ```
 
-This code is a part of the Bitcoin Core software, specifically dealing with the proof of work (PoW) difficulty adjustment mechanism. The comments added provide explanations for each function and key logic blocks, helping readers understand the purpose and functionality of the code.
+2.  Ask it for a marinade with specific ingredients
+```
+$ ./client.py --use-s latex-recipe-generator "I want a marinade for 2 pounds of skirt steak and I have worstechire sauce, soy sauce, lime juice, and garlic.  Make a recipe that shows all the preportions" | tee skirt-steak-marinade.latex
 
+ \documentclass{article}
+ \usepackage{geometry}
+ \geometry{a4paper, margin=1in}
+ \usepackage{enumitem}
+
+ \title{Marinade for Skirt Steak}
+ \author{}
+ \date{}
+
+ \begin{document}
+
+ \maketitle
+
+ \section*{Ingredients}
+ \begin{itemize}
+     \item 2 pounds of skirt steak
+     \item \textbf{Marinade:}
+     \begin{itemize}
+         \item \(\frac{1}{4}\) cup Worcestershire sauce
+         \item \(\frac{1}{4}\) cup soy sauce
+         \item \(\frac{1}{4}\) cup lime juice
+         \item 4 cloves of garlic, minced
+     \end{itemize}
+ \end{itemize}
+
+ \section*{Instructions}
+ \begin{enumerate}
+     \item In a medium bowl, combine the Worcestershire sauce, soy sauce, lime juice, and minced garlic. Mix well to create the
+ marinade.
+     \item Place the skirt steak in a large resealable plastic bag or a shallow dish.
+     \item Pour the marinade over the steak, ensuring it is evenly coated.
+     \item Seal the bag or cover the dish with plastic wrap. Refrigerate for at least 2 hours, or overnight for best results.
+     \item Preheat your grill or skillet over medium-high heat.
+     \item Remove the steak from the marinade and let any excess marinade drip off.
+     \item Grill or sear the steak for 3-5 minutes on each side, or until desired doneness is reached.
+     \item Let the steak rest for 5 minutes before slicing against the grain.
+ \end{enumerate}
+
+ \end{document}
+```
+3.  Use pdflatex to create a pdf
+```
+$ pdflatex skirt-steak-marinade.latex
+```
+See https://github.com/rpgrimm/vern/blob/main/demos/output_samples/skirt-steak-marinade.pdf
+
+4.  Use session latex-recipe-generator and ask for 5 pound recipe
+```
+$ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of steak" | tee skirt-steak-marinade-5lb.latex
+
+ \documentclass{article}
+ \usepackage{geometry}
+ \geometry{a4paper, margin=1in}
+ \usepackage{enumitem}
+
+ \title{Marinade for Skirt Steak}
+ \author{}
+ \date{}
+
+ \begin{document}
+
+ \maketitle
+
+ \section*{Ingredients}
+ \begin{itemize}
+     \item 5 pounds of skirt steak
+     \item \textbf{Marinade:}
+     \begin{itemize}
+         \item \(\frac{5}{8}\) cup Worcestershire sauce
+         \item \(\frac{5}{8}\) cup soy sauce
+         \item \(\frac{5}{8}\) cup lime juice
+         \item 10 cloves of garlic, minced
+     \end{itemize}
+ \end{itemize}
+
+ \section*{Instructions}
+ \begin{enumerate}
+     \item In a medium bowl, combine the Worcestershire sauce, soy sauce, lime juice, and minced garlic. Mix well to create the marinade.
+     \item Place the skirt steak in a large resealable plastic bag or a shallow dish.
+     \item Pour the marinade over the steak, ensuring it is evenly coated.
+     \item Seal the bag or cover the dish with plastic wrap. Refrigerate for at least 2 hours, or overnight for best results.
+     \item Preheat your grill or skillet over medium-high heat.
+     \item Remove the steak from the marinade and let any excess marinade drip off.
+     \item Grill or sear the steak for 3-5 minutes on each side, or until desired doneness is reached.
+     \item Let the steak rest for 5 minutes before slicing against the grain.
+ \end{enumerate}
+
+ \end{document}
+```
 
 ### Translating old texts
 
-1.  wget Chaucer's  
-```
-wget https://www.gutenberg.org/cache/epub/2383/pg2383.txt
-```
+1.  Remove modern-translator session to start from scratch to not hit token limit
+    ```
+    ./client.py --rm-s modern-translator
+    ```
+2.  Create new session with role for modern translator
+    ```
+    $ ./vern --new-s modern-translator You are a language modernization assistant. Your job is to translate old English text into modern, natural English while preserving meaning and tone. Avoid archaic words, restructure sentences for clarity, and ensure readability for a contemporary audience. Always return only the translated text, without explanations or formatting.
+    ```
+3.  Run ../scripts/get_canterbury_tales_prologue.sh 
+    ```
+    $ ../scripts/get_canterbury_tales_prologue.sh
+    ```
+4.  Feed prologue to vern
+    ```
+    $ cat canterbury-tales-prologue.txt|./vern --use-s modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
+THE PROLOGUE
 
-See demos for more use cases such as commenting code, auditing /etc/ssh files,
-creating bash scripts, making notes on old books, creating recipes and showing
-markdown, and more.
+When April, with its sweet showers, has pierced the drought of March to the root and bathed every vein in such liquid that the flower is born from it; when the gentle west wind, Zephyrus,
+has breathed life into the tender crops in every grove and field, and the young sun has run half its course in Aries, and small birds make melody, sleeping all night with open eyes, so
+nature stirs them in their hearts; then people long to go on pilgrimages, and travelers seek distant shores to visit holy shrines in various lands. Especially from every corner of
+England, they travel to Canterbury to seek the holy blessed martyr who has helped them when they were sick.
+
+It happened that in this season, one day in Southwark at the Tabard Inn, as I lay ready to go on my pilgrimage to Canterbury with a devout heart, there came into that inn at night a
+company of twenty-nine people, of various sorts, who had by chance fallen into fellowship, and they were all pilgrims who intended to ride to Canterbury. The rooms and stables were
+spacious, and we were well provided with the best. Shortly, when the sun had set, I had spoken with every one of them, and I was soon part of their fellowship, and we made a promise to
+rise early to take our way as I will describe to you.
+*** snip ***
+```
+See the full output at [canterbury-tales-prologue-modern.txt](https://github.com/rpgrimm/vern/blob/main/demos/output_samples/canterbury-tales-prologue-modern.txt)
