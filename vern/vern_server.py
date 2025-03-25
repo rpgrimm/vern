@@ -26,15 +26,16 @@ from utils import find_available_port, write_server_info_to_file, load_config
 
 class CommandListener():
 
-    def __init__(self, config, model="gpt-4o-mini", overrides=None):
+    def __init__(self, config):
 
         self.config = config
         logging.debug(self.config)
 
         self.running = False
-        self.ai_handler = AIHandler()
+        self.ai_handler = AIHandler(config)
 
-        logging.info(f"Using model {model}")
+        logging.info(f"Using model {config['settings']['model']}")
+        self.model = config['settings']['model']
 
         self.session_contexts = {}
         self.sessions = {}
@@ -382,7 +383,7 @@ def show_all_threads():
         print(f"Thread Name: {thread.name}, ID: {thread.ident}, Daemon: {thread.daemon}")
 
 def main_daemon():
-    command_listener = CommandListener()
+    command_listener = CommandListener(config)
     command_listener.start()
     while command_listener.running:
         time.sleep(.1)

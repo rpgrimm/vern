@@ -5,15 +5,16 @@ import sys
 import tiktoken
 
 class AIHandler:
-    def __init__(self):
+    def __init__(self, config):
         self.client = None
         self.init_ai()
+        self.model = config['settings']['model']
 
         # Define the model's token limit
         self.TOKEN_LIMIT = 30000
 
         # Initialize tokenizer for GPT-4o
-        self.ENCODER = tiktoken.encoding_for_model("gpt-4o")
+        self.ENCODER = tiktoken.encoding_for_model(self.model)
 
     def init_ai(self):
         """ Initialize AI client """

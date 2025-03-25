@@ -46,9 +46,8 @@ class SessionContext:
         shutil.move(self.session_dir, trash_path)
         logging.info(f"Moved session {sid} to trash as {os.path.basename(trash_path)}")
 
-    def __init__(self, sid, config=None, model='gpt-4o-mini', system_content=None, ppid=False):
+    def __init__(self, sid, config=None, system_content=None, ppid=False):
         self.sid = sid
-        self.model = model
         self.user_and_assitant_content = []  # Stores user and assistant content in order
 
         if self.sid.startswith('ppid'):
@@ -58,6 +57,7 @@ class SessionContext:
             script_path = os.path.dirname(os.path.abspath(__file__))
             config_path = os.path.join(script_path, "config.yaml")
             config = load_config(config_path)
+        self.model = config['settings']['model']
 
         self.session_dir = os.path.join(config['settings']['dpath'], f'session-{self.sid}')
         if ppid:
