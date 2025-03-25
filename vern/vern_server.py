@@ -35,7 +35,6 @@ class CommandListener():
         self.ai_handler = AIHandler(config)
 
         logging.info(f"Using model {config['settings']['model']}")
-        self.model = config['settings']['model']
 
         self.session_contexts = {}
         self.sessions = {}

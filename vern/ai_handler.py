@@ -8,13 +8,13 @@ class AIHandler:
     def __init__(self, config):
         self.client = None
         self.init_ai()
-        self.model = config['settings']['model']
 
         # Define the model's token limit
         self.TOKEN_LIMIT = 30000
 
+        self.config = config
         # Initialize tokenizer for GPT-4o
-        self.ENCODER = tiktoken.encoding_for_model(self.model)
+        self.ENCODER = tiktoken.encoding_for_model(self.config['settings']['model'])
 
     def init_ai(self):
         """ Initialize AI client """
@@ -54,7 +54,7 @@ class AIHandler:
             return {
                 "status": "success",
                 "data": self.client.chat.completions.create(
-                    model=session_context.model,
+                    model=session_context.config['settings']['model'],
                     messages=ai_content,
                     temperature=0,
                 ),
@@ -90,7 +90,7 @@ class AIHandler:
             return {
                 "status": "success",
                 "data": self.client.chat.completions.create(
-                    model=session_context.model,
+                    model=session_context.config['settings']['model'],
                     messages=ai_content,
                     temperature=0,
                 ),

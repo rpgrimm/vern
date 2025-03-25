@@ -5,8 +5,7 @@ import os
 import pprint
 import shutil
 
-
-from utils import load_config
+from utils import load_config, save_config
 
 class SessionContext:
     DEFAULT_SYSTEM_CONTENT = (
@@ -56,20 +55,19 @@ class SessionContext:
         if config is None:
             script_path = os.path.dirname(os.path.abspath(__file__))
             config_path = os.path.join(script_path, "config.yaml")
-            config = load_config(config_path)
-        self.model = config['settings']['model']
+            self.config = load_config(config_path)
 
-        self.session_dir = os.path.join(config['settings']['dpath'], f'session-{self.sid}')
+        self.session_dir = os.path.join(self.config['settings']['dpath'], f'session-{self.sid}')
         if ppid:
-            self.session_dir = os.path.join(config['settings']['dpath'], '.ppid', f'session-{self.sid}')
+            self.session_dir = os.path.join(self.config['settings']['dpath'], '.ppid', f'session-{self.sid}')
 
         # File paths
         self.system_file = os.path.join(self.session_dir, "system.json")
         self.conversation_file = os.path.join(self.session_dir, "conversation.json")
-        self.model_file = os.path.join(self.session_dir, "model")
+        self.config_file = os.path.join(self.session_dir, "config.yaml")
 
         # Load existing session or initialize new one
-        if self.session_exists(config['settings']['dpath'], sid):
+        if self.session_exists(self.config['settings']['dpath'], sid):
             logging.info(f'Loading session from {self.session_dir}')
             self.load_session()
         else:
@@ -93,8 +91,7 @@ class SessionContext:
         with open(self.conversation_file, "r") as f:
             self.user_and_assistant_content = json.load(f)
 
-        with open(self.model_file, "r") as f:
-            self.model = f.read()
+        self.config = load_config(self.config_file)
 
     def save_session(self):
         """Save the system message and conversation together."""
@@ -104,8 +101,7 @@ class SessionContext:
         with open(self.conversation_file, "w") as f:
             json.dump(self.user_and_assistant_content, f, indent=4)
 
-        with open(self.model_file, "w") as f:
-            f.write(self.model)
+        save_config(self.config, self.config_file)
 
     def add_user_content(self, content):
         """Add a new message to the conversation and save session."""
@@ -149,7 +145,7 @@ class SessionContext:
         logging.info(f"Saved one-shot response to {os.path.basename(oneshot_path)}")
 
     def set_model(self, model):
-        self.model = model
+        self.config['settings']['model'] = model
         self.save_session()
 
     def reset(self, sid):
