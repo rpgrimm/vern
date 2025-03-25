@@ -1,7 +1,8 @@
 # vern
 
-vern is a command-line interface to OpenAI's ChatGPT that supports predefined [system
-roles](#system-roles), such as [recipe generator](#recipe-generator), [generate code](#code-generator),
+vern is a minimalist command-line interface for interacting with OpenAI's API.  It is written in Python and designed with developers and power users in mind. It enables persistent, scriptable conversations directly from the terminal, with features like session recall, customizable prompts, and seamless integration into shell workflows. 
+
+It supports predefined [system roles](#system-roles), such as [recipe generator](#recipe-generator), [generate code](#code-generator),
 [code commentor](#code-commentor) and [modern translator](#modern-translator), [sessions](#using-sessions), an
 [interactive prompt](#interactive-prompt) interface, can read files via stdin, and will pretty-print
 in markdown.
