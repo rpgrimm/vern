@@ -1,6 +1,6 @@
 settings:
   debug: false
-  dpath: ~/.local/share/vern-dev/
+  dpath: ~/.local/share/vern/
   model: "gpt-4o-mini"
 
 network:
