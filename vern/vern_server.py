@@ -20,7 +20,6 @@ import yaml
 from daemonize import Daemonize
 from protocol import create_response, recv_json
 from session_context import SessionContext
-from client_context import ClientContext
 from ai_handler import AIHandler
 from utils import find_available_port, write_server_info_to_file, load_config
 
