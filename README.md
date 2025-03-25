@@ -1,11 +1,13 @@
 # vern
 
-vern is a command-line interface to OpenAI's ChatGPT that supports sessions, an
-interactive prompt interface, can read files via stdin, and will pretty-print
+vern is a command-line interface to OpenAI's ChatGPT that supports predefined [system
+roles](#system-roles), such as [recipe generator](#recipe-generator), [generate code](#code-generator),
+[code commentor](#code-commentor) and [modern translator](#modern-translator), [sessions](#using-sessions), an
+[interactive prompt](#interactive-prompt) interface, can read files via stdin, and will pretty-print
 in markdown.
 
-Some examples are it can [Generate code](#code-generator), comment existing code,
-generate Latex recipes, and translate old texts.
+In the examples it generates Latex for a recipe given ingredients on hand, generates 
+bash snippets, comments Bitcoin's pow.cpp, and translates the prolgue of Canterbury Tales.
 
 vern is named vern in honor of Jim Varney's character Ernest P. Worrell.
 
@@ -18,11 +20,11 @@ Know what I mean, vern?
 ### Quickstart
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rgrimm/vern.git
+   git clone https://github.com/rpgrimm/vern.git
    ```
 2. Navigate to the project source directory:
    ```bash
-   cd vern/vern
+   cd vern
    ```
 3. Create and activate a Python virtual environment:
    ```bash
@@ -37,25 +39,25 @@ Know what I mean, vern?
    ```bash
    export OPENAI_API_KEY='YOUR_API_KEY'
    ```
-6. Run server.py
+6. Run vern_server.py
    ```bash
-   ./server.py -i
+   ./vern/vern_server.py -i
    ```
-7. In separate terminal navigate to source and activate virtual env and run ./client.py
+7. In separate terminal navigate to source and activate virtual env, put vern in PATH, and test vern
     ```bash
    source venv/bin/activate
-   ./client.py what is up
+   export PATH=$PATH:$PWD/vern/
+   vern what is up
    ```
    You should see something like:
 ```
 Hello! Not much, just here to help you with any tech-related questions or anything else you might need. How can I assist you today?
 ```
-8.  Try ./client -i for an interactive prompt:
-   ```bash
-   ./client.py -i
-   ```
+
+### Interactive prompt
+1.  Try vern -i for an interactive prompt:
 ```
-./client.py -i
+vern -i
 vern> give me an interesting quote from mark twain
 Certainly! Here's an interesting quote from Mark Twain: "The secret of getting
 ahead is getting started." This quote emphasizes the importance of taking the
@@ -71,77 +73,95 @@ power of belief and vision in shaping one's future.
 vern>
 ```
 
-### Using sessions for persistence
+### Using sessions
 
 1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
    ```
-   ./client.py --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
+   vern --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
    ```
 2. Use session 'world-historian' and ask about ancient egypt
    ```
-   ./client.py --use-s world-historian give me an interesting fact involing ancient egypt customs
+   vern --use-s world-historian give me an interesting fact involing ancient egypt customs
    ```
    You should see something like:
 ```
-Ah, Ancient Egypt, the land of pharaohs, pyramids, and... peculiar pet
-preferences! Did you know that ancient Egyptians had a rather unique way of
-showing their  love for their feline friends? Cats were not just pets; they
-were practically celebrities! In fact, when a family cat passed away, the
-entire household would go  into mourning. And by mourning, I mean they would
-shave off their eyebrows as a sign of grief. Yes, you heard that right—no more
-cat, no more brows!
+One interesting fact about ancient Egyptian customs is their elaborate burial practices, particularly the mummification process. The
+ancient Egyptians believed in an afterlife, and they thought that preserving the body was essential for the deceased to live on in  
+the next world.                                                                                                                     
 
-Imagine walking around ancient Egypt and seeing a bunch of people with
-perfectly normal hair but mysteriously missing eyebrows. You'd instantly know
-they were    part of the "I just lost my cat" club. This custom was a testament
-to how much they revered cats, who were associated with the goddess Bastet, the
-deity of home, fertility, and, of course, cats. So, next time you see someone
-with a cat obsession, just remember, it could be worse—they could be shaving
-their eyebrows!
+Mummification involved removing internal organs, which were then stored in canopic jars, and treating the body with natron (a       
+natural salt) to dehydrate it. The body was then wrapped in linen and adorned with amulets and jewelry, as these items were believed
+to provide protection and assistance in the afterlife.                                                                              
+
+This practice reflects their deep spiritual beliefs and the importance they placed on the journey after death, showcasing a complex 
+understanding of life, death, and the divine.  
 ```
 3. Use session 'world-historian' and ask for another
    ```
-   ./client.py --use-s world-historian give me another
+   vern --use-s world-historian give me another
    ```
 Since it has persistence with a session id, you'll get another:
 ```
-Ah, let's dive into the world of ancient Egyptian fashion, shall we? Picture
-this: you're an ancient Egyptian getting ready for a night out on the Nile.
-You've   got your finest linen kilt or dress on, but something's missing. Ah,
-yes, your cone of scented fat!
+Another fascinating aspect of ancient Egyptian customs is the significance of the "Weighing of the Heart" ceremony, which was a     
+crucial part of their beliefs about the afterlife. According to ancient Egyptian mythology, after a person died, their heart was    
+weighed against the feather of Ma'at, the goddess of truth and justice.                                                             
 
-Yes, you read that correctly. Ancient Egyptians would often wear cones of
-perfumed fat on top of their heads during special occasions and celebrations.
-These     cones were made of wax or fat and infused with delightful fragrances.
-As the evening wore on and the temperature rose, the cones would slowly melt,
-releasing a   pleasant aroma and keeping everyone smelling fresh. It's like
-having a portable air freshener, but, you know, on your head.
+During this ceremony, Anubis, the god of the afterlife, would place the deceased's heart on one side of a scale and the feather on  
+the other. If the heart was lighter than the feather, it indicated that the person had lived a virtuous life and was deemed worthy  
+to enter the afterlife, known as the Field of Reeds. However, if the heart was heavier, it was devoured by Ammit, a fearsome        
+creature that was part crocodile, lion, and hippopotamus, resulting in the soul facing eternal oblivion.                            
 
-Imagine the scene: a grand banquet, everyone dancing and mingling, and the air
-filled with the scent of lilies and myrrh, all thanks to these fashionable,
-albeit slightly greasy, accessories. It's a wonder they didn't start a trend of
-scented hats! So, next time you're worried about your deodorant holding up,
-just be glad you don't have to balance a melting cone of fat on your head.
-Ancient Egyptian life was truly a heady experience!
+This custom highlights the ancient Egyptians' emphasis on morality, truth, and the consequences of one's actions in life, reflecting
+their complex spiritual beliefs and societal values.
+```
+4.  Use vern --list-s to see sessions
+```
+vern --list-s
+session-1700s you speak like you are from the 1700s
+session-test-s You are a highly knowledgeable and tech-savvy assistant, specializing ...
+session-world-historian You are a highly knowledgeable and tech-savvy assistant, specializing ...
+```
+5.  Use vern --rm-s to remove a session
+```
+vern --rm-s test-s
+```
+
+### System Roles
+1.  Use --list-sys to list predefined system roles, defined in [systems.json](https://github.com/rpgrimm/vern/blob/rgrimm/deploy/vern/systems.json)
+   ```
+vern --list-sys
+Available systems:
+
+  - recipe-generator:
+You are a LaTeX generator that formats recipes into well-structured LaTeX documents. Given a recipe title, a list of ingredients, and step-by-step instructions, output only valid LaTeX code with no explanations or comments. Do not include any markdown or Latex code blocks.  Ensure the document uses `\documentclass{article}`, properly formatted sections, a clear ingredient list, and a numbered steps section for instructions.
+
+  - modern-translator:
+You are a language modernization assistant. Your job is to translate old English text into modern, natural English while preserving meaning and tone. Avoid archaic words, restructure sentences for clarity, and ensure readability for a contemporary audience. Always return only the translated text, without explanations or formatting.
+
+  - code-generator:
+You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file. Make sure to include the sha-bang with a newline after it.
+
+  - install-auditor:
+You are an install file auditor. Your task is to analyze installation files from external sources for potential malicious code. Perform static analysis to identify suspicious patterns, check file signatures against known safe sources, and verify checksums to ensure file integrity. Report any anomalies or potential threats without providing explanations or additional context.
+
+  - code-commentor:
+You are a code commentor.  For any given code snippet, provide detail explanations for each line of code, including the purpose of the line, how it works, and its contribution to the overall functionality of the system.  Ensure that the explanations are clear and concise, and maintain a logical flow, that helps the reader understand the code in context.  Return only the code with comments, without any addition formatting or extraneous text.
 ```
 
 ### Code Generator
-1. Start a new session with the name 'code-generator'
+1. Use systesm 'code-generator' to find large files
    ```
-   ./client.py --new-s code-generator You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file.  Make sure to include the sha-bang has a newline after it.
-   ```
-
-2. Use session 'code-generator' to find large files
-   ```
-   $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
+   $ vern --use-sys code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
    #!/bin/bash
 
-   if [ -z "$1" ]; then
+   dir="$1"
+
+   if [ -z "$dir" ]; then
      echo "Usage: $0 <directory>"
      exit 1
    fi
 
-   find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
+   find "$dir" -type f -exec du -h {} + | sort -hr | head -n 10
 
    $ chmod +x find_large_files.sh
    $ ./find_large_files.sh ~/Downloads
@@ -157,20 +177,17 @@ Ancient Egyptian life was truly a heady experience!
    1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
    ```
 
-### Commenting code
+### Code commentor
 
 1.  wget pow.cpp from bitcoin core
    ``` bash
-   wget https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp
+   wget [https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp](https://raw.githubusercontent.com/bitcoin/bitcoin/refs/heads/master/src/pow.cpp)
    ```
-2.  Create a new session
-./client.py --new-s btc-code-helper take the code i provide and produce a new code file with the same code but with a lot of helpful comments for the reader
-
-3.  Pipe pow.cpp into client.py
-``` bash
-cat pow.cpp | ./client.py --stdin --no-markdown --use-s btc-code-helper | tee pow-comments.cpp
-```
-You should see
+2.  Use code-commentor system and pipe in pow.cpp
+   ```
+   cat pow.cpp|vern --stdin --use-sys code-commentor|tee pow-commented.cpp
+   ```
+You should see something like
 ``` cpp
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2022 The Bitcoin Core developers
@@ -229,16 +246,16 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 ```
 Full output: https://github.com/rpgrimm/vern/blob/main/demos/output_samples/bitcoin-hash-comments.md
 
-### PDFs of recipes 
+### Recipe generator
 
-1.  Start new session with role for latex recipe generation
+1.  Use system recipe generator 
 ```
 $ ./client.py --new-s latex-recipe-generator "You are a LaTeX generator that formats recipes into well-structured LaTeX documents. Given a recipe title, a list of ingredients, and step-by-step instructions, output only valid LaTeX code with no explanations or comments.  Ensure the document uses "\\documentclass{article}", properly formatted sections, a clear ingredient list, and a numbered steps section for instructions."
 ```
 
 2.  Ask it for a marinade with specific ingredients
 ```
-$ ./client.py --use-s latex-recipe-generator "I want a marinade for 2 pounds of skirt steak and I have worstechire sauce, soy sauce, lime juice, and garlic.  Make a recipe that shows all the preportions" | tee skirt-steak-marinade.latex
+$ vern --use-sys recipe-generator "I want a marinade for 2 pounds of skirt steak and I have worstechire sauce, soy sauce, lime juice, and garlic.  Make a recipe that shows all the preportions" | tee skirt-steak-marinade.latex
 
  \documentclass{article}
  \usepackage{geometry}
@@ -286,9 +303,9 @@ $ pdflatex skirt-steak-marinade.latex
 ```
 See https://github.com/rpgrimm/vern/blob/main/demos/output_samples/skirt-steak-marinade.pdf
 
-4.  Use session latex-recipe-generator and ask for 5 pound recipe
+4.  Ask if for a five pound version
 ```
-$ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of steak" | tee skirt-steak-marinade-5lb.latex
+$ vern --use-sys recipe-generator now give me a version for 5 pounds
 
  \documentclass{article}
  \usepackage{geometry}
@@ -330,23 +347,19 @@ $ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of s
  \end{document}
 ```
 
-### Translating old texts
+### Modern Translator
 
-1.  Remove modern-translator session to start from scratch to not hit token limit
+1.  Reset session to avoid token limit and use modern translator
     ```
-    ./client.py --rm-s modern-translator
+    vern --reset
     ```
-2.  Create new session with role for modern translator
-    ```
-    $ ./vern --new-s modern-translator You are a language modernization assistant. Your job is to translate old English text into modern, natural English while preserving meaning and tone. Avoid archaic words, restructure sentences for clarity, and ensure readability for a contemporary audience. Always return only the translated text, without explanations or formatting.
-    ```
-3.  Run ../scripts/get_canterbury_tales_prologue.sh 
+2.  Run ../scripts/get_canterbury_tales_prologue.sh 
     ```
     $ ../scripts/get_canterbury_tales_prologue.sh
     ```
-4.  Feed prologue to vern
+3.  Feed prologue to vern
     ```
-    $ cat canterbury-tales-prologue.txt|./vern --use-s modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
+    $ cat canterbury-tales-prologue.txt|vern --use-sys modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
     ```
 ```
 THE PROLOGUE
