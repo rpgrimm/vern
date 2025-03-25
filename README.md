@@ -1,9 +1,9 @@
 # vern
 
 vern is a command-line interface to OpenAI's ChatGPT that supports predefined [system
-roles](#system-roles), such as [Recipe generator](#recipe-generator), [Generate code](#code-generator),
-[Code commentor](#code-commentor) and [more](#more-sys), [sessions](#using-sessions), an
-interactive prompt interface, can read files via stdin, and will pretty-print
+roles](#system-roles), such as [recipe generator](#recipe-generator), [generate code](#code-generator),
+[code commentor](#code-commentor) and [modern translator](#modern-translator), [sessions](#using-sessions), an
+[interactive prompt](#interactive-prompt) interface, can read files via stdin, and will pretty-print
 in markdown.
 
 In the examples it generates Latex for a recipe given ingredients on hand, generates 
@@ -53,11 +53,10 @@ Know what I mean, vern?
 ```
 Hello! Not much, just here to help you with any tech-related questions or anything else you might need. How can I assist you today?
 ```
-8.  Try vern -i for an interactive prompt:
-   ```bash
-   vern -i
-   ```
-```
+
+### Interactive prompt
+1.  Try vern -i for an interactive prompt:
+```bash
 vern -i
 vern> give me an interesting quote from mark twain
 Certainly! Here's an interesting quote from Mark Twain: "The secret of getting
@@ -114,6 +113,17 @@ creature that was part crocodile, lion, and hippopotamus, resulting in the soul 
 
 This custom highlights the ancient Egyptians' emphasis on morality, truth, and the consequences of one's actions in life, reflecting
 their complex spiritual beliefs and societal values.
+```
+4.  Use vern --list-s to see sessions
+```
+vern --list-s
+session-1700s you speak like you are from the 1700s
+session-test-s You are a highly knowledgeable and tech-savvy assistant, specializing ...
+session-world-historian You are a highly knowledgeable and tech-savvy assistant, specializing ...
+```
+5.  Use vern --rm-s to remove a session
+```
+vern --rm-s test-s
 ```
 
 ### System Roles
@@ -337,7 +347,7 @@ $ vern --use-sys recipe-generator now give me a version for 5 pounds
  \end{document}
 ```
 
-### Text Translator
+### Modern Translator
 
 1.  Reset session to avoid token limit and use modern translator
     ```
