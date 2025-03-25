@@ -199,7 +199,7 @@ class Client:
             sys.exit(1)
 
     def use_s_oneshot(self, data):
-        req = create_request('use-s-oneshot', data)
+        req = create_request(self.sid, 'use-s-oneshot', data)
         json_data = self.do_command(req)
 
         if self.handle_response(json_data):
