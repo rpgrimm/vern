@@ -1,7 +1,7 @@
 # vern
 
-vern is a command-line interface to OpenAI's ChatGPT that supports predefined system
-roles, such as [Recipe generator](#recipe-generator), [Generate code](#code-generator),
+vern is a command-line interface to OpenAI's ChatGPT that supports predefined [system
+roles](#system-roles), such as [Recipe generator](#recipe-generator), [Generate code](#code-generator),
 [Code commentor](#code-commentor) and [more](#more-sys), [sessions](#using-sessions), an
 interactive prompt interface, can read files via stdin, and will pretty-print
 in markdown.
@@ -116,23 +116,42 @@ This custom highlights the ancient Egyptians' emphasis on morality, truth, and t
 their complex spiritual beliefs and societal values.
 ```
 
-### Code Generator
-1. Start a new session with the name 'code-generator'
+### System Roles
+1.  Use --list-sys to list predefined system roles, defined in [systems.json](https://github.com/rpgrimm/vern/blob/rgrimm/deploy/vern/systems.json)
    ```
-   ./client.py --new-s code-generator You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file.  Make sure to include the sha-bang has a newline after it.
-   ```
+vern --list-sys
+Available systems:
 
-2. Use session 'code-generator' to find large files
+  - recipe-generator:
+You are a LaTeX generator that formats recipes into well-structured LaTeX documents. Given a recipe title, a list of ingredients, and step-by-step instructions, output only valid LaTeX code with no explanations or comments. Do not include any markdown or Latex code blocks.  Ensure the document uses `\documentclass{article}`, properly formatted sections, a clear ingredient list, and a numbered steps section for instructions.
+
+  - modern-translator:
+You are a language modernization assistant. Your job is to translate old English text into modern, natural English while preserving meaning and tone. Avoid archaic words, restructure sentences for clarity, and ensure readability for a contemporary audience. Always return only the translated text, without explanations or formatting.
+
+  - code-generator:
+You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file. Make sure to include the sha-bang with a newline after it.
+
+  - install-auditor:
+You are an install file auditor. Your task is to analyze installation files from external sources for potential malicious code. Perform static analysis to identify suspicious patterns, check file signatures against known safe sources, and verify checksums to ensure file integrity. Report any anomalies or potential threats without providing explanations or additional context.
+
+  - code-commentor:
+You are a code commentor.  For any given code snippet, provide detail explanations for each line of code, including the purpose of the line, how it works, and its contribution to the overall functionality of the system.  Ensure that the explanations are clear and concise, and maintain a logical flow, that helps the reader understand the code in context.  Return only the code with comments, without any addition formatting or extraneous text.
+```
+
+### Code Generator
+1. Use systesm 'code-generator' to find large files
    ```
-   $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
+   $ vern --use-sys code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
    #!/bin/bash
 
-   if [ -z "$1" ]; then
+   dir="$1"
+
+   if [ -z "$dir" ]; then
      echo "Usage: $0 <directory>"
      exit 1
    fi
 
-   find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
+   find "$dir" -type f -exec du -h {} + | sort -hr | head -n 10
 
    $ chmod +x find_large_files.sh
    $ ./find_large_files.sh ~/Downloads
