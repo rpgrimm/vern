@@ -1,11 +1,13 @@
 # vern
 
-vern is a command-line interface to OpenAI's ChatGPT that supports sessions, an
+vern is a command-line interface to OpenAI's ChatGPT that supports predefined system
+roles, such as [Recipe generator](#recipe-generator), [Generate code](#code-generator),
+[Code commentor](#code-commentor) and [more](#more-sys), [sessions](#using-sessions), an
 interactive prompt interface, can read files via stdin, and will pretty-print
 in markdown.
 
-Some examples are it can [Generate code](#code-generator), comment existing code,
-generate Latex recipes, and translate old texts.
+In the examples it generates Latex for a recipe given ingredients on hand, generates 
+bash snippets, comments Bitcoin's pow.cpp, and translates the prolgue of Canterbury Tales.
 
 vern is named vern in honor of Jim Varney's character Ernest P. Worrell.
 
@@ -18,11 +20,11 @@ Know what I mean, vern?
 ### Quickstart
 1. Clone the repository:
    ```bash
-   git clone https://github.com/rgrimm/vern.git
+   git clone https://github.com/rpgrimm/vern.git
    ```
 2. Navigate to the project source directory:
    ```bash
-   cd vern/vern
+   cd vern
    ```
 3. Create and activate a Python virtual environment:
    ```bash
@@ -37,25 +39,26 @@ Know what I mean, vern?
    ```bash
    export OPENAI_API_KEY='YOUR_API_KEY'
    ```
-6. Run server.py
+6. Run vern_server.py
    ```bash
-   ./server.py -i
+   ./vern/vern_server.py -i
    ```
-7. In separate terminal navigate to source and activate virtual env and run ./client.py
+7. In separate terminal navigate to source and activate virtual env, put vern in PATH, and test vern
     ```bash
    source venv/bin/activate
-   ./client.py what is up
+   export PATH=$PATH:$PWD/vern/
+   vern what is up
    ```
    You should see something like:
 ```
 Hello! Not much, just here to help you with any tech-related questions or anything else you might need. How can I assist you today?
 ```
-8.  Try ./client -i for an interactive prompt:
+8.  Try vern -i for an interactive prompt:
    ```bash
-   ./client.py -i
+   vern -i
    ```
 ```
-./client.py -i
+vern -i
 vern> give me an interesting quote from mark twain
 Certainly! Here's an interesting quote from Mark Twain: "The secret of getting
 ahead is getting started." This quote emphasizes the importance of taking the
@@ -71,58 +74,46 @@ power of belief and vision in shaping one's future.
 vern>
 ```
 
-### Using sessions for persistence
+### Using sessions
 
 1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
    ```
-   ./client.py --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
+   vern --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
    ```
 2. Use session 'world-historian' and ask about ancient egypt
    ```
-   ./client.py --use-s world-historian give me an interesting fact involing ancient egypt customs
+   vern --use-s world-historian give me an interesting fact involing ancient egypt customs
    ```
    You should see something like:
 ```
-Ah, Ancient Egypt, the land of pharaohs, pyramids, and... peculiar pet
-preferences! Did you know that ancient Egyptians had a rather unique way of
-showing their  love for their feline friends? Cats were not just pets; they
-were practically celebrities! In fact, when a family cat passed away, the
-entire household would go  into mourning. And by mourning, I mean they would
-shave off their eyebrows as a sign of grief. Yes, you heard that right—no more
-cat, no more brows!
+One interesting fact about ancient Egyptian customs is their elaborate burial practices, particularly the mummification process. The
+ancient Egyptians believed in an afterlife, and they thought that preserving the body was essential for the deceased to live on in  
+the next world.                                                                                                                     
 
-Imagine walking around ancient Egypt and seeing a bunch of people with
-perfectly normal hair but mysteriously missing eyebrows. You'd instantly know
-they were    part of the "I just lost my cat" club. This custom was a testament
-to how much they revered cats, who were associated with the goddess Bastet, the
-deity of home, fertility, and, of course, cats. So, next time you see someone
-with a cat obsession, just remember, it could be worse—they could be shaving
-their eyebrows!
+Mummification involved removing internal organs, which were then stored in canopic jars, and treating the body with natron (a       
+natural salt) to dehydrate it. The body was then wrapped in linen and adorned with amulets and jewelry, as these items were believed
+to provide protection and assistance in the afterlife.                                                                              
+
+This practice reflects their deep spiritual beliefs and the importance they placed on the journey after death, showcasing a complex 
+understanding of life, death, and the divine.  
 ```
 3. Use session 'world-historian' and ask for another
    ```
-   ./client.py --use-s world-historian give me another
+   vern --use-s world-historian give me another
    ```
 Since it has persistence with a session id, you'll get another:
 ```
-Ah, let's dive into the world of ancient Egyptian fashion, shall we? Picture
-this: you're an ancient Egyptian getting ready for a night out on the Nile.
-You've   got your finest linen kilt or dress on, but something's missing. Ah,
-yes, your cone of scented fat!
+Another fascinating aspect of ancient Egyptian customs is the significance of the "Weighing of the Heart" ceremony, which was a     
+crucial part of their beliefs about the afterlife. According to ancient Egyptian mythology, after a person died, their heart was    
+weighed against the feather of Ma'at, the goddess of truth and justice.                                                             
 
-Yes, you read that correctly. Ancient Egyptians would often wear cones of
-perfumed fat on top of their heads during special occasions and celebrations.
-These     cones were made of wax or fat and infused with delightful fragrances.
-As the evening wore on and the temperature rose, the cones would slowly melt,
-releasing a   pleasant aroma and keeping everyone smelling fresh. It's like
-having a portable air freshener, but, you know, on your head.
+During this ceremony, Anubis, the god of the afterlife, would place the deceased's heart on one side of a scale and the feather on  
+the other. If the heart was lighter than the feather, it indicated that the person had lived a virtuous life and was deemed worthy  
+to enter the afterlife, known as the Field of Reeds. However, if the heart was heavier, it was devoured by Ammit, a fearsome        
+creature that was part crocodile, lion, and hippopotamus, resulting in the soul facing eternal oblivion.                            
 
-Imagine the scene: a grand banquet, everyone dancing and mingling, and the air
-filled with the scent of lilies and myrrh, all thanks to these fashionable,
-albeit slightly greasy, accessories. It's a wonder they didn't start a trend of
-scented hats! So, next time you're worried about your deodorant holding up,
-just be glad you don't have to balance a melting cone of fat on your head.
-Ancient Egyptian life was truly a heady experience!
+This custom highlights the ancient Egyptians' emphasis on morality, truth, and the consequences of one's actions in life, reflecting
+their complex spiritual beliefs and societal values.
 ```
 
 ### Code Generator
