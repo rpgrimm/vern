@@ -11,6 +11,8 @@ class AIHandler:
 
         # Define the model's token limit
         self.TOKEN_LIMIT = 30000
+        if config['settings']['model'] in ['gpt-4o-mini', 'gpt-3.5-turbo']:
+            self.TOKEN_LIMIT = 200000
 
         self.config = config
         # Initialize tokenizer for GPT-4o
