@@ -167,20 +167,17 @@ You are a code commentor.  For any given code snippet, provide detail explanatio
    1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
    ```
 
-### Commenting code
+### Code commentor
 
 1.  wget pow.cpp from bitcoin core
    ``` bash
-   wget https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp
+   wget [https://github.com/bitcoin/bitcoin/blob/master/src/pow.cpp](https://raw.githubusercontent.com/bitcoin/bitcoin/refs/heads/master/src/pow.cpp)
    ```
-2.  Create a new session
-./client.py --new-s btc-code-helper take the code i provide and produce a new code file with the same code but with a lot of helpful comments for the reader
-
-3.  Pipe pow.cpp into client.py
-``` bash
-cat pow.cpp | ./client.py --stdin --no-markdown --use-s btc-code-helper | tee pow-comments.cpp
-```
-You should see
+2.  Use code-commentor system and pipe in pow.cpp
+   ```
+   cat pow.cpp|vern --stdin --use-sys code-commentor|tee pow-commented.cpp
+   ```
+You should see something like
 ``` cpp
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2022 The Bitcoin Core developers
@@ -239,16 +236,16 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
 ```
 Full output: https://github.com/rpgrimm/vern/blob/main/demos/output_samples/bitcoin-hash-comments.md
 
-### PDFs of recipes 
+### Recipe generator
 
-1.  Start new session with role for latex recipe generation
+1.  Use system recipe generator 
 ```
 $ ./client.py --new-s latex-recipe-generator "You are a LaTeX generator that formats recipes into well-structured LaTeX documents. Given a recipe title, a list of ingredients, and step-by-step instructions, output only valid LaTeX code with no explanations or comments.  Ensure the document uses "\\documentclass{article}", properly formatted sections, a clear ingredient list, and a numbered steps section for instructions."
 ```
 
 2.  Ask it for a marinade with specific ingredients
 ```
-$ ./client.py --use-s latex-recipe-generator "I want a marinade for 2 pounds of skirt steak and I have worstechire sauce, soy sauce, lime juice, and garlic.  Make a recipe that shows all the preportions" | tee skirt-steak-marinade.latex
+$ vern --use-sys recipe-generator "I want a marinade for 2 pounds of skirt steak and I have worstechire sauce, soy sauce, lime juice, and garlic.  Make a recipe that shows all the preportions" | tee skirt-steak-marinade.latex
 
  \documentclass{article}
  \usepackage{geometry}
@@ -296,9 +293,9 @@ $ pdflatex skirt-steak-marinade.latex
 ```
 See https://github.com/rpgrimm/vern/blob/main/demos/output_samples/skirt-steak-marinade.pdf
 
-4.  Use session latex-recipe-generator and ask for 5 pound recipe
+4.  Ask if for a five pound version
 ```
-$ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of steak" | tee skirt-steak-marinade-5lb.latex
+$ vern --use-sys recipe-generator now give me a version for 5 pounds
 
  \documentclass{article}
  \usepackage{geometry}
@@ -340,23 +337,19 @@ $ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of s
  \end{document}
 ```
 
-### Translating old texts
+### Text Translator
 
-1.  Remove modern-translator session to start from scratch to not hit token limit
+1.  Reset session to avoid token limit and use modern translator
     ```
-    ./client.py --rm-s modern-translator
+    ./client.py --reset
     ```
-2.  Create new session with role for modern translator
-    ```
-    $ ./vern --new-s modern-translator You are a language modernization assistant. Your job is to translate old English text into modern, natural English while preserving meaning and tone. Avoid archaic words, restructure sentences for clarity, and ensure readability for a contemporary audience. Always return only the translated text, without explanations or formatting.
-    ```
-3.  Run ../scripts/get_canterbury_tales_prologue.sh 
+2.  Run ../scripts/get_canterbury_tales_prologue.sh 
     ```
     $ ../scripts/get_canterbury_tales_prologue.sh
     ```
-4.  Feed prologue to vern
+3.  Feed prologue to vern
     ```
-    $ cat canterbury-tales-prologue.txt|./vern --use-s modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
+    $ cat canterbury-tales-prologue.txt|vern --use-sys modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
     ```
 ```
 THE PROLOGUE
