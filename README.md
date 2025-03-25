@@ -56,7 +56,7 @@ Hello! Not much, just here to help you with any tech-related questions or anythi
 
 ### Interactive prompt
 1.  Try vern -i for an interactive prompt:
-```bash
+```
 vern -i
 vern> give me an interesting quote from mark twain
 Certainly! Here's an interesting quote from Mark Twain: "The secret of getting
@@ -351,7 +351,7 @@ $ vern --use-sys recipe-generator now give me a version for 5 pounds
 
 1.  Reset session to avoid token limit and use modern translator
     ```
-    ./client.py --reset
+    vern --reset
     ```
 2.  Run ../scripts/get_canterbury_tales_prologue.sh 
     ```
