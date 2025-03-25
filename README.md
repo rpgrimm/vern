@@ -127,7 +127,7 @@ vern --rm-s test-s
 ```
 
 ### System Roles
-1.  Use --list-sys to list predefined system roles, defined in [systems.json](https://github.com/rpgrimm/vern/blob/rgrimm/deploy/vern/systems.json)
+1.  Use --list-sys to list predefined system roles, defined in https://github.com/rpgrimm/vern/blob/main/vern/systems.json
    ```
 vern --list-sys
 Available systems:
