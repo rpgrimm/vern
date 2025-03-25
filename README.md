@@ -1,7 +1,11 @@
 # vern
 
-vern is a command-line interface to OpenAI's ChatGPT that supports sessions, a
-prompt interface, can read files via stdin, and will pretty-print in markdown.
+vern is a command-line interface to OpenAI's ChatGPT that supports sessions, an
+interactive prompt interface, can read files via stdin, and will pretty-print
+in markdown.
+
+Some examples are it can [Generate code](#code-generator), comment existing code,
+generate Latex recipes, and translate old texts.
 
 vern is named vern in honor of Jim Varney's character Ernest P. Worrell.
 
@@ -69,36 +73,6 @@ vern>
 
 ### Using sessions for persistence
 
-1. Start a new session with the name 'code-generator'
-   ```
-   ./client.py --new-s code-generator You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file.  Make sure to include the sha-bang has a newline after it.
-   ```
-
-2. Use session 'code-generator' to find large files
-   ```
-   $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
-   #!/bin/bash
-
-   if [ -z "$1" ]; then
-     echo "Usage: $0 <directory>"
-     exit 1
-   fi
-
-   find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
-
-   $ chmod +x find_large_files.sh
-   $ ./find_large_files.sh ~/Downloads
-   7.5G    /home/rgrimm/Downloads/iso-img/iso/ArkOS_RG353M_v2.0_11182022.img
-   5.8G    /home/rgrimm/Downloads/iso-img/Win10_22H2_English_x64v1.iso
-   5.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-24.04-desktop-amd64.iso
-   4.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-22.04.3-desktop-amd64.iso
-   3.8G    /home/rgrimm/Downloads/iso-img/xubuntu-24.04-desktop-amd64.iso
-   2.9G    /home/rgrimm/Downloads/iso-img/iso/lubuntu-23.04-desktop-amd64.iso
-   2.9G    /home/rgrimm/Downloads/iso-img/iso/linuxmint-21.3-cinnamon-64bit.iso
-   2.7G    /home/rgrimm/Downloads/iso-img/linuxmint-22-xfce-64bit.iso
-   2.5G    /home/rgrimm/Downloads/iso-img/iso/Manjaro-ARM-RoninOS-rockpro64-22.12.img
-   1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
-   ```
 1. Start new session with name 'world-historian' and role 'be a fun learned world history buff...'
    ```
    ./client.py --new-s world-historian be a fun learned world history buff and explain things in an engaging and humorous way
@@ -150,6 +124,38 @@ scented hats! So, next time you're worried about your deodorant holding up,
 just be glad you don't have to balance a melting cone of fat on your head.
 Ancient Egyptian life was truly a heady experience!
 ```
+
+### Code Generator
+1. Start a new session with the name 'code-generator'
+   ```
+   ./client.py --new-s code-generator You are a code generation assistant. Always respond with raw code and no explanations, formatting, or extraneous text. Do not include comments, markdown formatting, or surrounding instructions. The response should be directly executable when piped into a file.  Make sure to include the sha-bang has a newline after it.
+   ```
+
+2. Use session 'code-generator' to find large files
+   ```
+   $ ./client.py --use-s code-generator Create a bash script which finds the 10 biggest files recursively and takes a dir as an arg | tee find_large_files.sh
+   #!/bin/bash
+
+   if [ -z "$1" ]; then
+     echo "Usage: $0 <directory>"
+     exit 1
+   fi
+
+   find "$1" -type f -exec du -h {} + | sort -rh | head -n 10
+
+   $ chmod +x find_large_files.sh
+   $ ./find_large_files.sh ~/Downloads
+   7.5G    /home/rgrimm/Downloads/iso-img/iso/ArkOS_RG353M_v2.0_11182022.img
+   5.8G    /home/rgrimm/Downloads/iso-img/Win10_22H2_English_x64v1.iso
+   5.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-24.04-desktop-amd64.iso
+   4.7G    /home/rgrimm/Downloads/iso-img/iso/ubuntu-22.04.3-desktop-amd64.iso
+   3.8G    /home/rgrimm/Downloads/iso-img/xubuntu-24.04-desktop-amd64.iso
+   2.9G    /home/rgrimm/Downloads/iso-img/iso/lubuntu-23.04-desktop-amd64.iso
+   2.9G    /home/rgrimm/Downloads/iso-img/iso/linuxmint-21.3-cinnamon-64bit.iso
+   2.7G    /home/rgrimm/Downloads/iso-img/linuxmint-22-xfce-64bit.iso
+   2.5G    /home/rgrimm/Downloads/iso-img/iso/Manjaro-ARM-RoninOS-rockpro64-22.12.img
+   1.9G    /home/rgrimm/Downloads/iso-img/iso/rockpi4c_ubuntu_focal_server_arm64_20210126_0004-gpt.img
+   ```
 
 ### Commenting code
 
@@ -341,6 +347,8 @@ $ ./client.py --use-s latex-recipe-generator "Give me the same for 5 pounds of s
 4.  Feed prologue to vern
     ```
     $ cat canterbury-tales-prologue.txt|./vern --use-s modern-translator --stdin | tee canterbury-tales-prologue-modern.txt
+    ```
+```
 THE PROLOGUE
 
 When April, with its sweet showers, has pierced the drought of March to the root and bathed every vein in such liquid that the flower is born from it; when the gentle west wind, Zephyrus,
@@ -354,4 +362,4 @@ spacious, and we were well provided with the best. Shortly, when the sun had set
 rise early to take our way as I will describe to you.
 *** snip ***
 ```
-See the full output at [canterbury-tales-prologue-modern.txt](https://github.com/rpgrimm/vern/blob/main/demos/output_samples/canterbury-tales-prologue-modern.txt)
+See the full output at https://github.com/rpgrimm/vern/blob/main/demos/output_samples/canterbury-tales-prologue-modern.txt
