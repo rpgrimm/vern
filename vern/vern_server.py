@@ -157,9 +157,9 @@ class CommandListener():
                     session_context = SessionContext(json_data['sid'])
                     self.session_contexts[json_data['sid']] = session_context
 
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
 
-                elif json_data['cmd'] == 'new-user-s':
+                elif json_data['cmd'] == 'new-s':
                     """Handle new session creation"""
 
                     logging.debug(f"New session session-{json_data['sid']} requested")
@@ -181,7 +181,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.set_system_content(json_data['data'])
+                    session_context.set_system_content(json_data['system'])
 
 
                 elif json_data['cmd'] == 'use-s-query':
@@ -190,7 +190,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
 
                 elif json_data['cmd'] == 'use-s-system':
                     """Handle using an existing session system"""
@@ -198,17 +198,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.set_system_content(json_data['data'])
-                    self.send_ack(json_data['sid'], client_socket)
-
-                elif json_data['cmd'] == 'use-s-oneshot':
-                    """Handle using an existing session system"""
-
-                    if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
-                        return
-
-                    user_content = [{'role' : 'user', 'content' : json_data['data']}]
-                    self.do_ai_query(client_socket, session_context, user_content, oneshot=True)
+                    session_context.set_system_content(json_data['system'])
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'use-sys':
@@ -217,7 +207,7 @@ class CommandListener():
                         return
 
                     session_context.set_system_content(json_data['system'])
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'rm-s':

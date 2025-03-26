@@ -41,7 +41,7 @@ class AIHandler:
 
         ai_content = [session_context.system_content] + session_context.user_and_assistant_content
         if oneshot_user_content:
-            ai_content = [session_context.system_content] + oneshot_user_content
+            ai_content = [session_context.system_content] + [{'role' : 'user', 'content' : oneshot_user_content}]
 
         token_count = self.count_tokens(ai_content)
 
