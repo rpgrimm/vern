@@ -22,7 +22,7 @@ from rich.console import Console
 from rich.markdown import Markdown
 
 class Client:
-    def __init__(self, sid=None, config=None, model="gpt-4o-mini", no_markdown=False, save_responses=False):
+    def __init__(self, sid=None, config=None, no_markdown=False, save_responses=False):
 
         self.sid = sid if sid else f'ppid-{os.getppid()}'
         self.no_markdown = no_markdown
@@ -76,7 +76,6 @@ class Client:
             logging.error(myresponse)
 
     def server_init(self):
-        return
         """Initialize server session and retrieve a client ID (cid)."""
         request = create_request(self.sid, "init-ppid-session", "allow me to introduce myself")
         myresponse = self.do_command(request)
@@ -358,6 +357,7 @@ if __name__ == "__main__":
 
     if args.list_m:
         client.list_models()
+        sys.exit(0)
 
     if args.init:
         client.server_init()
@@ -365,6 +365,11 @@ if __name__ == "__main__":
 
     if args.exit:
         client.server_exit()
+        sys.exit(0)
+
+    if args.interactive:
+        client.load_history()
+        client.go_interactive()
         sys.exit(0)
 
     if not args.stdin:
@@ -375,6 +380,7 @@ if __name__ == "__main__":
         elif args.oneshot:
             client.use_s_oneshot(" ".join(args.args))
         elif args.model:
+            client.server_init()
             client.use_model(args.model)
         elif args.use_sys:
             client.use_sys(args.use_sys, " ".join(args.args))
@@ -404,7 +410,3 @@ if __name__ == "__main__":
             else:
                 client.do_user_content(input_text)
                 sys.exit(0)
-
-    if args.interactive:
-        client.load_history()
-        client.go_interactive()
