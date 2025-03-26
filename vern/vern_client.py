@@ -401,6 +401,9 @@ if __name__ == "__main__":
             elif args.use_sys:
                 client.use_sys(args.use_sys, input_text)
                 sys.exit(0)
+            else:
+                client.do_user_content(input_text)
+                sys.exit(0)
 
     if args.interactive:
         client.load_history()
