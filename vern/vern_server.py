@@ -85,9 +85,13 @@ class CommandListener():
     def does_session_dir_exist(self, sid):
         return SessionContext.session_exists(self.config['settings']['dpath'], sid)
 
-    def do_ai_query(self, client_socket, session_context, data):
-        session_context.add_user_content(data)
-        d_airesponse = self.ai_handler.get_airesponse(session_context)  # Get AI response
+    def do_ai_query(self, client_socket, session_context, data, oneshot=False):
+
+        if not oneshot:
+            session_context.add_user_content(data)
+            d_airesponse = self.ai_handler.get_airesponse(session_context)  # Get AI response
+        else:
+            d_airesponse = self.ai_handler.get_airesponse(session_context, oneshot_user_content=data)  # Get AI response
 
         if d_airesponse['status'] == 'error':
             logging.error(f"AI Error: {d_airesponse['message']}")
@@ -97,27 +101,13 @@ class CommandListener():
         ai_text_response = d_airesponse['data'].choices[0].message.content
 
         # Save response in session history
-        session_context.add_assistant_content(ai_text_response)
+        if oneshot:
+            session_context.add_oneshot_content(ai_text_response)
+        else:
+            session_context.add_assistant_content(ai_text_response)
 
         self.send_response(client_socket, create_response(session_context.sid, 'success', 'airesponsetofollow', 'not_applicable'))
         self.send_obj(client_socket, d_airesponse['data'])
-
-    def do_ai_query_oneshot(self, client_socket, session_context, data):
-        d_airesponse = self.ai_handler.get_airesponse_oneshot(session_context, data)  # Get AI response
-
-        if d_airesponse['status'] == 'error':
-            logging.error(f"AI Error: {d_airesponse['message']}")
-            self.send_response(client_socket, create_response(session_context.sid, 'error', d_airesponse['code'], d_airesponse['message']))
-            return
-
-        ai_text_response = d_airesponse['data'].choices[0].message.content
-
-        # Save response in session history
-        session_context.add_oneshot_content(ai_text_response)
-
-        self.send_response(client_socket, create_response(session_context.sid, 'success', 'airesponsetofollow', 'not_applicable'))
-        self.send_obj(client_socket, d_airesponse['data'])
-
 
     def find_session_for_client(self, client_socket, sid):
         if self.is_session_active(sid):
@@ -218,7 +208,7 @@ class CommandListener():
                         return
 
                     user_content = [{'role' : 'user', 'content' : json_data['data']}]
-                    self.do_ai_query_oneshot(client_socket, session_context, user_content)
+                    self.do_ai_query(client_socket, session_context, user_content, oneshot=True)
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'use-sys':

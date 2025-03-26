@@ -52,6 +52,7 @@ class SessionContext:
         if self.sid.startswith('ppid'):
             ppid=True
 
+        self.config = config
         if config is None:
             script_path = os.path.dirname(os.path.abspath(__file__))
             config_path = os.path.join(script_path, "config.yaml")
