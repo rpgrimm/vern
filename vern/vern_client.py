@@ -72,14 +72,13 @@ class Client:
 
     def server_exit(self):
         request = create_request(self.sid, "exit", "allow me to shut you down")
-        myresponse = self.do_command(request)
-        if myresponse["status"] != "success":
-            logging.error(myresponse)
+        myresponse = self.send_command(request)
+        self.handle_response(myresponse)
 
     def server_init(self):
         """Initialize server session and retrieve a client ID (cid)."""
         request = create_request(self.sid, "init-ppid-session", "allow me to introduce myself")
-        myresponse = self.do_command(request)
+        myresponse = self.send_command(request)
         if myresponse["status"] == "success":
             self.sid = myresponse["sid"]
             logging.debug(f"Client initialized with sid={self.sid}")
@@ -91,11 +90,9 @@ class Client:
 
     def do_user_content(self, msg):
         req = create_request(self.sid, 'query', msg, oneshot=self.oneshot)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
         logging.debug(f"Got response {json_data}")
-
-    def do_command(self, req, filename=None, save=False):
-        return self.send_command(req, filename, save)
+        self.handle_response(json_data)
 
     def send_command(self, req, filename=None, save=False):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as self.client_socket:
@@ -191,14 +188,14 @@ class Client:
     def use_s_query(self, sid, data):
         self.sid = sid
         req = create_request(self.sid, 'use-s-query', data, oneshot=self.oneshot)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def use_s_system(self, system):
         req = create_request(self.sid, 'use-s-system', system=system, oneshot=self.oneshot)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -206,14 +203,14 @@ class Client:
     def rm_s(self, sid):
         self.sid = sid
         req = create_request(self.sid, 'rm-s', sid)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def list_s(self):
         req = create_request(self.sid, 'list-s')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -230,7 +227,6 @@ class Client:
             content = data.get("content", "[No content]")
             print(f"\n  - {name}:\n{content}")
 
-
     def use_sys(self, system, query):
         """Use a predefined system from system.json"""
         if system not in self.systems:
@@ -243,14 +239,14 @@ class Client:
         #print(self.systems)
         system_content = self.systems[system]['content']
         req = create_request(self.sid, 'use-sys', query, system=system_content, oneshot=self.oneshot)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def list_models(self):
         req = create_request(self.sid, 'list-m')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -259,7 +255,7 @@ class Client:
 
     def use_model(self, model):
         req = create_request(self.sid, 'use-model', model)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
