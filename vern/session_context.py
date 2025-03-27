@@ -149,7 +149,35 @@ class SessionContext:
         self.config['settings']['model'] = model
         self.save_session()
 
-    def reset(self, sid):
-        logging.info(f'Resetting {sid}')
+    def reset(self):
+        logging.info(f'Resetting {self.sid}')
+        self.user_and_assistant_content = []
+        self.save_session()
+
+    def archive_conversation(self):
+        base_name = "conversation"
+        ext = ".json"
+        idx = 1
+
+        # Construct full path to original file
+        conv_path = os.path.join(self.session_dir, f"{base_name}{ext}")
+
+        # Ensure conversation.json exists
+        if not os.path.exists(conv_path):
+            print(f"No {base_name}{ext} found to archive.")
+            return
+
+        # Find the next available conversation-<x>.json filename
+        while True:
+            archive_name = f"{base_name}-{idx}{ext}"
+            archive_path = os.path.join(self.session_dir, archive_name)
+            if not os.path.exists(archive_path):
+                break
+            idx += 1
+
+        # Move (rename) the file to the archive path
+        os.rename(conv_path, archive_path)
+        print(f"Archived to {archive_path}")
+
         self.user_and_assistant_content = []
         self.save_session()

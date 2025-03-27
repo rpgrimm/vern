@@ -171,13 +171,18 @@ class Client:
 
     def do_reset(self):
         req = create_request(self.sid, 'reset')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
+        self.handle_response(json_data)
+
+    def archive_conversation(self):
+        req = create_request(self.sid, 'archive-conversation')
+        json_data = self.send_command(req)
         self.handle_response(json_data)
 
     def new_s(self, sid, system=None):
         self.sid = sid
         req = create_request(sid, 'new-s', system=system)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
         if self.handle_response(json_data):
             sys.exit(1)
         #set up history file once we confirm our sid
@@ -398,6 +403,9 @@ if __name__ == "__main__":
     elif args.interactive:
         client.load_history()
         client.go_interactive()
+        sys.exit(0)
+    elif args.archive_conversation:
+        client.archive_conversation()
         sys.exit(0)
 
     if not args.stdin:

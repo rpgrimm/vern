@@ -221,6 +221,15 @@ class CommandListener():
                         del self.session_contexts[json_data['sid']]
                     self.send_ack(json_data['sid'], client_socket)
 
+                elif json_data['cmd'] == 'archive-conversation':
+                    """Moves a session to the temp dir's 'trash' instead of deleting it."""
+
+                    session_context = self.find_session_for_client(client_socket, json_data['sid'])
+                    if session_context is None:
+                        return
+                    session_context.archive_conversation()
+                    self.send_ack(json_data['sid'], client_socket)
+
                 elif json_data['cmd'] == 'list-s':
                     """Lists all valid session directories in dpath, sorting numbers first, then alphabetically,
                     and includes a truncated version of the system.json content (first 70 characters).

@@ -22,4 +22,5 @@ def parse_args():
     parser.add_argument("--exit", action='store_true')
     parser.add_argument("--oneshot", action='store_true', help='Use system role from session and don\'t send whole converation, just said command line query as oneshot')
     parser.add_argument("--reset", action='store_true', help='Reset the session')
+    parser.add_argument("--archive-conversation", action='store_true', help='Reset the session')
     return parser.parse_args()
