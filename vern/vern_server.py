@@ -154,8 +154,8 @@ class CommandListener():
                     """Handle AI queries and responses"""
                     logging.debug(f"Processing query: {json_data['data']}")
 
-                    session_context = SessionContext(json_data['sid'])
-                    self.session_contexts[json_data['sid']] = session_context
+                    if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
+                        return
 
                     self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
 
