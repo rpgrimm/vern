@@ -320,9 +320,11 @@ def handle_non_stdin(args, client):
     if args.system:
         client.use_s_system(" ".join(args.system))
     elif args.use_sys:
+        client.server_init()
         client.use_sys(args.use_sys, " ".join(args.args))
     elif args.args:
-        client.server_init()
+        if not args.use_s:
+            client.server_init()
         client.do_user_content(" ".join(args.args))
     else:
         logging.warning("⚠️  No valid action arguments provided.")
