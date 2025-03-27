@@ -5,7 +5,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description='Send text to server.')
     parser.add_argument("args", nargs="*", help="Multiple positional arguments")
     parser.add_argument('-d', '--debug', action='store_true', help='Print debug messages')
-    parser.add_argument('--new-s', type=str, nargs=1, help='Start a new session with optional role')
+    parser.add_argument('--new-s', type=str, nargs=1, help='Start a new session')
     parser.add_argument('--use-s', type=str, nargs=1, help='Use an existing session')
     parser.add_argument('--rm-s', type=str, nargs=1, help='Remove an existing session')
     parser.add_argument('--list-s', action='store_true', help='List existing sessions')
