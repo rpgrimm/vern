@@ -307,7 +307,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.reset(json_data['sid'])
+                    session_context.reset()
                     self.send_ack(json_data['sid'], client_socket)
 
                 else:
