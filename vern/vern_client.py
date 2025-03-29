@@ -341,6 +341,7 @@ def handle_stdin(args, client):
 
         # Process the stdin input based on additional flags
         if args.args:
+            client.server_init()
             msg = " ".join(args.args)
             # Here, we send an introductory message followed by the actual input.
             client.do_user_content(f"I'm about to send text your way and I want you to {msg}")
@@ -348,6 +349,7 @@ def handle_stdin(args, client):
         elif args.use_sys:
             client.use_sys(args.use_sys, input_text)
         else:
+            client.server_init()
             client.do_user_content(input_text)
 
 
