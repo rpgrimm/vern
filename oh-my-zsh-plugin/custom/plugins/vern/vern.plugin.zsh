@@ -28,5 +28,5 @@ function vs {
 }
 
 function vc {
-	$VERN --use-sys code-generator
+	$VERN --use-sys code-generator "$@"
 }
