@@ -227,7 +227,7 @@ class Client:
             content = data.get("content", "[No content]")
             print(f"\n  - {name}:\n{content}")
 
-    def use_sys(self, system, query):
+    def get_system(self, system):
         """Use a predefined system from system.json"""
         if system not in self.systems:
             logging.error(f'{system} not supported')
@@ -236,8 +236,10 @@ class Client:
         if system in ['code-generator', 'recipe-generator', 'modern-translator', 'code-commentor']:
             self.no_markdown = True
 
-        #print(self.systems)
-        system_content = self.systems[system]['content']
+        return self.systems[system]['content']
+
+    def use_sys(self, system, query):
+        system_content = self.get_system(system)
         req = create_request(self.sid, 'use-sys', query, system=system_content, oneshot=self.oneshot)
         json_data = self.send_command(req)
 
@@ -393,6 +395,8 @@ if __name__ == "__main__":
         sys.exit(0)
     elif args.new_s:
         system = " ".join(args.system) if args.system else None
+        if args.use_sys:
+            system = client.get_system(args.use_sys)
         client.new_s(args.new_s[0], system)
         sys.exit(0)
     elif args.init:

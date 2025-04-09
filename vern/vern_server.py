@@ -168,7 +168,7 @@ class CommandListener():
                         logging.error(f"Session session-{json_data['sid']} already exists")
                         self.send_nack(json_data['sid'], client_socket, f"Session session-{json_data['sid']} already exists")
                     else:
-                        session_context = SessionContext(json_data['sid'], system_content=json_data['data'])
+                        session_context = SessionContext(json_data['sid'], system_content=json_data['system'])
                         self.session_contexts[json_data['sid']] = session_context
                         logging.info(f"Startet new session @ {session_context.session_dir}")
 
