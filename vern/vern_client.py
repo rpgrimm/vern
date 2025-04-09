@@ -317,15 +317,22 @@ class Client:
 
 def handle_non_stdin(args, client):
     # Handle actions when no stdin input is provided.
+
+    user_args = None
+    if args.edit:
+        user_args = open_vim()
+    elif args.args:
+        user_args = " ".join(args.args)
+
     if args.system:
-        client.use_s_system(" ".join(args.system))
+        client.use_s_system(user_args)
     elif args.use_sys:
         client.server_init()
-        client.use_sys(args.use_sys, " ".join(args.args))
-    elif args.args:
+        client.use_sys(args.use_sys, user_args)
+    elif user_args:
         if not args.use_s:
             client.server_init()
-        client.do_user_content(" ".join(args.args))
+        client.do_user_content(user_args)
     else:
         logging.warning("⚠️  No valid action arguments provided.")
 
