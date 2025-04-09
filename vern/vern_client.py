@@ -354,6 +354,7 @@ def handle_stdin(args, client):
             client.do_user_content(f"I'm about to send text your way and I want you to {msg}")
             client.do_user_content(input_text)
         elif args.use_sys:
+            client.server_init()
             client.use_sys(args.use_sys, input_text)
         else:
             client.server_init()
