@@ -30,3 +30,7 @@ function vs {
 function vc {
 	$VERN --use-sys code-generator "$@"
 }
+
+function vl {
+	$VERN --use-sys latex-generator "$@"
+}
