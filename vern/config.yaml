@@ -1,7 +1,8 @@
 settings:
   debug: false
   dpath: ~/.local/share/vern/
-  model: "gpt-4o-mini"
+    #model: "gpt-4o-mini"
+  model: "o3-mini"
 
 network:
   host: localhost

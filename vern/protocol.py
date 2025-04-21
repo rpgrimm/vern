@@ -5,7 +5,7 @@ import logging
 import sys
 
 # Function to create a JSON request
-def create_request(sid, cmd, data=None, system=None):
+def create_request(sid, cmd, data=None, system=None, oneshot=False):
     """
     Create a JSON request object for the server to consume.
 
@@ -21,6 +21,7 @@ def create_request(sid, cmd, data=None, system=None):
         "cmd": cmd,
         "data": data,
         "system": system,
+        "oneshot": oneshot,
     }
     return json.dumps(request_data)
 

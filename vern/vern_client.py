@@ -22,13 +22,14 @@ from rich.console import Console
 from rich.markdown import Markdown
 
 class Client:
-    def __init__(self, sid=None, config=None, model="gpt-4o-mini", no_markdown=False, save_responses=False):
+    def __init__(self, sid=None, config=None, no_markdown=False, save_responses=False):
 
         self.sid = sid if sid else f'ppid-{os.getppid()}'
         self.no_markdown = no_markdown
         self.save_responses = save_responses
         self.response_count = 0  # Counter for responses
         self.client_socket = None
+        self.oneshot = False
 
         self.systems = self.load_systems()
 
@@ -70,16 +71,14 @@ class Client:
         load_history(self.history_file)
 
     def server_exit(self):
-        request = create_request(self.sid, "exit", "allow me to introduce myself")
-        myresponse = self.do_command(request)
-        if myresponse["status"] != "success":
-            logging.error(myresponse)
+        request = create_request(self.sid, "exit", "allow me to shut you down")
+        myresponse = self.send_command(request)
+        self.handle_response(myresponse)
 
     def server_init(self):
-        return
         """Initialize server session and retrieve a client ID (cid)."""
         request = create_request(self.sid, "init-ppid-session", "allow me to introduce myself")
-        myresponse = self.do_command(request)
+        myresponse = self.send_command(request)
         if myresponse["status"] == "success":
             self.sid = myresponse["sid"]
             logging.debug(f"Client initialized with sid={self.sid}")
@@ -90,12 +89,10 @@ class Client:
         self.history_file = os.path.join(self.config['settings']['dpath'], f"history-{self.sid}.txt")
 
     def do_user_content(self, msg):
-        req = create_request(self.sid, 'query', msg)
-        json_data = self.do_command(req)
+        req = create_request(self.sid, 'query', msg, oneshot=self.oneshot)
+        json_data = self.send_command(req)
         logging.debug(f"Got response {json_data}")
-
-    def do_command(self, req, filename=None, save=False):
-        return self.send_command(req, filename, save)
+        self.handle_response(json_data)
 
     def send_command(self, req, filename=None, save=False):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as self.client_socket:
@@ -171,13 +168,18 @@ class Client:
 
     def do_reset(self):
         req = create_request(self.sid, 'reset')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
+        self.handle_response(json_data)
+
+    def archive_conversation(self):
+        req = create_request(self.sid, 'archive-conversation')
+        json_data = self.send_command(req)
         self.handle_response(json_data)
 
     def new_s(self, sid, system=None):
         self.sid = sid
-        req = create_request(sid, 'new-user-s', system)
-        json_data = self.do_command(req)
+        req = create_request(sid, 'new-s', system=system)
+        json_data = self.send_command(req)
         if self.handle_response(json_data):
             sys.exit(1)
         #set up history file once we confirm our sid
@@ -185,22 +187,15 @@ class Client:
 
     def use_s_query(self, sid, data):
         self.sid = sid
-        req = create_request(self.sid, 'use-s-query', data)
-        json_data = self.do_command(req)
+        req = create_request(self.sid, 'use-s-query', data, oneshot=self.oneshot)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def use_s_system(self, system):
-        req = create_request(self.sid, 'use-s-system', system)
-        json_data = self.do_command(req)
-
-        if self.handle_response(json_data):
-            sys.exit(1)
-
-    def use_s_oneshot(self, data):
-        req = create_request('use-s-oneshot', data)
-        json_data = self.do_command(req)
+        req = create_request(self.sid, 'use-s-system', system=system, oneshot=self.oneshot)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -208,14 +203,14 @@ class Client:
     def rm_s(self, sid):
         self.sid = sid
         req = create_request(self.sid, 'rm-s', sid)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def list_s(self):
         req = create_request(self.sid, 'list-s')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -232,8 +227,7 @@ class Client:
             content = data.get("content", "[No content]")
             print(f"\n  - {name}:\n{content}")
 
-
-    def use_sys(self, system, query):
+    def get_system(self, system):
         """Use a predefined system from system.json"""
         if system not in self.systems:
             logging.error(f'{system} not supported')
@@ -242,17 +236,19 @@ class Client:
         if system in ['code-generator', 'recipe-generator', 'modern-translator', 'code-commentor']:
             self.no_markdown = True
 
-        #print(self.systems)
-        system_content = self.systems[system]['content']
-        req = create_request(self.sid, 'use-sys', query, system_content)
-        json_data = self.do_command(req)
+        return self.systems[system]['content']
+
+    def use_sys(self, system, query):
+        system_content = self.get_system(system)
+        req = create_request(self.sid, 'use-sys', query, system=system_content, oneshot=self.oneshot)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
 
     def list_models(self):
         req = create_request(self.sid, 'list-m')
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -261,7 +257,7 @@ class Client:
 
     def use_model(self, model):
         req = create_request(self.sid, 'use-model', model)
-        json_data = self.do_command(req)
+        json_data = self.send_command(req)
 
         if self.handle_response(json_data):
             sys.exit(1)
@@ -321,6 +317,51 @@ class Client:
             print("\nExiting and saving history. Goodbye!")
             sys.exit(0)
 
+def handle_non_stdin(args, client):
+    # Handle actions when no stdin input is provided.
+
+    user_args = None
+    if args.edit:
+        user_args = open_vim()
+    elif args.args:
+        user_args = " ".join(args.args)
+
+    if args.system:
+        client.use_s_system(user_args)
+    elif args.use_sys:
+        client.server_init()
+        client.use_sys(args.use_sys, user_args)
+    elif user_args:
+        if not args.use_s:
+            client.server_init()
+        client.do_user_content(user_args)
+    else:
+        logging.warning("⚠️  No valid action arguments provided.")
+
+def handle_stdin(args, client):
+        # Read from stdin, then choose an action.
+        input_text = sys.stdin.read().strip()  # Remove trailing newlines/spaces
+        if not input_text:
+            logging.warning("⚠️  No input received from stdin.")
+            sys.exit(1)  # Exit with a non-zero code if nothing is received
+        else:
+            # Optionally, log a truncated version of the input.
+            logging.debug(f"📥 Received input from stdin: {input_text[:100]}...")
+
+        # Process the stdin input based on additional flags
+        if args.args:
+            client.server_init()
+            msg = " ".join(args.args)
+            # Here, we send an introductory message followed by the actual input.
+            client.do_user_content(f"I'm about to send text your way and I want you to {msg}")
+            client.do_user_content(input_text)
+        elif args.use_sys:
+            client.server_init()
+            client.use_sys(args.use_sys, input_text)
+        else:
+            client.server_init()
+            client.do_user_content(input_text)
+
 
 if __name__ == "__main__":
     from cli import parse_args
@@ -334,74 +375,52 @@ if __name__ == "__main__":
     #init(autoreset=True)
     init()
 
-    sid = None
-    if args.use_s:
-        sid = args.use_s[0]
+    sid = args.use_s[0] if args.use_s else None
     client = Client(sid=sid, no_markdown=args.no_markdown, save_responses=args.save_responses)
+
+    if args.oneshot:
+        client.oneshot=True
 
     if args.rm_s:
         client.rm_s(args.rm_s[0])
         sys.exit(0)
-
-    if args.list_s:
+    elif args.list_s:
         client.list_s()
         sys.exit(0)
-
-    if args.list_sys:
+    elif args.list_sys:
         client.list_sys()
         sys.exit(0)
-
-    if args.new_s:
+    elif args.list_m:
+        client.list_models()
+        sys.exit(0)
+    elif args.new_s:
         system = " ".join(args.system) if args.system else None
+        if args.use_sys:
+            system = client.get_system(args.use_sys)
         client.new_s(args.new_s[0], system)
         sys.exit(0)
-
-    if args.list_m:
-        client.list_models()
-
-    if args.init:
+    elif args.init:
         client.server_init()
         sys.exit(0)
-
-    if args.exit:
+    elif args.exit:
         client.server_exit()
+        sys.exit(0)
+    elif args.model:
+        client.server_init()
+        client.use_model(args.model)
+        sys.exit(0)
+    elif args.reset:
+        client.do_reset()
+        sys.exit(0)
+    elif args.interactive:
+        client.load_history()
+        client.go_interactive()
+        sys.exit(0)
+    elif args.archive_conversation:
+        client.archive_conversation()
         sys.exit(0)
 
     if not args.stdin:
-        # ./client.py --use-s <session id> <query>
-
-        if args.system:
-            client.use_s_system(" ".join(args.system))
-        elif args.oneshot:
-            client.use_s_oneshot(" ".join(args.args))
-        elif args.model:
-            client.use_model(args.model)
-        elif args.use_sys:
-            client.use_sys(args.use_sys, " ".join(args.args))
-            sys.exit(0)
-        elif args.reset:
-            client.do_reset()
-            sys.exit(0)
-        elif len(args.args) > 0:
-            client.server_init()
-            client.do_user_content(" ".join(args.args))
-            sys.exit(0)
+            handle_non_stdin(args, client)
     else:
-        input_text = sys.stdin.read().strip()  # ✅ Strip trailing newlines/spaces
-
-        if not input_text:
-            logging.warning("⚠️ No input received from stdin.")
-        else:
-            logging.debug(f"📥 Received input from stdin: {input_text[:100]}...")  # ✅ Limit log size
-            if args.args:
-                msg = " ".join(args.args)
-                client.do_user_content(f'I\'m about to send text your way and I want you to {msg}')
-                client.do_user_content(input_text)
-                sys.exit(0)
-            elif args.use_sys:
-                client.use_sys(args.use_sys, input_text)
-                sys.exit(0)
-
-    if args.interactive:
-        client.load_history()
-        client.go_interactive()
+            handle_stdin(args, client)

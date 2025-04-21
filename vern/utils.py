@@ -99,3 +99,17 @@ def load_config(config_path, overrides=None):
             config["settings"][key] = value
 
     return config
+
+def save_config(config, config_path):
+    """
+    Save the configuration dictionary to a YAML file.
+
+    :param config: Dictionary containing configuration key-value pairs.
+    :param config_path: Path to the YAML file where the config will be saved.
+    """
+    try:
+        with open(config_path, 'w') as file:
+            yaml.dump(config, file, default_flow_style=False)
+        print(f"Configuration saved to {config_path}")
+    except Exception as e:
+        print(f"An error occurred while saving the configuration: {e}")

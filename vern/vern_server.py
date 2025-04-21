@@ -26,15 +26,15 @@ from utils import find_available_port, write_server_info_to_file, load_config
 
 class CommandListener():
 
-    def __init__(self, config, model="gpt-4o-mini", overrides=None):
+    def __init__(self, config):
 
         self.config = config
         logging.debug(self.config)
 
         self.running = False
-        self.ai_handler = AIHandler()
+        self.ai_handler = AIHandler(config)
 
-        logging.info(f"Using model {model}")
+        logging.info(f"Using model {config['settings']['model']}")
 
         self.session_contexts = {}
         self.sessions = {}
@@ -85,9 +85,13 @@ class CommandListener():
     def does_session_dir_exist(self, sid):
         return SessionContext.session_exists(self.config['settings']['dpath'], sid)
 
-    def do_ai_query(self, client_socket, session_context, data):
-        session_context.add_user_content(data)
-        d_airesponse = self.ai_handler.get_airesponse(session_context)  # Get AI response
+    def do_ai_query(self, client_socket, session_context, data, oneshot=False):
+
+        if not oneshot:
+            session_context.add_user_content(data)
+            d_airesponse = self.ai_handler.get_airesponse(session_context)  # Get AI response
+        else:
+            d_airesponse = self.ai_handler.get_airesponse(session_context, oneshot_user_content=data)  # Get AI response
 
         if d_airesponse['status'] == 'error':
             logging.error(f"AI Error: {d_airesponse['message']}")
@@ -97,27 +101,13 @@ class CommandListener():
         ai_text_response = d_airesponse['data'].choices[0].message.content
 
         # Save response in session history
-        session_context.add_assistant_content(ai_text_response)
+        if oneshot:
+            session_context.add_oneshot_content(ai_text_response)
+        else:
+            session_context.add_assistant_content(ai_text_response)
 
         self.send_response(client_socket, create_response(session_context.sid, 'success', 'airesponsetofollow', 'not_applicable'))
         self.send_obj(client_socket, d_airesponse['data'])
-
-    def do_ai_query_oneshot(self, client_socket, session_context, data):
-        d_airesponse = self.ai_handler.get_airesponse_oneshot(session_context, data)  # Get AI response
-
-        if d_airesponse['status'] == 'error':
-            logging.error(f"AI Error: {d_airesponse['message']}")
-            self.send_response(client_socket, create_response(session_context.sid, 'error', d_airesponse['code'], d_airesponse['message']))
-            return
-
-        ai_text_response = d_airesponse['data'].choices[0].message.content
-
-        # Save response in session history
-        session_context.add_oneshot_content(ai_text_response)
-
-        self.send_response(client_socket, create_response(session_context.sid, 'success', 'airesponsetofollow', 'not_applicable'))
-        self.send_obj(client_socket, d_airesponse['data'])
-
 
     def find_session_for_client(self, client_socket, sid):
         if self.is_session_active(sid):
@@ -164,12 +154,12 @@ class CommandListener():
                     """Handle AI queries and responses"""
                     logging.debug(f"Processing query: {json_data['data']}")
 
-                    session_context = SessionContext(json_data['sid'])
-                    self.session_contexts[json_data['sid']] = session_context
+                    if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
+                        return
 
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
 
-                elif json_data['cmd'] == 'new-user-s':
+                elif json_data['cmd'] == 'new-s':
                     """Handle new session creation"""
 
                     logging.debug(f"New session session-{json_data['sid']} requested")
@@ -178,7 +168,7 @@ class CommandListener():
                         logging.error(f"Session session-{json_data['sid']} already exists")
                         self.send_nack(json_data['sid'], client_socket, f"Session session-{json_data['sid']} already exists")
                     else:
-                        session_context = SessionContext(json_data['sid'], system_content=json_data['data'])
+                        session_context = SessionContext(json_data['sid'], system_content=json_data['system'])
                         self.session_contexts[json_data['sid']] = session_context
                         logging.info(f"Startet new session @ {session_context.session_dir}")
 
@@ -191,7 +181,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.set_system_content(json_data['data'])
+                    session_context.set_system_content(json_data['system'])
 
 
                 elif json_data['cmd'] == 'use-s-query':
@@ -200,7 +190,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
 
                 elif json_data['cmd'] == 'use-s-system':
                     """Handle using an existing session system"""
@@ -208,17 +198,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.set_system_content(json_data['data'])
-                    self.send_ack(json_data['sid'], client_socket)
-
-                elif json_data['cmd'] == 'use-s-oneshot':
-                    """Handle using an existing session system"""
-
-                    if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
-                        return
-
-                    user_content = [{'role' : 'user', 'content' : json_data['data']}]
-                    self.do_ai_query_oneshot(client_socket, session_context, user_content)
+                    session_context.set_system_content(json_data['system'])
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'use-sys':
@@ -227,7 +207,7 @@ class CommandListener():
                         return
 
                     session_context.set_system_content(json_data['system'])
-                    self.do_ai_query(client_socket, session_context, json_data['data'])
+                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'rm-s':
@@ -239,6 +219,15 @@ class CommandListener():
                     session_context.remove_session(self.temp_dir, self.config['settings']['dpath'], json_data['sid'])
                     if json_data['sid'] in self.session_contexts:
                         del self.session_contexts[json_data['sid']]
+                    self.send_ack(json_data['sid'], client_socket)
+
+                elif json_data['cmd'] == 'archive-conversation':
+                    """Moves a session to the temp dir's 'trash' instead of deleting it."""
+
+                    session_context = self.find_session_for_client(client_socket, json_data['sid'])
+                    if session_context is None:
+                        return
+                    session_context.archive_conversation()
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'list-s':
@@ -318,7 +307,7 @@ class CommandListener():
                     if (session_context := self.find_session_for_client(client_socket, json_data['sid'])) is None:
                         return
 
-                    session_context.reset(json_data['sid'])
+                    session_context.reset()
                     self.send_ack(json_data['sid'], client_socket)
 
                 else:
@@ -382,7 +371,7 @@ def show_all_threads():
         print(f"Thread Name: {thread.name}, ID: {thread.ident}, Daemon: {thread.daemon}")
 
 def main_daemon():
-    command_listener = CommandListener()
+    command_listener = CommandListener(config)
     command_listener.start()
     while command_listener.running:
         time.sleep(.1)
