@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Vern Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/code/dev/vern/venv/bin/python3 /home/rgrimm/code/dev/vern/vern/vern_server.py -i -d
+Environment="OPENAI_API_KEY=<YOUR OPENAI API KEY>"
+Environment="PATH=/home/rgrimm/code/dev/vern/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
+Environment="PYTHONPATH=/home/rgrimm/code/dev/vern/venv/lib/python3.10/site-packages"
+WorkingDirectory=%h/code/dev/vern/
+
+[Install]
+WantedBy=default.target
