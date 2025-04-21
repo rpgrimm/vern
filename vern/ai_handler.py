@@ -16,7 +16,12 @@ class AIHandler:
 
         self.config = config
         # Initialize tokenizer for GPT-4o
-        self.ENCODER = tiktoken.encoding_for_model(self.config['settings']['model'])
+        model_name = self.config['settings']['model']
+        try:
+            self.ENCODER = tiktoken.encoding_for_model(model_name)
+        except KeyError:
+            print(f"Unknown model '{model_name}', falling back to cl100k_base tokenizer.")
+            self.ENCODER = tiktoken.get_encoding("cl100k_base")
 
     def init_ai(self):
         """ Initialize AI client """
