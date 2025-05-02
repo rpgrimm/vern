@@ -348,8 +348,15 @@ def handle_stdin(args, client):
             # Optionally, log a truncated version of the input.
             logging.debug(f"📥 Received input from stdin: {input_text[:100]}...")
 
+        client.server_init()
+
         # Process the stdin input based on additional flags
-        if args.args:
+        if args.edit:
+            client.server_init()
+            user_args = open_vim()
+            client.do_user_content(user_args)
+            client.do_user_content(input_text)
+        elif args.args:
             client.server_init()
             msg = " ".join(args.args)
             # Here, we send an introductory message followed by the actual input.
