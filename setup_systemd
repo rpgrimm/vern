@@ -1,0 +1,10 @@
+#!/bin/sh -e
+
+if [ -z "$OPENAI_API_KEY" ] ; then
+	echo "Please set environment variable OPENAI_API_KEY"
+	exit 1
+fi
+sed "/^Environment=\"OPENAI_API_KEY=.*/ s//Environment=\"OPENAI_API_KEY=$OPENAI_API_KEY\"/" systemd/config/user/vern.service > ~/.config/systemd/user/vern.service
+systemctl --user daemon-reload
+systemctl --user enable vern
+systemctl --user start vern
