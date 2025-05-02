@@ -18,6 +18,7 @@ import time
 import yaml
 
 from daemonize import Daemonize
+from functools import partial
 from protocol import create_response, recv_json
 from session_context import SessionContext
 from ai_handler import AIHandler
@@ -370,7 +371,8 @@ def show_all_threads():
     for thread in threads:
         print(f"Thread Name: {thread.name}, ID: {thread.ident}, Daemon: {thread.daemon}")
 
-def main_daemon():
+def main_daemon(config):
+    logging.info('Starting CommandListener')
     command_listener = CommandListener(config)
     command_listener.start()
     while command_listener.running:
@@ -383,14 +385,6 @@ def main(argv = sys.argv[1:], config=None):
     parser.add_argument('-c', '--config', type=str, help='Provide path to config.yaml')
     args = parser.parse_args(argv)
 
-    logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO, format='%(asctime)s - %(levelname)s - L%(lineno)d - %(message)s')
-    # Suppress excessive HTTP logs
-    logging.getLogger("http.client").setLevel(logging.WARNING)
-    logging.getLogger("httpx").setLevel(logging.WARNING)
-    logging.getLogger("urllib3").setLevel(logging.WARNING)
-    logging.getLogger("openai").setLevel(logging.WARNING)
-    logging.getLogger("requests").setLevel(logging.WARNING)
-
     script_path = os.path.dirname(os.path.abspath(__file__))
 
     if config is None:
@@ -398,10 +392,14 @@ def main(argv = sys.argv[1:], config=None):
         config = load_config(config_path)
 
     if not args.interactive:
+        logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO, format='%(asctime)s - %(levelname)s - L%(lineno)d - %(message)s', filename='/var/tmp/vern.log')
+        logging.info('daemon logging initialized')
         pid = os.path.join(config['settings']['dpath'], "vern.pid")
-        daemon = Daemonize(app="vern_server", pid=pid, action=main_daemon)
-        rc = daemon.start()
+        daemon = Daemonize(app="vern_server_asdf", pid=pid, action=partial(main_daemon, config))
+        daemon.start()
         sys.exit(0)
+
+    logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO, format='%(asctime)s - %(levelname)s - L%(lineno)d - %(message)s')
 
     command_listener = CommandListener(config)
     command_listener.start()
