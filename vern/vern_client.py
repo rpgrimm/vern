@@ -166,6 +166,18 @@ class Client:
             logging.warning("systems.json not found.")
             return {}
 
+    def write_systems(self):
+        """Load predefined systems from systems.json."""
+        script_dir = os.path.dirname(os.path.abspath(__file__))  # Get script's directory
+        system_file = os.path.join(script_dir, "systems.json")  # Construct absolute path to systems.json
+        try:
+            with open(system_file, "w") as f:
+                systems_json = { 'systems' : self.systems }
+                json.dump(systems_json, f, indent=2)
+                logging.debug(f"Wrote {system_file}")
+        except Exception as e:
+            logging.error(f"Failed to write systems.json: {e}")
+
     def do_reset(self):
         req = create_request(self.sid, 'reset')
         json_data = self.send_command(req)
@@ -317,6 +329,30 @@ class Client:
             print("\nExiting and saving history. Goodbye!")
             sys.exit(0)
 
+    def add_system(self, system_name, system_content):
+        if system_name in self.systems:
+            logging.error(f'{system_name} exists: {self.systems[system_name]}')
+            return
+
+        self.systems[system_name] = {'role': 'system', 'content': system_content}
+
+        logging.info(f'{system_name} added')
+
+        self.write_systems()
+
+    def rm_system(self, system_name):
+        if not system_name in self.systems:
+            logging.error(f'{system_name} does not exist')
+            return
+
+        del self.systems[system_name]
+
+        logging.info(f'{system_name} removed')
+
+        self.write_systems()
+
+
+
 def handle_non_stdin(args, client):
     # Handle actions when no stdin input is provided.
 
@@ -426,6 +462,13 @@ if __name__ == "__main__":
     elif args.archive_conversation:
         client.archive_conversation()
         sys.exit(0)
+    elif args.add_system:
+        client.add_system(args.add_system[0], args.add_system[1])
+        sys.exit(0)
+    elif args.rm_system:
+        client.rm_system(args.rm_system[0])
+        sys.exit(0)
+
 
     if not args.stdin:
             handle_non_stdin(args, client)
