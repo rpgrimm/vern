@@ -384,6 +384,7 @@ def main(argv = sys.argv[1:], config=None):
     parser.add_argument('-d', '--debug', action='store_true', help='Print debug messages')
     parser.add_argument('-i', '--interactive', action='store_true', help='Interactive mode')
     parser.add_argument('-c', '--config', type=str, help='Provide path to config.yaml')
+    parser.add_argument("--daemon", "--daemonize", action='store_true', help='Daemonize the server')
     args = parser.parse_args(argv)
 
     script_path = os.path.dirname(os.path.abspath(__file__))
@@ -392,7 +393,7 @@ def main(argv = sys.argv[1:], config=None):
         config_path = args.config or os.path.join(script_path, "config.yaml")
         config = load_config(config_path)
 
-    if not args.interactive:
+    if args.daemon:
         pid = os.path.join(config['settings']['dpath'], "vern.pid")
         daemon = Daemonize(app="vern_server_daemon", pid=pid, action=partial(main_daemon, config, args))
         daemon.start()
@@ -402,6 +403,11 @@ def main(argv = sys.argv[1:], config=None):
 
     command_listener = CommandListener(config)
     command_listener.start()
+
+    if not args.interactive:
+        while command_listener.running:
+            time.sleep(.1)
+        sys.exit(0)
 
     def non_blocking_input(prompt, timeout=0.1):
         """Check for input with a timeout."""
