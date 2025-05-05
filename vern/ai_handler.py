@@ -63,6 +63,9 @@ class AIHandler:
 
         logging.debug(f"Getting AI response for {ai_content}")
 
+        max_completion_tokens=50000
+        if session_context.config['settings']['model'] == 'gpt-4o':
+            max_completion_tokens=16384
         try:
             return {
                 "status": "success",
@@ -70,8 +73,7 @@ class AIHandler:
                     model=session_context.config['settings']['model'],
                     messages=ai_content,
                     #temperature=0,
-                    #max_completion_tokens=16384,
-                    max_completion_tokens=50000,
+                    max_completion_tokens=max_completion_tokens,
                 ),
             }
         except openai.AuthenticationError as e:
