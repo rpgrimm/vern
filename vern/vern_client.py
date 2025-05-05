@@ -463,6 +463,9 @@ if __name__ == "__main__":
         client.archive_conversation()
         sys.exit(0)
     elif args.add_system:
+        if len(args.add_system) < 2:
+            logging.error("Need content for --add-system")
+            sys.exit(1)
         client.add_system(args.add_system[0], args.add_system[1])
         sys.exit(0)
     elif args.rm_system:
