@@ -1,0 +1,8 @@
+vern/prompt*txt
+vern/*.latex
+vern/*.pdf
+vern/*.aux
+vern/*.log
+*.swp
+vern/__pycache__
+venv
