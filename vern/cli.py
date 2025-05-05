@@ -24,6 +24,6 @@ def parse_args():
     parser.add_argument("--reset", action='store_true', help='Reset the session')
     parser.add_argument("--archive-conversation", action='store_true', help='Reset the session')
     parser.add_argument("--edit", action='store_true', help='Open vim')
-    parser.add_argument("--add-system", type=str, nargs='+', help='Add a system')
-    parser.add_argument("--rm-system", type=str, nargs=1, help='Remove a system')
+    parser.add_argument("--add-system", "--add-sys", type=str, nargs='+', help='Add a system')
+    parser.add_argument("--rm-system", "--rm-sys", type=str, nargs=1, help='Remove a system')
     return parser.parse_args()
