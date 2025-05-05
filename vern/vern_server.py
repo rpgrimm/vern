@@ -372,7 +372,7 @@ def show_all_threads():
         print(f"Thread Name: {thread.name}, ID: {thread.ident}, Daemon: {thread.daemon}")
 
 def main_daemon(config, args):
-    logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO, format='%(asctime)s - %(levelname)s - L%(lineno)d - %(message)s', filename='/var/tmp/vern.log')
+    logging.basicConfig(level=logging.DEBUG if args.debug else logging.INFO, format='%(asctime)s - %(levelname)s - L%(lineno)d - %(message)s', filename=os.path.join(config['settings']['dpath'], 'vern.log'))
     logging.info('Starting CommandListener')
     command_listener = CommandListener(config)
     command_listener.start()
@@ -394,7 +394,7 @@ def main(argv = sys.argv[1:], config=None):
 
     if not args.interactive:
         pid = os.path.join(config['settings']['dpath'], "vern.pid")
-        daemon = Daemonize(app="vern_server_asdf", pid=pid, action=partial(main_daemon, config, args))
+        daemon = Daemonize(app="vern_server_daemon", pid=pid, action=partial(main_daemon, config, args))
         daemon.start()
         sys.exit(0)
 
