@@ -1,15 +1,20 @@
 
 [Unit]
 Description=Vern Server
-After=network.target
+After=network-online.target
+Wants=network-online.target
 
 [Service]
 Type=simple
+ExecStartPre=/bin/bash -c 'until host google.com; do echo "Waiting for DNS..."; sleep 1; done'
 ExecStart=%h/code/dev/vern/venv/bin/python3 /home/rgrimm/code/dev/vern/vern/vern_server.py
 Environment="OPENAI_API_KEY=<YOUR OPENAI API KEY>"
 Environment="PATH=/home/rgrimm/code/dev/vern/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin"
 Environment="PYTHONPATH=/home/rgrimm/code/dev/vern/venv/lib/python3.10/site-packages"
 WorkingDirectory=%h/code/dev/vern/
+Restart=Always
+RestartSec=5
+TimeoutStartSec=0
 
 [Install]
 WantedBy=default.target
