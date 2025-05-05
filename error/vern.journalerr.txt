@@ -1,0 +1,91 @@
+May 05 10:54:54 dutch systemd[2825]: Started vern.service - Vern Server.
+May 05 10:54:54 dutch python3[2965]: 2025-05-05 10:54:54,981 - DEBUG - L33 - {'settings': {'debug': False, 'dpath': '/home/rgrimm/.local/share/vern/', 'model': 'o3-mini'}, 'network': {'host': 'localhost', 'port': 53035}}
+May 05 10:54:55 dutch python3[2965]: 2025-05-05 10:54:55,053 - DEBUG - L1049 - Starting new HTTPS connection (1): openaipublic.blob.core.windows.net:443
+May 05 10:54:55 dutch python3[2965]: Traceback (most recent call last):
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connection.py", line 198, in _new_conn
+May 05 10:54:55 dutch python3[2965]:     sock = connection.create_connection(
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+May 05 10:54:55 dutch python3[2965]:     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+May 05 10:54:55 dutch python3[2965]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/usr/lib/python3.12/socket.py", line 963, in getaddrinfo
+May 05 10:54:55 dutch python3[2965]:     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+May 05 10:54:55 dutch python3[2965]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]: socket.gaierror: [Errno -3] Temporary failure in name resolution
+May 05 10:54:55 dutch python3[2965]: The above exception was the direct cause of the following exception:
+May 05 10:54:55 dutch python3[2965]: Traceback (most recent call last):
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+May 05 10:54:55 dutch python3[2965]:     response = self._make_request(
+May 05 10:54:55 dutch python3[2965]:                ^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+May 05 10:54:55 dutch python3[2965]:     raise new_e
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+May 05 10:54:55 dutch python3[2965]:     self._validate_conn(conn)
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+May 05 10:54:55 dutch python3[2965]:     conn.connect()
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connection.py", line 704, in connect
+May 05 10:54:55 dutch python3[2965]:     self.sock = sock = self._new_conn()
+May 05 10:54:55 dutch python3[2965]:                        ^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connection.py", line 205, in _new_conn
+May 05 10:54:55 dutch python3[2965]:     raise NameResolutionError(self.host, self, e) from e
+May 05 10:54:55 dutch python3[2965]: urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x7417f6c05820>: Failed to resolve 'openaipublic.blob.core.windows.net' ([Errno -3] Temporary failure in name resolution)
+May 05 10:54:55 dutch python3[2965]: The above exception was the direct cause of the following exception:
+May 05 10:54:55 dutch python3[2965]: Traceback (most recent call last):
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/adapters.py", line 667, in send
+May 05 10:54:55 dutch python3[2965]:     resp = conn.urlopen(
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+May 05 10:54:55 dutch python3[2965]:     retries = retries.increment(
+May 05 10:54:55 dutch python3[2965]:               ^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/urllib3/util/retry.py", line 519, in increment
+May 05 10:54:55 dutch python3[2965]:     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+May 05 10:54:55 dutch python3[2965]:     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='openaipublic.blob.core.windows.net', port=443): Max retries exceeded with url: /encodings/o200k_base.tiktoken (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7417f6c05820>: Failed to resolve 'openaipublic.blob.core.windows.net' ([Errno -3] Temporary failure in name resolution)"))
+May 05 10:54:55 dutch python3[2965]: During handling of the above exception, another exception occurred:
+May 05 10:54:55 dutch python3[2965]: Traceback (most recent call last):
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/vern/vern_server.py", line 442, in <module>
+May 05 10:54:55 dutch python3[2965]:     main()
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/vern/vern_server.py", line 403, in main
+May 05 10:54:55 dutch python3[2965]:     command_listener = CommandListener(config)
+May 05 10:54:55 dutch python3[2965]:                        ^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/vern/vern_server.py", line 36, in __init__
+May 05 10:54:55 dutch python3[2965]:     self.ai_handler = AIHandler(config)
+May 05 10:54:55 dutch python3[2965]:                       ^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/vern/ai_handler.py", line 21, in __init__
+May 05 10:54:55 dutch python3[2965]:     self.ENCODER = tiktoken.encoding_for_model(model_name)
+May 05 10:54:55 dutch python3[2965]:                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken/model.py", line 110, in encoding_for_model
+May 05 10:54:55 dutch python3[2965]:     return get_encoding(encoding_name_for_model(model_name))
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken/registry.py", line 86, in get_encoding
+May 05 10:54:55 dutch python3[2965]:     enc = Encoding(**constructor())
+May 05 10:54:55 dutch python3[2965]:                      ^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken_ext/openai_public.py", line 96, in o200k_base
+May 05 10:54:55 dutch python3[2965]:     mergeable_ranks = load_tiktoken_bpe(
+May 05 10:54:55 dutch python3[2965]:                       ^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken/load.py", line 148, in load_tiktoken_bpe
+May 05 10:54:55 dutch python3[2965]:     contents = read_file_cached(tiktoken_bpe_file, expected_hash)
+May 05 10:54:55 dutch python3[2965]:                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken/load.py", line 63, in read_file_cached
+May 05 10:54:55 dutch python3[2965]:     contents = read_file(blobpath)
+May 05 10:54:55 dutch python3[2965]:                ^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/tiktoken/load.py", line 22, in read_file
+May 05 10:54:55 dutch python3[2965]:     resp = requests.get(blobpath)
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/api.py", line 73, in get
+May 05 10:54:55 dutch python3[2965]:     return request("get", url, params=params, **kwargs)
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/api.py", line 59, in request
+May 05 10:54:55 dutch python3[2965]:     return session.request(method=method, url=url, **kwargs)
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/sessions.py", line 589, in request
+May 05 10:54:55 dutch python3[2965]:     resp = self.send(prep, **send_kwargs)
+May 05 10:54:55 dutch python3[2965]:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/sessions.py", line 703, in send
+May 05 10:54:55 dutch python3[2965]:     r = adapter.send(request, **kwargs)
+May 05 10:54:55 dutch python3[2965]:         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+May 05 10:54:55 dutch python3[2965]:   File "/home/rgrimm/code/dev/vern/venv/lib/python3.12/site-packages/requests/adapters.py", line 700, in send
+May 05 10:54:55 dutch python3[2965]:     raise ConnectionError(e, request=request)
+May 05 10:54:55 dutch python3[2965]: requests.exceptions.ConnectionError: HTTPSConnectionPool(host='openaipublic.blob.core.windows.net', port=443): Max retries exceeded with url: /encodings/o200k_base.tiktoken (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x7417f6c05820>: Failed to resolve 'openaipublic.blob.core.windows.net' ([Errno -3] Temporary failure in name resolution)"))
+May 05 10:54:55 dutch systemd[2825]: vern.service: Main process exited, code=exited, status=1/FAILURE
+May 05 10:54:55 dutch systemd[2825]: vern.service: Failed with result 'exit-code'.
