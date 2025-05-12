@@ -208,7 +208,8 @@ class CommandListener():
                         return
 
                     session_context.set_system_content(json_data['system'])
-                    self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
+                    if json_data['data'] is not None:
+                        self.do_ai_query(client_socket, session_context, json_data['data'], oneshot=json_data['oneshot'])
                     self.send_ack(json_data['sid'], client_socket)
 
                 elif json_data['cmd'] == 'rm-s':
