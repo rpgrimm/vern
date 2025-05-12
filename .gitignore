@@ -1,4 +1,4 @@
-vern/prompt*txt
+prompt*txt
 vern/*.latex
 vern/*.pdf
 vern/*.aux
