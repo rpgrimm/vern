@@ -1,19 +1,17 @@
 # vern.plugin.zsh
 
-VERN=~/code/dev/vern/vern/vern_client.py
+SRC_DIR=~/code/dev/vern
 
-source ~/code/dev/vern/venv/bin/activate
-export PATH=$PATH:~/code/dev/vern/vern/
+export PYTHON3=$SRC_DIR/venv/bin/python3
 
-function v4 { vern --model gpt-4o }
-function vcp { cat ~/.local/share/vern/.ppid/session-ppid-$$/config.yaml }
+vern() { $PYTHON3 $SRC_DIR/vern/vern_client.py "$@" }
+v() { vern "$@" }
+v4()  { vern --model gpt-4o "$@" }
+vcp() { cat ~/.local/share/vern/.ppid/session-ppid-$$/config.yaml && cat ~/.local/share/vern/.ppid/session-ppid-$$/system.json }
+vc() { vern --use-sys code-generator "$@" }
 
 function vern-code-gen { vern --use-sys code-generator "$@" }
 
-
-function v {
-	$VERN "$@"
-}
 
 function ve {
 	tempfile=$(mktemp /tmp/editor.XXXXXX)
@@ -22,13 +20,9 @@ function ve {
 	rm "$tempfile"
 }
 
-function vs {
-	$VERN --use-sys sophisticated "$@"
-}
+function vs { vern --use-sys sophisticated "$@" }
 
-function vc {
-	$VERN --use-sys code-generator "$@"
-}
+
 
 function vl {
 	$VERN --use-sys latex-generator "$@"
