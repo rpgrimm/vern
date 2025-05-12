@@ -1,0 +1,1000 @@
+May 06 11:52:42 ripper clipboard-url-monitor.zsh[96141]: Authorization required, but no authorization protocol specified
+May 06 11:52:42 ripper clipboard-url-monitor.zsh[96141]: Error: Can't open display: :0
+May 06 11:52:48 ripper clipboard-url-monitor.zsh[96160]: Authorization required, but no authorization protocol specified
+May 06 11:52:48 ripper clipboard-url-monitor.zsh[96160]: Error: Can't open display: :0
+May 06 11:52:51 ripper clipboard-url-monitor.zsh[96169]: Authorization required, but no authorization protocol specified
+May 06 11:52:51 ripper clipboard-url-monitor.zsh[96169]: Error: Can't open display: :0
+May 06 11:52:53 ripper clipboard-url-monitor.zsh[96176]: Authorization required, but no authorization protocol specified
+May 06 11:52:53 ripper clipboard-url-monitor.zsh[96176]: Error: Can't open display: :0
+May 06 11:52:55 ripper clipboard-url-monitor.zsh[96221]: Authorization required, but no authorization protocol specified
+May 06 11:52:55 ripper clipboard-url-monitor.zsh[96221]: Error: Can't open display: :0
+May 06 11:52:57 ripper clipboard-url-monitor.zsh[96229]: Authorization required, but no authorization protocol specified
+May 06 11:52:57 ripper clipboard-url-monitor.zsh[96229]: Error: Can't open display: :0
+May 06 11:52:59 ripper clipboard-url-monitor.zsh[96248]: Authorization required, but no authorization protocol specified
+May 06 11:52:59 ripper clipboard-url-monitor.zsh[96248]: Error: Can't open display: :0
+May 06 11:53:01 ripper clipboard-url-monitor.zsh[96285]: Authorization required, but no authorization protocol specified
+May 06 11:53:01 ripper clipboard-url-monitor.zsh[96285]: Error: Can't open display: :0
+May 06 11:53:03 ripper clipboard-url-monitor.zsh[96291]: Authorization required, but no authorization protocol specified
+May 06 11:53:03 ripper clipboard-url-monitor.zsh[96291]: Error: Can't open display: :0
+May 06 11:53:05 ripper clipboard-url-monitor.zsh[96297]: Authorization required, but no authorization protocol specified
+May 06 11:53:05 ripper clipboard-url-monitor.zsh[96297]: Error: Can't open display: :0
+May 06 11:53:06 ripper clipboard-url-monitor.zsh[96302]: Authorization required, but no authorization protocol specified
+May 06 11:53:06 ripper clipboard-url-monitor.zsh[96302]: Error: Can't open display: :0
+May 06 11:53:11 ripper clipboard-url-monitor.zsh[96317]: Authorization required, but no authorization protocol specified
+May 06 11:53:11 ripper clipboard-url-monitor.zsh[96317]: Error: Can't open display: :0
+May 06 11:53:12 ripper clipboard-url-monitor.zsh[96320]: Authorization required, but no authorization protocol specified
+May 06 11:53:12 ripper clipboard-url-monitor.zsh[96320]: Error: Can't open display: :0
+May 06 11:53:13 ripper clipboard-url-monitor.zsh[96323]: Authorization required, but no authorization protocol specified
+May 06 11:53:13 ripper clipboard-url-monitor.zsh[96323]: Error: Can't open display: :0
+May 06 11:53:17 ripper clipboard-url-monitor.zsh[96336]: Authorization required, but no authorization protocol specified
+May 06 11:53:17 ripper clipboard-url-monitor.zsh[96336]: Error: Can't open display: :0
+May 06 11:53:19 ripper clipboard-url-monitor.zsh[96343]: Authorization required, but no authorization protocol specified
+May 06 11:53:19 ripper clipboard-url-monitor.zsh[96343]: Error: Can't open display: :0
+May 06 11:53:21 ripper clipboard-url-monitor.zsh[96349]: Authorization required, but no authorization protocol specified
+May 06 11:53:21 ripper clipboard-url-monitor.zsh[96349]: Error: Can't open display: :0
+May 06 11:53:25 ripper clipboard-url-monitor.zsh[96364]: Authorization required, but no authorization protocol specified
+May 06 11:53:25 ripper clipboard-url-monitor.zsh[96364]: Error: Can't open display: :0
+May 06 11:53:28 ripper clipboard-url-monitor.zsh[96373]: Authorization required, but no authorization protocol specified
+May 06 11:53:28 ripper clipboard-url-monitor.zsh[96373]: Error: Can't open display: :0
+May 06 11:53:29 ripper clipboard-url-monitor.zsh[96377]: Authorization required, but no authorization protocol specified
+May 06 11:53:29 ripper clipboard-url-monitor.zsh[96377]: Error: Can't open display: :0
+May 06 11:53:30 ripper clipboard-url-monitor.zsh[96380]: Authorization required, but no authorization protocol specified
+May 06 11:53:30 ripper clipboard-url-monitor.zsh[96380]: Error: Can't open display: :0
+May 06 11:53:31 ripper clipboard-url-monitor.zsh[96384]: Authorization required, but no authorization protocol specified
+May 06 11:53:31 ripper clipboard-url-monitor.zsh[96384]: Error: Can't open display: :0
+May 06 11:53:32 ripper clipboard-url-monitor.zsh[96387]: Authorization required, but no authorization protocol specified
+May 06 11:53:32 ripper clipboard-url-monitor.zsh[96387]: Error: Can't open display: :0
+May 06 11:53:33 ripper clipboard-url-monitor.zsh[96390]: Authorization required, but no authorization protocol specified
+May 06 11:53:33 ripper clipboard-url-monitor.zsh[96390]: Error: Can't open display: :0
+May 06 11:53:34 ripper clipboard-url-monitor.zsh[96393]: Authorization required, but no authorization protocol specified
+May 06 11:53:34 ripper clipboard-url-monitor.zsh[96393]: Error: Can't open display: :0
+May 06 11:53:36 ripper clipboard-url-monitor.zsh[96399]: Authorization required, but no authorization protocol specified
+May 06 11:53:36 ripper clipboard-url-monitor.zsh[96399]: Error: Can't open display: :0
+May 06 11:53:37 ripper clipboard-url-monitor.zsh[96402]: Authorization required, but no authorization protocol specified
+May 06 11:53:37 ripper clipboard-url-monitor.zsh[96402]: Error: Can't open display: :0
+May 06 11:53:38 ripper clipboard-url-monitor.zsh[96405]: Authorization required, but no authorization protocol specified
+May 06 11:53:38 ripper clipboard-url-monitor.zsh[96405]: Error: Can't open display: :0
+May 06 11:53:39 ripper clipboard-url-monitor.zsh[96408]: Authorization required, but no authorization protocol specified
+May 06 11:53:39 ripper clipboard-url-monitor.zsh[96408]: Error: Can't open display: :0
+May 06 11:53:41 ripper clipboard-url-monitor.zsh[96414]: Authorization required, but no authorization protocol specified
+May 06 11:53:41 ripper clipboard-url-monitor.zsh[96414]: Error: Can't open display: :0
+May 06 11:53:42 ripper clipboard-url-monitor.zsh[96417]: Authorization required, but no authorization protocol specified
+May 06 11:53:42 ripper clipboard-url-monitor.zsh[96417]: Error: Can't open display: :0
+May 06 11:53:43 ripper clipboard-url-monitor.zsh[96420]: Authorization required, but no authorization protocol specified
+May 06 11:53:43 ripper clipboard-url-monitor.zsh[96420]: Error: Can't open display: :0
+May 06 11:53:44 ripper clipboard-url-monitor.zsh[96424]: Authorization required, but no authorization protocol specified
+May 06 11:53:44 ripper clipboard-url-monitor.zsh[96424]: Error: Can't open display: :0
+May 06 11:53:47 ripper clipboard-url-monitor.zsh[96433]: Authorization required, but no authorization protocol specified
+May 06 11:53:47 ripper clipboard-url-monitor.zsh[96433]: Error: Can't open display: :0
+May 06 11:53:48 ripper clipboard-url-monitor.zsh[96436]: Authorization required, but no authorization protocol specified
+May 06 11:53:48 ripper clipboard-url-monitor.zsh[96436]: Error: Can't open display: :0
+May 06 11:53:51 ripper clipboard-url-monitor.zsh[96445]: Authorization required, but no authorization protocol specified
+May 06 11:53:51 ripper clipboard-url-monitor.zsh[96445]: Error: Can't open display: :0
+May 06 11:53:52 ripper clipboard-url-monitor.zsh[96448]: Authorization required, but no authorization protocol specified
+May 06 11:53:52 ripper clipboard-url-monitor.zsh[96448]: Error: Can't open display: :0
+May 06 11:53:54 ripper clipboard-url-monitor.zsh[96455]: Authorization required, but no authorization protocol specified
+May 06 11:53:54 ripper clipboard-url-monitor.zsh[96455]: Error: Can't open display: :0
+May 06 11:53:56 ripper clipboard-url-monitor.zsh[96461]: Authorization required, but no authorization protocol specified
+May 06 11:53:56 ripper clipboard-url-monitor.zsh[96461]: Error: Can't open display: :0
+May 06 11:53:57 ripper clipboard-url-monitor.zsh[96464]: Authorization required, but no authorization protocol specified
+May 06 11:53:57 ripper clipboard-url-monitor.zsh[96464]: Error: Can't open display: :0
+May 06 11:53:59 ripper clipboard-url-monitor.zsh[96482]: Authorization required, but no authorization protocol specified
+May 06 11:53:59 ripper clipboard-url-monitor.zsh[96482]: Error: Can't open display: :0
+May 06 11:54:00 ripper clipboard-url-monitor.zsh[96496]: Authorization required, but no authorization protocol specified
+May 06 11:54:00 ripper clipboard-url-monitor.zsh[96496]: Error: Can't open display: :0
+May 06 11:54:01 ripper clipboard-url-monitor.zsh[96510]: Authorization required, but no authorization protocol specified
+May 06 11:54:01 ripper clipboard-url-monitor.zsh[96510]: Error: Can't open display: :0
+May 06 11:54:02 ripper clipboard-url-monitor.zsh[96524]: Authorization required, but no authorization protocol specified
+May 06 11:54:02 ripper clipboard-url-monitor.zsh[96524]: Error: Can't open display: :0
+May 06 11:54:03 ripper clipboard-url-monitor.zsh[96527]: Authorization required, but no authorization protocol specified
+May 06 11:54:03 ripper clipboard-url-monitor.zsh[96527]: Error: Can't open display: :0
+May 06 11:54:04 ripper clipboard-url-monitor.zsh[96545]: Authorization required, but no authorization protocol specified
+May 06 11:54:04 ripper clipboard-url-monitor.zsh[96545]: Error: Can't open display: :0
+May 06 11:54:07 ripper clipboard-url-monitor.zsh[96554]: Authorization required, but no authorization protocol specified
+May 06 11:54:07 ripper clipboard-url-monitor.zsh[96554]: Error: Can't open display: :0
+May 06 11:54:10 ripper clipboard-url-monitor.zsh[96563]: Authorization required, but no authorization protocol specified
+May 06 11:54:10 ripper clipboard-url-monitor.zsh[96563]: Error: Can't open display: :0
+May 06 11:54:11 ripper clipboard-url-monitor.zsh[96566]: Authorization required, but no authorization protocol specified
+May 06 11:54:11 ripper clipboard-url-monitor.zsh[96566]: Error: Can't open display: :0
+May 06 11:54:12 ripper clipboard-url-monitor.zsh[96569]: Authorization required, but no authorization protocol specified
+May 06 11:54:12 ripper clipboard-url-monitor.zsh[96569]: Error: Can't open display: :0
+May 06 11:54:14 ripper clipboard-url-monitor.zsh[96576]: Authorization required, but no authorization protocol specified
+May 06 11:54:14 ripper clipboard-url-monitor.zsh[96576]: Error: Can't open display: :0
+May 06 11:54:15 ripper clipboard-url-monitor.zsh[96579]: Authorization required, but no authorization protocol specified
+May 06 11:54:15 ripper clipboard-url-monitor.zsh[96579]: Error: Can't open display: :0
+May 06 11:54:16 ripper clipboard-url-monitor.zsh[96582]: Authorization required, but no authorization protocol specified
+May 06 11:54:16 ripper clipboard-url-monitor.zsh[96582]: Error: Can't open display: :0
+May 06 11:54:17 ripper clipboard-url-monitor.zsh[96585]: Authorization required, but no authorization protocol specified
+May 06 11:54:17 ripper clipboard-url-monitor.zsh[96585]: Error: Can't open display: :0
+May 06 11:54:18 ripper clipboard-url-monitor.zsh[96589]: Authorization required, but no authorization protocol specified
+May 06 11:54:18 ripper clipboard-url-monitor.zsh[96589]: Error: Can't open display: :0
+May 06 11:54:19 ripper clipboard-url-monitor.zsh[96593]: Authorization required, but no authorization protocol specified
+May 06 11:54:19 ripper clipboard-url-monitor.zsh[96593]: Error: Can't open display: :0
+May 06 11:54:22 ripper clipboard-url-monitor.zsh[96602]: Authorization required, but no authorization protocol specified
+May 06 11:54:22 ripper clipboard-url-monitor.zsh[96602]: Error: Can't open display: :0
+May 06 11:54:25 ripper clipboard-url-monitor.zsh[96613]: Authorization required, but no authorization protocol specified
+May 06 11:54:25 ripper clipboard-url-monitor.zsh[96613]: Error: Can't open display: :0
+May 06 11:54:26 ripper clipboard-url-monitor.zsh[96616]: Authorization required, but no authorization protocol specified
+May 06 11:54:26 ripper clipboard-url-monitor.zsh[96616]: Error: Can't open display: :0
+May 06 11:54:27 ripper clipboard-url-monitor.zsh[96619]: Authorization required, but no authorization protocol specified
+May 06 11:54:27 ripper clipboard-url-monitor.zsh[96619]: Error: Can't open display: :0
+May 06 11:54:28 ripper clipboard-url-monitor.zsh[96622]: Authorization required, but no authorization protocol specified
+May 06 11:54:28 ripper clipboard-url-monitor.zsh[96622]: Error: Can't open display: :0
+May 06 11:54:29 ripper clipboard-url-monitor.zsh[96627]: Authorization required, but no authorization protocol specified
+May 06 11:54:29 ripper clipboard-url-monitor.zsh[96627]: Error: Can't open display: :0
+May 06 11:54:31 ripper clipboard-url-monitor.zsh[96633]: Authorization required, but no authorization protocol specified
+May 06 11:54:31 ripper clipboard-url-monitor.zsh[96633]: Error: Can't open display: :0
+May 06 11:54:32 ripper clipboard-url-monitor.zsh[96636]: Authorization required, but no authorization protocol specified
+May 06 11:54:32 ripper clipboard-url-monitor.zsh[96636]: Error: Can't open display: :0
+May 06 11:54:33 ripper clipboard-url-monitor.zsh[96639]: Authorization required, but no authorization protocol specified
+May 06 11:54:33 ripper clipboard-url-monitor.zsh[96639]: Error: Can't open display: :0
+May 06 11:54:34 ripper clipboard-url-monitor.zsh[96644]: Authorization required, but no authorization protocol specified
+May 06 11:54:34 ripper clipboard-url-monitor.zsh[96644]: Error: Can't open display: :0
+May 06 11:54:35 ripper clipboard-url-monitor.zsh[96648]: Authorization required, but no authorization protocol specified
+May 06 11:54:35 ripper clipboard-url-monitor.zsh[96648]: Error: Can't open display: :0
+May 06 11:54:36 ripper clipboard-url-monitor.zsh[96651]: Authorization required, but no authorization protocol specified
+May 06 11:54:36 ripper clipboard-url-monitor.zsh[96651]: Error: Can't open display: :0
+May 06 11:54:37 ripper clipboard-url-monitor.zsh[96654]: Authorization required, but no authorization protocol specified
+May 06 11:54:37 ripper clipboard-url-monitor.zsh[96654]: Error: Can't open display: :0
+May 06 11:54:44 ripper clipboard-url-monitor.zsh[96676]: Authorization required, but no authorization protocol specified
+May 06 11:54:44 ripper clipboard-url-monitor.zsh[96676]: Error: Can't open display: :0
+May 06 11:54:49 ripper clipboard-url-monitor.zsh[96691]: Authorization required, but no authorization protocol specified
+May 06 11:54:49 ripper clipboard-url-monitor.zsh[96691]: Error: Can't open display: :0
+May 06 11:55:00 ripper clipboard-url-monitor.zsh[96738]: Authorization required, but no authorization protocol specified
+May 06 11:55:00 ripper clipboard-url-monitor.zsh[96738]: Error: Can't open display: :0
+May 06 11:55:01 ripper clipboard-url-monitor.zsh[96755]: Authorization required, but no authorization protocol specified
+May 06 11:55:01 ripper clipboard-url-monitor.zsh[96755]: Error: Can't open display: :0
+May 06 11:55:06 ripper clipboard-url-monitor.zsh[96780]: Authorization required, but no authorization protocol specified
+May 06 11:55:06 ripper clipboard-url-monitor.zsh[96780]: Error: Can't open display: :0
+May 06 11:55:09 ripper clipboard-url-monitor.zsh[96808]: Authorization required, but no authorization protocol specified
+May 06 11:55:09 ripper clipboard-url-monitor.zsh[96808]: Error: Can't open display: :0
+May 06 11:55:11 ripper clipboard-url-monitor.zsh[96814]: Authorization required, but no authorization protocol specified
+May 06 11:55:11 ripper clipboard-url-monitor.zsh[96814]: Error: Can't open display: :0
+May 06 11:55:15 ripper clipboard-url-monitor.zsh[96824]: Authorization required, but no authorization protocol specified
+May 06 11:55:15 ripper clipboard-url-monitor.zsh[96824]: Error: Can't open display: :0
+May 06 11:55:16 ripper clipboard-url-monitor.zsh[96827]: Authorization required, but no authorization protocol specified
+May 06 11:55:16 ripper clipboard-url-monitor.zsh[96827]: Error: Can't open display: :0
+May 06 11:55:17 ripper clipboard-url-monitor.zsh[96830]: Authorization required, but no authorization protocol specified
+May 06 11:55:17 ripper clipboard-url-monitor.zsh[96830]: Error: Can't open display: :0
+May 06 11:55:18 ripper clipboard-url-monitor.zsh[96833]: Authorization required, but no authorization protocol specified
+May 06 11:55:18 ripper clipboard-url-monitor.zsh[96833]: Error: Can't open display: :0
+May 06 11:55:19 ripper clipboard-url-monitor.zsh[96837]: Authorization required, but no authorization protocol specified
+May 06 11:55:19 ripper clipboard-url-monitor.zsh[96837]: Error: Can't open display: :0
+May 06 11:55:20 ripper clipboard-url-monitor.zsh[96840]: Authorization required, but no authorization protocol specified
+May 06 11:55:20 ripper clipboard-url-monitor.zsh[96840]: Error: Can't open display: :0
+May 06 11:55:21 ripper clipboard-url-monitor.zsh[96843]: Authorization required, but no authorization protocol specified
+May 06 11:55:21 ripper clipboard-url-monitor.zsh[96843]: Error: Can't open display: :0
+May 06 11:55:22 ripper clipboard-url-monitor.zsh[96846]: Authorization required, but no authorization protocol specified
+May 06 11:55:22 ripper clipboard-url-monitor.zsh[96846]: Error: Can't open display: :0
+May 06 11:55:23 ripper clipboard-url-monitor.zsh[96860]: Authorization required, but no authorization protocol specified
+May 06 11:55:23 ripper clipboard-url-monitor.zsh[96860]: Error: Can't open display: :0
+May 06 11:55:24 ripper clipboard-url-monitor.zsh[96874]: Authorization required, but no authorization protocol specified
+May 06 11:55:24 ripper clipboard-url-monitor.zsh[96874]: Error: Can't open display: :0
+May 06 11:55:25 ripper clipboard-url-monitor.zsh[96879]: Authorization required, but no authorization protocol specified
+May 06 11:55:25 ripper clipboard-url-monitor.zsh[96879]: Error: Can't open display: :0
+May 06 11:55:26 ripper clipboard-url-monitor.zsh[96882]: Authorization required, but no authorization protocol specified
+May 06 11:55:26 ripper clipboard-url-monitor.zsh[96882]: Error: Can't open display: :0
+May 06 11:55:28 ripper clipboard-url-monitor.zsh[96888]: Authorization required, but no authorization protocol specified
+May 06 11:55:28 ripper clipboard-url-monitor.zsh[96888]: Error: Can't open display: :0
+May 06 11:55:29 ripper clipboard-url-monitor.zsh[96891]: Authorization required, but no authorization protocol specified
+May 06 11:55:29 ripper clipboard-url-monitor.zsh[96891]: Error: Can't open display: :0
+May 06 11:55:30 ripper clipboard-url-monitor.zsh[96895]: Authorization required, but no authorization protocol specified
+May 06 11:55:30 ripper clipboard-url-monitor.zsh[96895]: Error: Can't open display: :0
+May 06 11:55:34 ripper clipboard-url-monitor.zsh[96908]: Authorization required, but no authorization protocol specified
+May 06 11:55:34 ripper clipboard-url-monitor.zsh[96908]: Error: Can't open display: :0
+May 06 11:55:35 ripper clipboard-url-monitor.zsh[96911]: Authorization required, but no authorization protocol specified
+May 06 11:55:35 ripper clipboard-url-monitor.zsh[96911]: Error: Can't open display: :0
+May 06 11:55:37 ripper clipboard-url-monitor.zsh[96918]: Authorization required, but no authorization protocol specified
+May 06 11:55:37 ripper clipboard-url-monitor.zsh[96918]: Error: Can't open display: :0
+May 06 11:55:38 ripper clipboard-url-monitor.zsh[96921]: Authorization required, but no authorization protocol specified
+May 06 11:55:38 ripper clipboard-url-monitor.zsh[96921]: Error: Can't open display: :0
+May 06 11:55:40 ripper clipboard-url-monitor.zsh[96927]: Authorization required, but no authorization protocol specified
+May 06 11:55:40 ripper clipboard-url-monitor.zsh[96927]: Error: Can't open display: :0
+May 06 11:55:44 ripper clipboard-url-monitor.zsh[96940]: Authorization required, but no authorization protocol specified
+May 06 11:55:44 ripper clipboard-url-monitor.zsh[96940]: Error: Can't open display: :0
+May 06 11:55:46 ripper clipboard-url-monitor.zsh[96946]: Authorization required, but no authorization protocol specified
+May 06 11:55:46 ripper clipboard-url-monitor.zsh[96946]: Error: Can't open display: :0
+May 06 11:55:47 ripper clipboard-url-monitor.zsh[96949]: Authorization required, but no authorization protocol specified
+May 06 11:55:47 ripper clipboard-url-monitor.zsh[96949]: Error: Can't open display: :0
+May 06 11:55:48 ripper clipboard-url-monitor.zsh[96952]: Authorization required, but no authorization protocol specified
+May 06 11:55:48 ripper clipboard-url-monitor.zsh[96952]: Error: Can't open display: :0
+May 06 11:55:49 ripper clipboard-url-monitor.zsh[96955]: Authorization required, but no authorization protocol specified
+May 06 11:55:49 ripper clipboard-url-monitor.zsh[96955]: Error: Can't open display: :0
+May 06 11:55:50 ripper clipboard-url-monitor.zsh[96958]: Authorization required, but no authorization protocol specified
+May 06 11:55:50 ripper clipboard-url-monitor.zsh[96958]: Error: Can't open display: :0
+May 06 11:55:51 ripper clipboard-url-monitor.zsh[96961]: Authorization required, but no authorization protocol specified
+May 06 11:55:51 ripper clipboard-url-monitor.zsh[96961]: Error: Can't open display: :0
+May 06 11:55:52 ripper clipboard-url-monitor.zsh[96964]: Authorization required, but no authorization protocol specified
+May 06 11:55:52 ripper clipboard-url-monitor.zsh[96964]: Error: Can't open display: :0
+May 06 11:55:53 ripper clipboard-url-monitor.zsh[96967]: Authorization required, but no authorization protocol specified
+May 06 11:55:53 ripper clipboard-url-monitor.zsh[96967]: Error: Can't open display: :0
+May 06 11:55:58 ripper clipboard-url-monitor.zsh[96983]: Authorization required, but no authorization protocol specified
+May 06 11:55:58 ripper clipboard-url-monitor.zsh[96983]: Error: Can't open display: :0
+May 06 11:56:03 ripper clipboard-url-monitor.zsh[97021]: Authorization required, but no authorization protocol specified
+May 06 11:56:03 ripper clipboard-url-monitor.zsh[97021]: Error: Can't open display: :0
+May 06 11:56:04 ripper clipboard-url-monitor.zsh[97025]: Authorization required, but no authorization protocol specified
+May 06 11:56:04 ripper clipboard-url-monitor.zsh[97025]: Error: Can't open display: :0
+May 06 11:56:14 ripper clipboard-url-monitor.zsh[97075]: Authorization required, but no authorization protocol specified
+May 06 11:56:14 ripper clipboard-url-monitor.zsh[97075]: Error: Can't open display: :0
+May 06 11:56:15 ripper clipboard-url-monitor.zsh[97098]: Authorization required, but no authorization protocol specified
+May 06 11:56:15 ripper clipboard-url-monitor.zsh[97098]: Error: Can't open display: :0
+May 06 11:56:17 ripper clipboard-url-monitor.zsh[97128]: Authorization required, but no authorization protocol specified
+May 06 11:56:17 ripper clipboard-url-monitor.zsh[97128]: Error: Can't open display: :0
+May 06 11:56:19 ripper clipboard-url-monitor.zsh[97225]: Authorization required, but no authorization protocol specified
+May 06 11:56:19 ripper clipboard-url-monitor.zsh[97225]: Error: Can't open display: :0
+May 06 11:56:21 ripper clipboard-url-monitor.zsh[97262]: Authorization required, but no authorization protocol specified
+May 06 11:56:21 ripper clipboard-url-monitor.zsh[97262]: Error: Can't open display: :0
+May 06 11:56:22 ripper clipboard-url-monitor.zsh[97266]: Authorization required, but no authorization protocol specified
+May 06 11:56:22 ripper clipboard-url-monitor.zsh[97266]: Error: Can't open display: :0
+May 06 11:56:24 ripper clipboard-url-monitor.zsh[97296]: Authorization required, but no authorization protocol specified
+May 06 11:56:24 ripper clipboard-url-monitor.zsh[97296]: Error: Can't open display: :0
+May 06 11:56:25 ripper clipboard-url-monitor.zsh[97323]: Authorization required, but no authorization protocol specified
+May 06 11:56:25 ripper clipboard-url-monitor.zsh[97323]: Error: Can't open display: :0
+May 06 11:56:27 ripper clipboard-url-monitor.zsh[97344]: Authorization required, but no authorization protocol specified
+May 06 11:56:27 ripper clipboard-url-monitor.zsh[97344]: Error: Can't open display: :0
+May 06 11:56:29 ripper clipboard-url-monitor.zsh[97379]: Authorization required, but no authorization protocol specified
+May 06 11:56:29 ripper clipboard-url-monitor.zsh[97379]: Error: Can't open display: :0
+May 06 11:56:31 ripper clipboard-url-monitor.zsh[97439]: Authorization required, but no authorization protocol specified
+May 06 11:56:31 ripper clipboard-url-monitor.zsh[97439]: Error: Can't open display: :0
+May 06 11:56:32 ripper clipboard-url-monitor.zsh[97471]: Authorization required, but no authorization protocol specified
+May 06 11:56:32 ripper clipboard-url-monitor.zsh[97471]: Error: Can't open display: :0
+May 06 11:56:33 ripper clipboard-url-monitor.zsh[97474]: Authorization required, but no authorization protocol specified
+May 06 11:56:33 ripper clipboard-url-monitor.zsh[97474]: Error: Can't open display: :0
+May 06 11:56:34 ripper clipboard-url-monitor.zsh[97478]: Authorization required, but no authorization protocol specified
+May 06 11:56:34 ripper clipboard-url-monitor.zsh[97478]: Error: Can't open display: :0
+May 06 11:56:35 ripper clipboard-url-monitor.zsh[97482]: Authorization required, but no authorization protocol specified
+May 06 11:56:35 ripper clipboard-url-monitor.zsh[97482]: Error: Can't open display: :0
+May 06 11:56:36 ripper clipboard-url-monitor.zsh[97500]: Authorization required, but no authorization protocol specified
+May 06 11:56:36 ripper clipboard-url-monitor.zsh[97500]: Error: Can't open display: :0
+May 06 11:56:37 ripper clipboard-url-monitor.zsh[97528]: Authorization required, but no authorization protocol specified
+May 06 11:56:37 ripper clipboard-url-monitor.zsh[97528]: Error: Can't open display: :0
+May 06 11:56:38 ripper clipboard-url-monitor.zsh[97543]: Authorization required, but no authorization protocol specified
+May 06 11:56:38 ripper clipboard-url-monitor.zsh[97543]: Error: Can't open display: :0
+May 06 11:56:39 ripper clipboard-url-monitor.zsh[97546]: Authorization required, but no authorization protocol specified
+May 06 11:56:39 ripper clipboard-url-monitor.zsh[97546]: Error: Can't open display: :0
+May 06 11:56:40 ripper clipboard-url-monitor.zsh[97559]: Authorization required, but no authorization protocol specified
+May 06 11:56:40 ripper clipboard-url-monitor.zsh[97559]: Error: Can't open display: :0
+May 06 11:56:41 ripper clipboard-url-monitor.zsh[97562]: Authorization required, but no authorization protocol specified
+May 06 11:56:41 ripper clipboard-url-monitor.zsh[97562]: Error: Can't open display: :0
+May 06 11:56:43 ripper clipboard-url-monitor.zsh[97584]: Authorization required, but no authorization protocol specified
+May 06 11:56:43 ripper clipboard-url-monitor.zsh[97584]: Error: Can't open display: :0
+May 06 11:56:44 ripper clipboard-url-monitor.zsh[97588]: Authorization required, but no authorization protocol specified
+May 06 11:56:44 ripper clipboard-url-monitor.zsh[97588]: Error: Can't open display: :0
+May 06 11:56:47 ripper clipboard-url-monitor.zsh[97597]: Authorization required, but no authorization protocol specified
+May 06 11:56:47 ripper clipboard-url-monitor.zsh[97597]: Error: Can't open display: :0
+May 06 11:56:48 ripper clipboard-url-monitor.zsh[97614]: Authorization required, but no authorization protocol specified
+May 06 11:56:48 ripper clipboard-url-monitor.zsh[97614]: Error: Can't open display: :0
+May 06 11:56:55 ripper clipboard-url-monitor.zsh[97639]: Authorization required, but no authorization protocol specified
+May 06 11:56:55 ripper clipboard-url-monitor.zsh[97639]: Error: Can't open display: :0
+May 06 11:56:57 ripper clipboard-url-monitor.zsh[97645]: Authorization required, but no authorization protocol specified
+May 06 11:56:57 ripper clipboard-url-monitor.zsh[97645]: Error: Can't open display: :0
+May 06 11:56:58 ripper clipboard-url-monitor.zsh[97648]: Authorization required, but no authorization protocol specified
+May 06 11:56:58 ripper clipboard-url-monitor.zsh[97648]: Error: Can't open display: :0
+May 06 11:56:59 ripper clipboard-url-monitor.zsh[97652]: Authorization required, but no authorization protocol specified
+May 06 11:56:59 ripper clipboard-url-monitor.zsh[97652]: Error: Can't open display: :0
+May 06 11:57:00 ripper clipboard-url-monitor.zsh[97677]: Authorization required, but no authorization protocol specified
+May 06 11:57:00 ripper clipboard-url-monitor.zsh[97677]: Error: Can't open display: :0
+May 06 11:57:02 ripper clipboard-url-monitor.zsh[97696]: Authorization required, but no authorization protocol specified
+May 06 11:57:02 ripper clipboard-url-monitor.zsh[97696]: Error: Can't open display: :0
+May 06 11:57:07 ripper clipboard-url-monitor.zsh[97711]: Authorization required, but no authorization protocol specified
+May 06 11:57:07 ripper clipboard-url-monitor.zsh[97711]: Error: Can't open display: :0
+May 06 11:57:08 ripper clipboard-url-monitor.zsh[97714]: Authorization required, but no authorization protocol specified
+May 06 11:57:08 ripper clipboard-url-monitor.zsh[97714]: Error: Can't open display: :0
+May 06 11:57:09 ripper clipboard-url-monitor.zsh[97717]: Authorization required, but no authorization protocol specified
+May 06 11:57:09 ripper clipboard-url-monitor.zsh[97717]: Error: Can't open display: :0
+May 06 11:57:10 ripper clipboard-url-monitor.zsh[97721]: Authorization required, but no authorization protocol specified
+May 06 11:57:10 ripper clipboard-url-monitor.zsh[97721]: Error: Can't open display: :0
+May 06 11:57:12 ripper clipboard-url-monitor.zsh[97728]: Authorization required, but no authorization protocol specified
+May 06 11:57:12 ripper clipboard-url-monitor.zsh[97728]: Error: Can't open display: :0
+May 06 11:57:13 ripper clipboard-url-monitor.zsh[97731]: Authorization required, but no authorization protocol specified
+May 06 11:57:13 ripper clipboard-url-monitor.zsh[97731]: Error: Can't open display: :0
+May 06 11:57:17 ripper clipboard-url-monitor.zsh[97744]: Authorization required, but no authorization protocol specified
+May 06 11:57:17 ripper clipboard-url-monitor.zsh[97744]: Error: Can't open display: :0
+May 06 11:57:18 ripper clipboard-url-monitor.zsh[97747]: Authorization required, but no authorization protocol specified
+May 06 11:57:18 ripper clipboard-url-monitor.zsh[97747]: Error: Can't open display: :0
+May 06 11:57:21 ripper clipboard-url-monitor.zsh[97757]: Authorization required, but no authorization protocol specified
+May 06 11:57:21 ripper clipboard-url-monitor.zsh[97757]: Error: Can't open display: :0
+May 06 11:57:22 ripper clipboard-url-monitor.zsh[97762]: Authorization required, but no authorization protocol specified
+May 06 11:57:22 ripper clipboard-url-monitor.zsh[97762]: Error: Can't open display: :0
+May 06 11:57:27 ripper clipboard-url-monitor.zsh[97781]: Authorization required, but no authorization protocol specified
+May 06 11:57:27 ripper clipboard-url-monitor.zsh[97781]: Error: Can't open display: :0
+May 06 11:57:28 ripper clipboard-url-monitor.zsh[97784]: Authorization required, but no authorization protocol specified
+May 06 11:57:28 ripper clipboard-url-monitor.zsh[97784]: Error: Can't open display: :0
+May 06 11:57:29 ripper clipboard-url-monitor.zsh[97788]: Authorization required, but no authorization protocol specified
+May 06 11:57:29 ripper clipboard-url-monitor.zsh[97788]: Error: Can't open display: :0
+May 06 11:57:30 ripper clipboard-url-monitor.zsh[97791]: Authorization required, but no authorization protocol specified
+May 06 11:57:30 ripper clipboard-url-monitor.zsh[97791]: Error: Can't open display: :0
+May 06 11:57:32 ripper clipboard-url-monitor.zsh[97797]: Authorization required, but no authorization protocol specified
+May 06 11:57:32 ripper clipboard-url-monitor.zsh[97797]: Error: Can't open display: :0
+May 06 11:57:33 ripper clipboard-url-monitor.zsh[97800]: Authorization required, but no authorization protocol specified
+May 06 11:57:33 ripper clipboard-url-monitor.zsh[97800]: Error: Can't open display: :0
+May 06 11:57:35 ripper clipboard-url-monitor.zsh[97807]: Authorization required, but no authorization protocol specified
+May 06 11:57:35 ripper clipboard-url-monitor.zsh[97807]: Error: Can't open display: :0
+May 06 11:57:36 ripper clipboard-url-monitor.zsh[97810]: Authorization required, but no authorization protocol specified
+May 06 11:57:36 ripper clipboard-url-monitor.zsh[97810]: Error: Can't open display: :0
+May 06 11:57:37 ripper clipboard-url-monitor.zsh[97813]: Authorization required, but no authorization protocol specified
+May 06 11:57:37 ripper clipboard-url-monitor.zsh[97813]: Error: Can't open display: :0
+May 06 11:57:38 ripper clipboard-url-monitor.zsh[97817]: Authorization required, but no authorization protocol specified
+May 06 11:57:38 ripper clipboard-url-monitor.zsh[97817]: Error: Can't open display: :0
+May 06 11:57:42 ripper clipboard-url-monitor.zsh[97830]: Authorization required, but no authorization protocol specified
+May 06 11:57:42 ripper clipboard-url-monitor.zsh[97830]: Error: Can't open display: :0
+May 06 11:57:44 ripper clipboard-url-monitor.zsh[97837]: Authorization required, but no authorization protocol specified
+May 06 11:57:44 ripper clipboard-url-monitor.zsh[97837]: Error: Can't open display: :0
+May 06 11:57:45 ripper clipboard-url-monitor.zsh[97840]: Authorization required, but no authorization protocol specified
+May 06 11:57:45 ripper clipboard-url-monitor.zsh[97840]: Error: Can't open display: :0
+May 06 11:57:46 ripper clipboard-url-monitor.zsh[97843]: Authorization required, but no authorization protocol specified
+May 06 11:57:46 ripper clipboard-url-monitor.zsh[97843]: Error: Can't open display: :0
+May 06 11:57:47 ripper clipboard-url-monitor.zsh[97846]: Authorization required, but no authorization protocol specified
+May 06 11:57:47 ripper clipboard-url-monitor.zsh[97846]: Error: Can't open display: :0
+May 06 11:57:49 ripper clipboard-url-monitor.zsh[97852]: Authorization required, but no authorization protocol specified
+May 06 11:57:49 ripper clipboard-url-monitor.zsh[97852]: Error: Can't open display: :0
+May 06 11:57:50 ripper clipboard-url-monitor.zsh[97855]: Authorization required, but no authorization protocol specified
+May 06 11:57:50 ripper clipboard-url-monitor.zsh[97855]: Error: Can't open display: :0
+May 06 11:57:51 ripper clipboard-url-monitor.zsh[97858]: Authorization required, but no authorization protocol specified
+May 06 11:57:51 ripper clipboard-url-monitor.zsh[97858]: Error: Can't open display: :0
+May 06 11:57:53 ripper clipboard-url-monitor.zsh[97865]: Authorization required, but no authorization protocol specified
+May 06 11:57:53 ripper clipboard-url-monitor.zsh[97865]: Error: Can't open display: :0
+May 06 11:57:54 ripper clipboard-url-monitor.zsh[97868]: Authorization required, but no authorization protocol specified
+May 06 11:57:54 ripper clipboard-url-monitor.zsh[97868]: Error: Can't open display: :0
+May 06 11:57:55 ripper clipboard-url-monitor.zsh[97872]: Authorization required, but no authorization protocol specified
+May 06 11:57:55 ripper clipboard-url-monitor.zsh[97872]: Error: Can't open display: :0
+May 06 11:57:56 ripper clipboard-url-monitor.zsh[97877]: Authorization required, but no authorization protocol specified
+May 06 11:57:56 ripper clipboard-url-monitor.zsh[97877]: Error: Can't open display: :0
+May 06 11:57:57 ripper clipboard-url-monitor.zsh[97880]: Authorization required, but no authorization protocol specified
+May 06 11:57:57 ripper clipboard-url-monitor.zsh[97880]: Error: Can't open display: :0
+May 06 11:57:58 ripper clipboard-url-monitor.zsh[97894]: Authorization required, but no authorization protocol specified
+May 06 11:57:58 ripper clipboard-url-monitor.zsh[97894]: Error: Can't open display: :0
+May 06 11:58:00 ripper clipboard-url-monitor.zsh[97921]: Authorization required, but no authorization protocol specified
+May 06 11:58:00 ripper clipboard-url-monitor.zsh[97921]: Error: Can't open display: :0
+May 06 11:58:02 ripper clipboard-url-monitor.zsh[97937]: Authorization required, but no authorization protocol specified
+May 06 11:58:02 ripper clipboard-url-monitor.zsh[97937]: Error: Can't open display: :0
+May 06 11:58:03 ripper clipboard-url-monitor.zsh[97940]: Authorization required, but no authorization protocol specified
+May 06 11:58:03 ripper clipboard-url-monitor.zsh[97940]: Error: Can't open display: :0
+May 06 11:58:04 ripper clipboard-url-monitor.zsh[97943]: Authorization required, but no authorization protocol specified
+May 06 11:58:04 ripper clipboard-url-monitor.zsh[97943]: Error: Can't open display: :0
+May 06 11:58:05 ripper clipboard-url-monitor.zsh[97947]: Authorization required, but no authorization protocol specified
+May 06 11:58:05 ripper clipboard-url-monitor.zsh[97947]: Error: Can't open display: :0
+May 06 11:58:07 ripper clipboard-url-monitor.zsh[97965]: Authorization required, but no authorization protocol specified
+May 06 11:58:07 ripper clipboard-url-monitor.zsh[97965]: Error: Can't open display: :0
+May 06 11:58:08 ripper clipboard-url-monitor.zsh[97968]: Authorization required, but no authorization protocol specified
+May 06 11:58:08 ripper clipboard-url-monitor.zsh[97968]: Error: Can't open display: :0
+May 06 11:58:09 ripper clipboard-url-monitor.zsh[97981]: Authorization required, but no authorization protocol specified
+May 06 11:58:09 ripper clipboard-url-monitor.zsh[97981]: Error: Can't open display: :0
+May 06 11:58:10 ripper clipboard-url-monitor.zsh[97984]: Authorization required, but no authorization protocol specified
+May 06 11:58:10 ripper clipboard-url-monitor.zsh[97984]: Error: Can't open display: :0
+May 06 11:58:11 ripper clipboard-url-monitor.zsh[97987]: Authorization required, but no authorization protocol specified
+May 06 11:58:11 ripper clipboard-url-monitor.zsh[97987]: Error: Can't open display: :0
+May 06 11:58:12 ripper clipboard-url-monitor.zsh[97990]: Authorization required, but no authorization protocol specified
+May 06 11:58:12 ripper clipboard-url-monitor.zsh[97990]: Error: Can't open display: :0
+May 06 11:58:13 ripper clipboard-url-monitor.zsh[97993]: Authorization required, but no authorization protocol specified
+May 06 11:58:13 ripper clipboard-url-monitor.zsh[97993]: Error: Can't open display: :0
+May 06 11:58:14 ripper clipboard-url-monitor.zsh[97997]: Authorization required, but no authorization protocol specified
+May 06 11:58:14 ripper clipboard-url-monitor.zsh[97997]: Error: Can't open display: :0
+May 06 11:58:15 ripper clipboard-url-monitor.zsh[98000]: Authorization required, but no authorization protocol specified
+May 06 11:58:15 ripper clipboard-url-monitor.zsh[98000]: Error: Can't open display: :0
+May 06 11:58:17 ripper clipboard-url-monitor.zsh[98006]: Authorization required, but no authorization protocol specified
+May 06 11:58:17 ripper clipboard-url-monitor.zsh[98006]: Error: Can't open display: :0
+May 06 11:58:18 ripper clipboard-url-monitor.zsh[98010]: Authorization required, but no authorization protocol specified
+May 06 11:58:18 ripper clipboard-url-monitor.zsh[98010]: Error: Can't open display: :0
+May 06 11:58:19 ripper clipboard-url-monitor.zsh[98013]: Authorization required, but no authorization protocol specified
+May 06 11:58:19 ripper clipboard-url-monitor.zsh[98013]: Error: Can't open display: :0
+May 06 11:58:20 ripper clipboard-url-monitor.zsh[98017]: Authorization required, but no authorization protocol specified
+May 06 11:58:20 ripper clipboard-url-monitor.zsh[98017]: Error: Can't open display: :0
+May 06 11:58:21 ripper clipboard-url-monitor.zsh[98020]: Authorization required, but no authorization protocol specified
+May 06 11:58:21 ripper clipboard-url-monitor.zsh[98020]: Error: Can't open display: :0
+May 06 11:58:22 ripper clipboard-url-monitor.zsh[98023]: Authorization required, but no authorization protocol specified
+May 06 11:58:22 ripper clipboard-url-monitor.zsh[98023]: Error: Can't open display: :0
+May 06 11:58:23 ripper clipboard-url-monitor.zsh[98026]: Authorization required, but no authorization protocol specified
+May 06 11:58:23 ripper clipboard-url-monitor.zsh[98026]: Error: Can't open display: :0
+May 06 11:58:24 ripper clipboard-url-monitor.zsh[98031]: Authorization required, but no authorization protocol specified
+May 06 11:58:24 ripper clipboard-url-monitor.zsh[98031]: Error: Can't open display: :0
+May 06 11:58:25 ripper clipboard-url-monitor.zsh[98034]: Authorization required, but no authorization protocol specified
+May 06 11:58:25 ripper clipboard-url-monitor.zsh[98034]: Error: Can't open display: :0
+May 06 11:58:26 ripper clipboard-url-monitor.zsh[98037]: Authorization required, but no authorization protocol specified
+May 06 11:58:26 ripper clipboard-url-monitor.zsh[98037]: Error: Can't open display: :0
+May 06 11:58:27 ripper clipboard-url-monitor.zsh[98040]: Authorization required, but no authorization protocol specified
+May 06 11:58:27 ripper clipboard-url-monitor.zsh[98040]: Error: Can't open display: :0
+May 06 11:58:28 ripper clipboard-url-monitor.zsh[98053]: Authorization required, but no authorization protocol specified
+May 06 11:58:28 ripper clipboard-url-monitor.zsh[98053]: Error: Can't open display: :0
+May 06 11:58:29 ripper clipboard-url-monitor.zsh[98057]: Authorization required, but no authorization protocol specified
+May 06 11:58:29 ripper clipboard-url-monitor.zsh[98057]: Error: Can't open display: :0
+May 06 11:58:30 ripper clipboard-url-monitor.zsh[98060]: Authorization required, but no authorization protocol specified
+May 06 11:58:30 ripper clipboard-url-monitor.zsh[98060]: Error: Can't open display: :0
+May 06 11:58:32 ripper clipboard-url-monitor.zsh[98098]: Authorization required, but no authorization protocol specified
+May 06 11:58:32 ripper clipboard-url-monitor.zsh[98098]: Error: Can't open display: :0
+May 06 11:58:33 ripper clipboard-url-monitor.zsh[98117]: Authorization required, but no authorization protocol specified
+May 06 11:58:33 ripper clipboard-url-monitor.zsh[98117]: Error: Can't open display: :0
+May 06 11:58:34 ripper clipboard-url-monitor.zsh[98121]: Authorization required, but no authorization protocol specified
+May 06 11:58:34 ripper clipboard-url-monitor.zsh[98121]: Error: Can't open display: :0
+May 06 11:58:35 ripper clipboard-url-monitor.zsh[98127]: Authorization required, but no authorization protocol specified
+May 06 11:58:35 ripper clipboard-url-monitor.zsh[98127]: Error: Can't open display: :0
+May 06 11:58:37 ripper clipboard-url-monitor.zsh[98135]: Authorization required, but no authorization protocol specified
+May 06 11:58:37 ripper clipboard-url-monitor.zsh[98135]: Error: Can't open display: :0
+May 06 11:58:38 ripper clipboard-url-monitor.zsh[98138]: Authorization required, but no authorization protocol specified
+May 06 11:58:38 ripper clipboard-url-monitor.zsh[98138]: Error: Can't open display: :0
+May 06 11:58:39 ripper clipboard-url-monitor.zsh[98156]: Authorization required, but no authorization protocol specified
+May 06 11:58:39 ripper clipboard-url-monitor.zsh[98156]: Error: Can't open display: :0
+May 06 11:58:40 ripper clipboard-url-monitor.zsh[98160]: Authorization required, but no authorization protocol specified
+May 06 11:58:40 ripper clipboard-url-monitor.zsh[98160]: Error: Can't open display: :0
+May 06 11:58:41 ripper clipboard-url-monitor.zsh[98164]: Authorization required, but no authorization protocol specified
+May 06 11:58:41 ripper clipboard-url-monitor.zsh[98164]: Error: Can't open display: :0
+May 06 11:58:42 ripper clipboard-url-monitor.zsh[98167]: Authorization required, but no authorization protocol specified
+May 06 11:58:42 ripper clipboard-url-monitor.zsh[98167]: Error: Can't open display: :0
+May 06 11:58:43 ripper clipboard-url-monitor.zsh[98171]: Authorization required, but no authorization protocol specified
+May 06 11:58:43 ripper clipboard-url-monitor.zsh[98171]: Error: Can't open display: :0
+May 06 11:58:44 ripper clipboard-url-monitor.zsh[98198]: Authorization required, but no authorization protocol specified
+May 06 11:58:44 ripper clipboard-url-monitor.zsh[98198]: Error: Can't open display: :0
+May 06 11:58:45 ripper clipboard-url-monitor.zsh[98212]: Authorization required, but no authorization protocol specified
+May 06 11:58:45 ripper clipboard-url-monitor.zsh[98212]: Error: Can't open display: :0
+May 06 11:58:46 ripper clipboard-url-monitor.zsh[98250]: Authorization required, but no authorization protocol specified
+May 06 11:58:46 ripper clipboard-url-monitor.zsh[98250]: Error: Can't open display: :0
+May 06 11:58:47 ripper clipboard-url-monitor.zsh[98279]: Authorization required, but no authorization protocol specified
+May 06 11:58:47 ripper clipboard-url-monitor.zsh[98279]: Error: Can't open display: :0
+May 06 11:58:48 ripper clipboard-url-monitor.zsh[98282]: Authorization required, but no authorization protocol specified
+May 06 11:58:48 ripper clipboard-url-monitor.zsh[98282]: Error: Can't open display: :0
+May 06 11:58:49 ripper clipboard-url-monitor.zsh[98288]: Authorization required, but no authorization protocol specified
+May 06 11:58:49 ripper clipboard-url-monitor.zsh[98288]: Error: Can't open display: :0
+May 06 11:58:52 ripper clipboard-url-monitor.zsh[98298]: Authorization required, but no authorization protocol specified
+May 06 11:58:52 ripper clipboard-url-monitor.zsh[98298]: Error: Can't open display: :0
+May 06 11:58:53 ripper clipboard-url-monitor.zsh[98302]: Authorization required, but no authorization protocol specified
+May 06 11:58:53 ripper clipboard-url-monitor.zsh[98302]: Error: Can't open display: :0
+May 06 11:58:54 ripper clipboard-url-monitor.zsh[98306]: Authorization required, but no authorization protocol specified
+May 06 11:58:54 ripper clipboard-url-monitor.zsh[98306]: Error: Can't open display: :0
+May 06 11:58:55 ripper clipboard-url-monitor.zsh[98309]: Authorization required, but no authorization protocol specified
+May 06 11:58:55 ripper clipboard-url-monitor.zsh[98309]: Error: Can't open display: :0
+May 06 11:58:57 ripper clipboard-url-monitor.zsh[98320]: Authorization required, but no authorization protocol specified
+May 06 11:58:57 ripper clipboard-url-monitor.zsh[98320]: Error: Can't open display: :0
+May 06 11:58:58 ripper clipboard-url-monitor.zsh[98323]: Authorization required, but no authorization protocol specified
+May 06 11:58:58 ripper clipboard-url-monitor.zsh[98323]: Error: Can't open display: :0
+May 06 11:58:59 ripper clipboard-url-monitor.zsh[98327]: Authorization required, but no authorization protocol specified
+May 06 11:58:59 ripper clipboard-url-monitor.zsh[98327]: Error: Can't open display: :0
+May 06 11:59:01 ripper clipboard-url-monitor.zsh[98354]: Authorization required, but no authorization protocol specified
+May 06 11:59:01 ripper clipboard-url-monitor.zsh[98354]: Error: Can't open display: :0
+May 06 11:59:04 ripper clipboard-url-monitor.zsh[98374]: Authorization required, but no authorization protocol specified
+May 06 11:59:04 ripper clipboard-url-monitor.zsh[98374]: Error: Can't open display: :0
+May 06 11:59:05 ripper clipboard-url-monitor.zsh[98377]: Authorization required, but no authorization protocol specified
+May 06 11:59:05 ripper clipboard-url-monitor.zsh[98377]: Error: Can't open display: :0
+May 06 11:59:06 ripper clipboard-url-monitor.zsh[98381]: Authorization required, but no authorization protocol specified
+May 06 11:59:06 ripper clipboard-url-monitor.zsh[98381]: Error: Can't open display: :0
+May 06 11:59:07 ripper clipboard-url-monitor.zsh[98385]: Authorization required, but no authorization protocol specified
+May 06 11:59:07 ripper clipboard-url-monitor.zsh[98385]: Error: Can't open display: :0
+May 06 11:59:08 ripper clipboard-url-monitor.zsh[98388]: Authorization required, but no authorization protocol specified
+May 06 11:59:08 ripper clipboard-url-monitor.zsh[98388]: Error: Can't open display: :0
+May 06 11:59:09 ripper clipboard-url-monitor.zsh[98391]: Authorization required, but no authorization protocol specified
+May 06 11:59:09 ripper clipboard-url-monitor.zsh[98391]: Error: Can't open display: :0
+May 06 11:59:10 ripper clipboard-url-monitor.zsh[98394]: Authorization required, but no authorization protocol specified
+May 06 11:59:10 ripper clipboard-url-monitor.zsh[98394]: Error: Can't open display: :0
+May 06 11:59:12 ripper clipboard-url-monitor.zsh[98400]: Authorization required, but no authorization protocol specified
+May 06 11:59:12 ripper clipboard-url-monitor.zsh[98400]: Error: Can't open display: :0
+May 06 11:59:13 ripper clipboard-url-monitor.zsh[98412]: Authorization required, but no authorization protocol specified
+May 06 11:59:13 ripper clipboard-url-monitor.zsh[98412]: Error: Can't open display: :0
+May 06 11:59:14 ripper clipboard-url-monitor.zsh[98439]: Authorization required, but no authorization protocol specified
+May 06 11:59:14 ripper clipboard-url-monitor.zsh[98439]: Error: Can't open display: :0
+May 06 11:59:15 ripper clipboard-url-monitor.zsh[98456]: Authorization required, but no authorization protocol specified
+May 06 11:59:15 ripper clipboard-url-monitor.zsh[98456]: Error: Can't open display: :0
+May 06 11:59:16 ripper clipboard-url-monitor.zsh[98459]: Authorization required, but no authorization protocol specified
+May 06 11:59:16 ripper clipboard-url-monitor.zsh[98459]: Error: Can't open display: :0
+May 06 11:59:17 ripper clipboard-url-monitor.zsh[98462]: Authorization required, but no authorization protocol specified
+May 06 11:59:17 ripper clipboard-url-monitor.zsh[98462]: Error: Can't open display: :0
+May 06 11:59:18 ripper clipboard-url-monitor.zsh[98465]: Authorization required, but no authorization protocol specified
+May 06 11:59:18 ripper clipboard-url-monitor.zsh[98465]: Error: Can't open display: :0
+May 06 11:59:19 ripper clipboard-url-monitor.zsh[98471]: Authorization required, but no authorization protocol specified
+May 06 11:59:19 ripper clipboard-url-monitor.zsh[98471]: Error: Can't open display: :0
+May 06 11:59:21 ripper clipboard-url-monitor.zsh[98478]: Authorization required, but no authorization protocol specified
+May 06 11:59:21 ripper clipboard-url-monitor.zsh[98478]: Error: Can't open display: :0
+May 06 11:59:22 ripper clipboard-url-monitor.zsh[98481]: Authorization required, but no authorization protocol specified
+May 06 11:59:22 ripper clipboard-url-monitor.zsh[98481]: Error: Can't open display: :0
+May 06 11:59:23 ripper clipboard-url-monitor.zsh[98484]: Authorization required, but no authorization protocol specified
+May 06 11:59:23 ripper clipboard-url-monitor.zsh[98484]: Error: Can't open display: :0
+May 06 11:59:24 ripper clipboard-url-monitor.zsh[98489]: Authorization required, but no authorization protocol specified
+May 06 11:59:24 ripper clipboard-url-monitor.zsh[98489]: Error: Can't open display: :0
+May 06 11:59:25 ripper clipboard-url-monitor.zsh[98492]: Authorization required, but no authorization protocol specified
+May 06 11:59:25 ripper clipboard-url-monitor.zsh[98492]: Error: Can't open display: :0
+May 06 11:59:26 ripper clipboard-url-monitor.zsh[98495]: Authorization required, but no authorization protocol specified
+May 06 11:59:26 ripper clipboard-url-monitor.zsh[98495]: Error: Can't open display: :0
+May 06 11:59:27 ripper clipboard-url-monitor.zsh[98498]: Authorization required, but no authorization protocol specified
+May 06 11:59:27 ripper clipboard-url-monitor.zsh[98498]: Error: Can't open display: :0
+May 06 11:59:28 ripper clipboard-url-monitor.zsh[98501]: Authorization required, but no authorization protocol specified
+May 06 11:59:28 ripper clipboard-url-monitor.zsh[98501]: Error: Can't open display: :0
+May 06 11:59:30 ripper clipboard-url-monitor.zsh[98508]: Authorization required, but no authorization protocol specified
+May 06 11:59:30 ripper clipboard-url-monitor.zsh[98508]: Error: Can't open display: :0
+May 06 11:59:31 ripper clipboard-url-monitor.zsh[98516]: Authorization required, but no authorization protocol specified
+May 06 11:59:31 ripper clipboard-url-monitor.zsh[98516]: Error: Can't open display: :0
+May 06 11:59:32 ripper clipboard-url-monitor.zsh[98519]: Authorization required, but no authorization protocol specified
+May 06 11:59:32 ripper clipboard-url-monitor.zsh[98519]: Error: Can't open display: :0
+May 06 11:59:33 ripper clipboard-url-monitor.zsh[98522]: Authorization required, but no authorization protocol specified
+May 06 11:59:33 ripper clipboard-url-monitor.zsh[98522]: Error: Can't open display: :0
+May 06 11:59:34 ripper clipboard-url-monitor.zsh[98525]: Authorization required, but no authorization protocol specified
+May 06 11:59:34 ripper clipboard-url-monitor.zsh[98525]: Error: Can't open display: :0
+May 06 11:59:35 ripper clipboard-url-monitor.zsh[98528]: Authorization required, but no authorization protocol specified
+May 06 11:59:35 ripper clipboard-url-monitor.zsh[98528]: Error: Can't open display: :0
+May 06 11:59:36 ripper clipboard-url-monitor.zsh[98531]: Authorization required, but no authorization protocol specified
+May 06 11:59:36 ripper clipboard-url-monitor.zsh[98531]: Error: Can't open display: :0
+May 06 11:59:37 ripper clipboard-url-monitor.zsh[98534]: Authorization required, but no authorization protocol specified
+May 06 11:59:37 ripper clipboard-url-monitor.zsh[98534]: Error: Can't open display: :0
+May 06 11:59:38 ripper clipboard-url-monitor.zsh[98538]: Authorization required, but no authorization protocol specified
+May 06 11:59:38 ripper clipboard-url-monitor.zsh[98538]: Error: Can't open display: :0
+May 06 11:59:39 ripper clipboard-url-monitor.zsh[98541]: Authorization required, but no authorization protocol specified
+May 06 11:59:39 ripper clipboard-url-monitor.zsh[98541]: Error: Can't open display: :0
+May 06 11:59:40 ripper clipboard-url-monitor.zsh[98544]: Authorization required, but no authorization protocol specified
+May 06 11:59:40 ripper clipboard-url-monitor.zsh[98544]: Error: Can't open display: :0
+May 06 11:59:41 ripper clipboard-url-monitor.zsh[98547]: Authorization required, but no authorization protocol specified
+May 06 11:59:41 ripper clipboard-url-monitor.zsh[98547]: Error: Can't open display: :0
+May 06 11:59:42 ripper clipboard-url-monitor.zsh[98550]: Authorization required, but no authorization protocol specified
+May 06 11:59:42 ripper clipboard-url-monitor.zsh[98550]: Error: Can't open display: :0
+May 06 11:59:43 ripper clipboard-url-monitor.zsh[98553]: Authorization required, but no authorization protocol specified
+May 06 11:59:43 ripper clipboard-url-monitor.zsh[98553]: Error: Can't open display: :0
+May 06 11:59:44 ripper clipboard-url-monitor.zsh[98557]: Authorization required, but no authorization protocol specified
+May 06 11:59:44 ripper clipboard-url-monitor.zsh[98557]: Error: Can't open display: :0
+May 06 11:59:45 ripper clipboard-url-monitor.zsh[98560]: Authorization required, but no authorization protocol specified
+May 06 11:59:45 ripper clipboard-url-monitor.zsh[98560]: Error: Can't open display: :0
+May 06 11:59:48 ripper clipboard-url-monitor.zsh[98574]: Authorization required, but no authorization protocol specified
+May 06 11:59:48 ripper clipboard-url-monitor.zsh[98574]: Error: Can't open display: :0
+May 06 11:59:49 ripper clipboard-url-monitor.zsh[98577]: Authorization required, but no authorization protocol specified
+May 06 11:59:49 ripper clipboard-url-monitor.zsh[98577]: Error: Can't open display: :0
+May 06 11:59:50 ripper clipboard-url-monitor.zsh[98580]: Authorization required, but no authorization protocol specified
+May 06 11:59:50 ripper clipboard-url-monitor.zsh[98580]: Error: Can't open display: :0
+May 06 11:59:51 ripper clipboard-url-monitor.zsh[98583]: Authorization required, but no authorization protocol specified
+May 06 11:59:51 ripper clipboard-url-monitor.zsh[98583]: Error: Can't open display: :0
+May 06 11:59:52 ripper clipboard-url-monitor.zsh[98586]: Authorization required, but no authorization protocol specified
+May 06 11:59:52 ripper clipboard-url-monitor.zsh[98586]: Error: Can't open display: :0
+May 06 11:59:53 ripper clipboard-url-monitor.zsh[98590]: Authorization required, but no authorization protocol specified
+May 06 11:59:53 ripper clipboard-url-monitor.zsh[98590]: Error: Can't open display: :0
+May 06 11:59:55 ripper clipboard-url-monitor.zsh[98596]: Authorization required, but no authorization protocol specified
+May 06 11:59:55 ripper clipboard-url-monitor.zsh[98596]: Error: Can't open display: :0
+May 06 11:59:58 ripper clipboard-url-monitor.zsh[98605]: Authorization required, but no authorization protocol specified
+May 06 11:59:58 ripper clipboard-url-monitor.zsh[98605]: Error: Can't open display: :0
+May 06 12:00:00 ripper clipboard-url-monitor.zsh[98621]: Authorization required, but no authorization protocol specified
+May 06 12:00:00 ripper clipboard-url-monitor.zsh[98621]: Error: Can't open display: :0
+May 06 12:00:03 ripper clipboard-url-monitor.zsh[98651]: Authorization required, but no authorization protocol specified
+May 06 12:00:03 ripper clipboard-url-monitor.zsh[98651]: Error: Can't open display: :0
+May 06 12:00:04 ripper clipboard-url-monitor.zsh[98654]: Authorization required, but no authorization protocol specified
+May 06 12:00:04 ripper clipboard-url-monitor.zsh[98654]: Error: Can't open display: :0
+May 06 12:00:06 ripper clipboard-url-monitor.zsh[98661]: Authorization required, but no authorization protocol specified
+May 06 12:00:06 ripper clipboard-url-monitor.zsh[98661]: Error: Can't open display: :0
+May 06 12:00:07 ripper clipboard-url-monitor.zsh[98664]: Authorization required, but no authorization protocol specified
+May 06 12:00:07 ripper clipboard-url-monitor.zsh[98664]: Error: Can't open display: :0
+May 06 12:00:08 ripper clipboard-url-monitor.zsh[98667]: Authorization required, but no authorization protocol specified
+May 06 12:00:08 ripper clipboard-url-monitor.zsh[98667]: Error: Can't open display: :0
+May 06 12:00:09 ripper clipboard-url-monitor.zsh[98670]: Authorization required, but no authorization protocol specified
+May 06 12:00:09 ripper clipboard-url-monitor.zsh[98670]: Error: Can't open display: :0
+May 06 12:00:11 ripper clipboard-url-monitor.zsh[98697]: Authorization required, but no authorization protocol specified
+May 06 12:00:11 ripper clipboard-url-monitor.zsh[98697]: Error: Can't open display: :0
+May 06 12:00:12 ripper clipboard-url-monitor.zsh[98700]: Authorization required, but no authorization protocol specified
+May 06 12:00:12 ripper clipboard-url-monitor.zsh[98700]: Error: Can't open display: :0
+May 06 12:00:13 ripper clipboard-url-monitor.zsh[98703]: Authorization required, but no authorization protocol specified
+May 06 12:00:13 ripper clipboard-url-monitor.zsh[98703]: Error: Can't open display: :0
+May 06 12:00:14 ripper clipboard-url-monitor.zsh[98706]: Authorization required, but no authorization protocol specified
+May 06 12:00:14 ripper clipboard-url-monitor.zsh[98706]: Error: Can't open display: :0
+May 06 12:00:15 ripper clipboard-url-monitor.zsh[98710]: Authorization required, but no authorization protocol specified
+May 06 12:00:15 ripper clipboard-url-monitor.zsh[98710]: Error: Can't open display: :0
+May 06 12:00:16 ripper clipboard-url-monitor.zsh[98713]: Authorization required, but no authorization protocol specified
+May 06 12:00:16 ripper clipboard-url-monitor.zsh[98713]: Error: Can't open display: :0
+May 06 12:00:17 ripper clipboard-url-monitor.zsh[98739]: Authorization required, but no authorization protocol specified
+May 06 12:00:17 ripper clipboard-url-monitor.zsh[98739]: Error: Can't open display: :0
+May 06 12:00:19 ripper clipboard-url-monitor.zsh[98761]: Authorization required, but no authorization protocol specified
+May 06 12:00:19 ripper clipboard-url-monitor.zsh[98761]: Error: Can't open display: :0
+May 06 12:00:20 ripper clipboard-url-monitor.zsh[98764]: Authorization required, but no authorization protocol specified
+May 06 12:00:20 ripper clipboard-url-monitor.zsh[98764]: Error: Can't open display: :0
+May 06 12:00:21 ripper clipboard-url-monitor.zsh[98768]: Authorization required, but no authorization protocol specified
+May 06 12:00:21 ripper clipboard-url-monitor.zsh[98768]: Error: Can't open display: :0
+May 06 12:00:22 ripper clipboard-url-monitor.zsh[98771]: Authorization required, but no authorization protocol specified
+May 06 12:00:22 ripper clipboard-url-monitor.zsh[98771]: Error: Can't open display: :0
+May 06 12:00:23 ripper clipboard-url-monitor.zsh[98801]: Authorization required, but no authorization protocol specified
+May 06 12:00:23 ripper clipboard-url-monitor.zsh[98801]: Error: Can't open display: :0
+May 06 12:00:24 ripper clipboard-url-monitor.zsh[98836]: Authorization required, but no authorization protocol specified
+May 06 12:00:24 ripper clipboard-url-monitor.zsh[98836]: Error: Can't open display: :0
+May 06 12:00:25 ripper clipboard-url-monitor.zsh[98852]: Authorization required, but no authorization protocol specified
+May 06 12:00:25 ripper clipboard-url-monitor.zsh[98852]: Error: Can't open display: :0
+May 06 12:00:28 ripper clipboard-url-monitor.zsh[98861]: Authorization required, but no authorization protocol specified
+May 06 12:00:28 ripper clipboard-url-monitor.zsh[98861]: Error: Can't open display: :0
+May 06 12:00:29 ripper clipboard-url-monitor.zsh[98865]: Authorization required, but no authorization protocol specified
+May 06 12:00:29 ripper clipboard-url-monitor.zsh[98865]: Error: Can't open display: :0
+May 06 12:00:30 ripper clipboard-url-monitor.zsh[98868]: Authorization required, but no authorization protocol specified
+May 06 12:00:30 ripper clipboard-url-monitor.zsh[98868]: Error: Can't open display: :0
+May 06 12:00:31 ripper clipboard-url-monitor.zsh[98871]: Authorization required, but no authorization protocol specified
+May 06 12:00:31 ripper clipboard-url-monitor.zsh[98871]: Error: Can't open display: :0
+May 06 12:00:33 ripper clipboard-url-monitor.zsh[98882]: Authorization required, but no authorization protocol specified
+May 06 12:00:33 ripper clipboard-url-monitor.zsh[98882]: Error: Can't open display: :0
+May 06 12:00:35 ripper clipboard-url-monitor.zsh[98890]: Authorization required, but no authorization protocol specified
+May 06 12:00:35 ripper clipboard-url-monitor.zsh[98890]: Error: Can't open display: :0
+May 06 12:00:36 ripper clipboard-url-monitor.zsh[98893]: Authorization required, but no authorization protocol specified
+May 06 12:00:36 ripper clipboard-url-monitor.zsh[98893]: Error: Can't open display: :0
+May 06 12:00:37 ripper clipboard-url-monitor.zsh[98896]: Authorization required, but no authorization protocol specified
+May 06 12:00:37 ripper clipboard-url-monitor.zsh[98896]: Error: Can't open display: :0
+May 06 12:00:38 ripper clipboard-url-monitor.zsh[98899]: Authorization required, but no authorization protocol specified
+May 06 12:00:38 ripper clipboard-url-monitor.zsh[98899]: Error: Can't open display: :0
+May 06 12:00:39 ripper clipboard-url-monitor.zsh[98970]: Authorization required, but no authorization protocol specified
+May 06 12:00:39 ripper clipboard-url-monitor.zsh[98970]: Error: Can't open display: :0
+May 06 12:00:40 ripper clipboard-url-monitor.zsh[98973]: Authorization required, but no authorization protocol specified
+May 06 12:00:40 ripper clipboard-url-monitor.zsh[98973]: Error: Can't open display: :0
+May 06 12:00:41 ripper clipboard-url-monitor.zsh[98989]: Authorization required, but no authorization protocol specified
+May 06 12:00:41 ripper clipboard-url-monitor.zsh[98989]: Error: Can't open display: :0
+May 06 12:00:42 ripper clipboard-url-monitor.zsh[98992]: Authorization required, but no authorization protocol specified
+May 06 12:00:42 ripper clipboard-url-monitor.zsh[98992]: Error: Can't open display: :0
+May 06 12:00:43 ripper clipboard-url-monitor.zsh[99005]: Authorization required, but no authorization protocol specified
+May 06 12:00:43 ripper clipboard-url-monitor.zsh[99005]: Error: Can't open display: :0
+May 06 12:00:44 ripper clipboard-url-monitor.zsh[99009]: Authorization required, but no authorization protocol specified
+May 06 12:00:44 ripper clipboard-url-monitor.zsh[99009]: Error: Can't open display: :0
+May 06 12:00:45 ripper clipboard-url-monitor.zsh[99012]: Authorization required, but no authorization protocol specified
+May 06 12:00:45 ripper clipboard-url-monitor.zsh[99012]: Error: Can't open display: :0
+May 06 12:00:46 ripper clipboard-url-monitor.zsh[99015]: Authorization required, but no authorization protocol specified
+May 06 12:00:46 ripper clipboard-url-monitor.zsh[99015]: Error: Can't open display: :0
+May 06 12:00:48 ripper clipboard-url-monitor.zsh[99021]: Authorization required, but no authorization protocol specified
+May 06 12:00:48 ripper clipboard-url-monitor.zsh[99021]: Error: Can't open display: :0
+May 06 12:00:50 ripper clipboard-url-monitor.zsh[99027]: Authorization required, but no authorization protocol specified
+May 06 12:00:50 ripper clipboard-url-monitor.zsh[99027]: Error: Can't open display: :0
+May 06 12:00:51 ripper clipboard-url-monitor.zsh[99030]: Authorization required, but no authorization protocol specified
+May 06 12:00:51 ripper clipboard-url-monitor.zsh[99030]: Error: Can't open display: :0
+May 06 12:00:52 ripper clipboard-url-monitor.zsh[99033]: Authorization required, but no authorization protocol specified
+May 06 12:00:52 ripper clipboard-url-monitor.zsh[99033]: Error: Can't open display: :0
+May 06 12:00:54 ripper clipboard-url-monitor.zsh[99043]: Authorization required, but no authorization protocol specified
+May 06 12:00:54 ripper clipboard-url-monitor.zsh[99043]: Error: Can't open display: :0
+May 06 12:00:55 ripper clipboard-url-monitor.zsh[99046]: Authorization required, but no authorization protocol specified
+May 06 12:00:55 ripper clipboard-url-monitor.zsh[99046]: Error: Can't open display: :0
+May 06 12:00:56 ripper clipboard-url-monitor.zsh[99049]: Authorization required, but no authorization protocol specified
+May 06 12:00:56 ripper clipboard-url-monitor.zsh[99049]: Error: Can't open display: :0
+May 06 12:00:58 ripper clipboard-url-monitor.zsh[99055]: Authorization required, but no authorization protocol specified
+May 06 12:00:58 ripper clipboard-url-monitor.zsh[99055]: Error: Can't open display: :0
+May 06 12:00:59 ripper clipboard-url-monitor.zsh[99059]: Authorization required, but no authorization protocol specified
+May 06 12:00:59 ripper clipboard-url-monitor.zsh[99059]: Error: Can't open display: :0
+May 06 12:01:01 ripper clipboard-url-monitor.zsh[99076]: Authorization required, but no authorization protocol specified
+May 06 12:01:01 ripper clipboard-url-monitor.zsh[99076]: Error: Can't open display: :0
+May 06 12:01:02 ripper clipboard-url-monitor.zsh[99079]: Authorization required, but no authorization protocol specified
+May 06 12:01:02 ripper clipboard-url-monitor.zsh[99079]: Error: Can't open display: :0
+May 06 12:01:03 ripper clipboard-url-monitor.zsh[99092]: Authorization required, but no authorization protocol specified
+May 06 12:01:03 ripper clipboard-url-monitor.zsh[99092]: Error: Can't open display: :0
+May 06 12:01:04 ripper clipboard-url-monitor.zsh[99095]: Authorization required, but no authorization protocol specified
+May 06 12:01:04 ripper clipboard-url-monitor.zsh[99095]: Error: Can't open display: :0
+May 06 12:01:05 ripper clipboard-url-monitor.zsh[99098]: Authorization required, but no authorization protocol specified
+May 06 12:01:05 ripper clipboard-url-monitor.zsh[99098]: Error: Can't open display: :0
+May 06 12:01:06 ripper clipboard-url-monitor.zsh[99102]: Authorization required, but no authorization protocol specified
+May 06 12:01:06 ripper clipboard-url-monitor.zsh[99102]: Error: Can't open display: :0
+May 06 12:01:07 ripper clipboard-url-monitor.zsh[99105]: Authorization required, but no authorization protocol specified
+May 06 12:01:07 ripper clipboard-url-monitor.zsh[99105]: Error: Can't open display: :0
+May 06 12:01:08 ripper clipboard-url-monitor.zsh[99108]: Authorization required, but no authorization protocol specified
+May 06 12:01:08 ripper clipboard-url-monitor.zsh[99108]: Error: Can't open display: :0
+May 06 12:01:09 ripper clipboard-url-monitor.zsh[99111]: Authorization required, but no authorization protocol specified
+May 06 12:01:09 ripper clipboard-url-monitor.zsh[99111]: Error: Can't open display: :0
+May 06 12:01:10 ripper clipboard-url-monitor.zsh[99114]: Authorization required, but no authorization protocol specified
+May 06 12:01:10 ripper clipboard-url-monitor.zsh[99114]: Error: Can't open display: :0
+May 06 12:01:11 ripper clipboard-url-monitor.zsh[99117]: Authorization required, but no authorization protocol specified
+May 06 12:01:11 ripper clipboard-url-monitor.zsh[99117]: Error: Can't open display: :0
+May 06 12:01:12 ripper clipboard-url-monitor.zsh[99120]: Authorization required, but no authorization protocol specified
+May 06 12:01:12 ripper clipboard-url-monitor.zsh[99120]: Error: Can't open display: :0
+May 06 12:01:13 ripper clipboard-url-monitor.zsh[99142]: Authorization required, but no authorization protocol specified
+May 06 12:01:13 ripper clipboard-url-monitor.zsh[99142]: Error: Can't open display: :0
+May 06 12:01:16 ripper clipboard-url-monitor.zsh[99165]: Authorization required, but no authorization protocol specified
+May 06 12:01:16 ripper clipboard-url-monitor.zsh[99165]: Error: Can't open display: :0
+May 06 12:01:17 ripper clipboard-url-monitor.zsh[99168]: Authorization required, but no authorization protocol specified
+May 06 12:01:17 ripper clipboard-url-monitor.zsh[99168]: Error: Can't open display: :0
+May 06 12:01:18 ripper clipboard-url-monitor.zsh[99180]: Authorization required, but no authorization protocol specified
+May 06 12:01:18 ripper clipboard-url-monitor.zsh[99180]: Error: Can't open display: :0
+May 06 12:01:19 ripper clipboard-url-monitor.zsh[99183]: Authorization required, but no authorization protocol specified
+May 06 12:01:19 ripper clipboard-url-monitor.zsh[99183]: Error: Can't open display: :0
+May 06 12:01:20 ripper clipboard-url-monitor.zsh[99198]: Authorization required, but no authorization protocol specified
+May 06 12:01:20 ripper clipboard-url-monitor.zsh[99198]: Error: Can't open display: :0
+May 06 12:01:23 ripper clipboard-url-monitor.zsh[99208]: Authorization required, but no authorization protocol specified
+May 06 12:01:23 ripper clipboard-url-monitor.zsh[99208]: Error: Can't open display: :0
+May 06 12:01:24 ripper clipboard-url-monitor.zsh[99215]: Authorization required, but no authorization protocol specified
+May 06 12:01:24 ripper clipboard-url-monitor.zsh[99215]: Error: Can't open display: :0
+May 06 12:01:25 ripper clipboard-url-monitor.zsh[99218]: Authorization required, but no authorization protocol specified
+May 06 12:01:25 ripper clipboard-url-monitor.zsh[99218]: Error: Can't open display: :0
+May 06 12:01:26 ripper clipboard-url-monitor.zsh[99221]: Authorization required, but no authorization protocol specified
+May 06 12:01:26 ripper clipboard-url-monitor.zsh[99221]: Error: Can't open display: :0
+May 06 12:01:27 ripper clipboard-url-monitor.zsh[99224]: Authorization required, but no authorization protocol specified
+May 06 12:01:27 ripper clipboard-url-monitor.zsh[99224]: Error: Can't open display: :0
+May 06 12:01:28 ripper clipboard-url-monitor.zsh[99227]: Authorization required, but no authorization protocol specified
+May 06 12:01:28 ripper clipboard-url-monitor.zsh[99227]: Error: Can't open display: :0
+May 06 12:01:29 ripper clipboard-url-monitor.zsh[99231]: Authorization required, but no authorization protocol specified
+May 06 12:01:29 ripper clipboard-url-monitor.zsh[99231]: Error: Can't open display: :0
+May 06 12:01:30 ripper clipboard-url-monitor.zsh[99234]: Authorization required, but no authorization protocol specified
+May 06 12:01:30 ripper clipboard-url-monitor.zsh[99234]: Error: Can't open display: :0
+May 06 12:01:31 ripper clipboard-url-monitor.zsh[99237]: Authorization required, but no authorization protocol specified
+May 06 12:01:31 ripper clipboard-url-monitor.zsh[99237]: Error: Can't open display: :0
+May 06 12:01:32 ripper clipboard-url-monitor.zsh[99247]: Authorization required, but no authorization protocol specified
+May 06 12:01:32 ripper clipboard-url-monitor.zsh[99247]: Error: Can't open display: :0
+May 06 12:01:33 ripper clipboard-url-monitor.zsh[99250]: Authorization required, but no authorization protocol specified
+May 06 12:01:33 ripper clipboard-url-monitor.zsh[99250]: Error: Can't open display: :0
+May 06 12:01:34 ripper clipboard-url-monitor.zsh[99253]: Authorization required, but no authorization protocol specified
+May 06 12:01:34 ripper clipboard-url-monitor.zsh[99253]: Error: Can't open display: :0
+May 06 12:01:35 ripper clipboard-url-monitor.zsh[99256]: Authorization required, but no authorization protocol specified
+May 06 12:01:35 ripper clipboard-url-monitor.zsh[99256]: Error: Can't open display: :0
+May 06 12:01:36 ripper clipboard-url-monitor.zsh[99259]: Authorization required, but no authorization protocol specified
+May 06 12:01:36 ripper clipboard-url-monitor.zsh[99259]: Error: Can't open display: :0
+May 06 12:01:37 ripper clipboard-url-monitor.zsh[99262]: Authorization required, but no authorization protocol specified
+May 06 12:01:37 ripper clipboard-url-monitor.zsh[99262]: Error: Can't open display: :0
+May 06 12:01:38 ripper clipboard-url-monitor.zsh[99265]: Authorization required, but no authorization protocol specified
+May 06 12:01:38 ripper clipboard-url-monitor.zsh[99265]: Error: Can't open display: :0
+May 06 12:01:39 ripper clipboard-url-monitor.zsh[99268]: Authorization required, but no authorization protocol specified
+May 06 12:01:39 ripper clipboard-url-monitor.zsh[99268]: Error: Can't open display: :0
+May 06 12:01:42 ripper clipboard-url-monitor.zsh[99277]: Authorization required, but no authorization protocol specified
+May 06 12:01:42 ripper clipboard-url-monitor.zsh[99277]: Error: Can't open display: :0
+May 06 12:01:43 ripper clipboard-url-monitor.zsh[99289]: Authorization required, but no authorization protocol specified
+May 06 12:01:43 ripper clipboard-url-monitor.zsh[99289]: Error: Can't open display: :0
+May 06 12:01:44 ripper clipboard-url-monitor.zsh[99293]: Authorization required, but no authorization protocol specified
+May 06 12:01:44 ripper clipboard-url-monitor.zsh[99293]: Error: Can't open display: :0
+May 06 12:01:45 ripper clipboard-url-monitor.zsh[99299]: Authorization required, but no authorization protocol specified
+May 06 12:01:45 ripper clipboard-url-monitor.zsh[99299]: Error: Can't open display: :0
+May 06 12:01:46 ripper clipboard-url-monitor.zsh[99302]: Authorization required, but no authorization protocol specified
+May 06 12:01:46 ripper clipboard-url-monitor.zsh[99302]: Error: Can't open display: :0
+May 06 12:01:47 ripper clipboard-url-monitor.zsh[99305]: Authorization required, but no authorization protocol specified
+May 06 12:01:47 ripper clipboard-url-monitor.zsh[99305]: Error: Can't open display: :0
+May 06 12:01:48 ripper clipboard-url-monitor.zsh[99308]: Authorization required, but no authorization protocol specified
+May 06 12:01:48 ripper clipboard-url-monitor.zsh[99308]: Error: Can't open display: :0
+May 06 12:01:49 ripper clipboard-url-monitor.zsh[99311]: Authorization required, but no authorization protocol specified
+May 06 12:01:49 ripper clipboard-url-monitor.zsh[99311]: Error: Can't open display: :0
+May 06 12:01:50 ripper clipboard-url-monitor.zsh[99315]: Authorization required, but no authorization protocol specified
+May 06 12:01:50 ripper clipboard-url-monitor.zsh[99315]: Error: Can't open display: :0
+May 06 12:01:51 ripper clipboard-url-monitor.zsh[99318]: Authorization required, but no authorization protocol specified
+May 06 12:01:51 ripper clipboard-url-monitor.zsh[99318]: Error: Can't open display: :0
+May 06 12:01:53 ripper clipboard-url-monitor.zsh[99324]: Authorization required, but no authorization protocol specified
+May 06 12:01:53 ripper clipboard-url-monitor.zsh[99324]: Error: Can't open display: :0
+May 06 12:01:54 ripper clipboard-url-monitor.zsh[99328]: Authorization required, but no authorization protocol specified
+May 06 12:01:54 ripper clipboard-url-monitor.zsh[99328]: Error: Can't open display: :0
+May 06 12:01:55 ripper clipboard-url-monitor.zsh[99362]: Authorization required, but no authorization protocol specified
+May 06 12:01:55 ripper clipboard-url-monitor.zsh[99362]: Error: Can't open display: :0
+May 06 12:01:56 ripper clipboard-url-monitor.zsh[99390]: Authorization required, but no authorization protocol specified
+May 06 12:01:56 ripper clipboard-url-monitor.zsh[99390]: Error: Can't open display: :0
+May 06 12:01:57 ripper clipboard-url-monitor.zsh[99393]: Authorization required, but no authorization protocol specified
+May 06 12:01:57 ripper clipboard-url-monitor.zsh[99393]: Error: Can't open display: :0
+May 06 12:01:58 ripper clipboard-url-monitor.zsh[99396]: Authorization required, but no authorization protocol specified
+May 06 12:01:58 ripper clipboard-url-monitor.zsh[99396]: Error: Can't open display: :0
+May 06 12:02:00 ripper clipboard-url-monitor.zsh[99416]: Authorization required, but no authorization protocol specified
+May 06 12:02:00 ripper clipboard-url-monitor.zsh[99416]: Error: Can't open display: :0
+May 06 12:02:01 ripper clipboard-url-monitor.zsh[99429]: Authorization required, but no authorization protocol specified
+May 06 12:02:01 ripper clipboard-url-monitor.zsh[99429]: Error: Can't open display: :0
+May 06 12:02:02 ripper clipboard-url-monitor.zsh[99432]: Authorization required, but no authorization protocol specified
+May 06 12:02:02 ripper clipboard-url-monitor.zsh[99432]: Error: Can't open display: :0
+May 06 12:02:03 ripper clipboard-url-monitor.zsh[99435]: Authorization required, but no authorization protocol specified
+May 06 12:02:03 ripper clipboard-url-monitor.zsh[99435]: Error: Can't open display: :0
+May 06 12:02:04 ripper clipboard-url-monitor.zsh[99438]: Authorization required, but no authorization protocol specified
+May 06 12:02:04 ripper clipboard-url-monitor.zsh[99438]: Error: Can't open display: :0
+May 06 12:02:05 ripper clipboard-url-monitor.zsh[99451]: Authorization required, but no authorization protocol specified
+May 06 12:02:05 ripper clipboard-url-monitor.zsh[99451]: Error: Can't open display: :0
+May 06 12:02:06 ripper clipboard-url-monitor.zsh[99467]: Authorization required, but no authorization protocol specified
+May 06 12:02:06 ripper clipboard-url-monitor.zsh[99467]: Error: Can't open display: :0
+May 06 12:02:07 ripper clipboard-url-monitor.zsh[99480]: Authorization required, but no authorization protocol specified
+May 06 12:02:07 ripper clipboard-url-monitor.zsh[99480]: Error: Can't open display: :0
+May 06 12:02:08 ripper clipboard-url-monitor.zsh[99483]: Authorization required, but no authorization protocol specified
+May 06 12:02:08 ripper clipboard-url-monitor.zsh[99483]: Error: Can't open display: :0
+May 06 12:02:09 ripper clipboard-url-monitor.zsh[99487]: Authorization required, but no authorization protocol specified
+May 06 12:02:09 ripper clipboard-url-monitor.zsh[99487]: Error: Can't open display: :0
+May 06 12:02:11 ripper clipboard-url-monitor.zsh[99493]: Authorization required, but no authorization protocol specified
+May 06 12:02:11 ripper clipboard-url-monitor.zsh[99493]: Error: Can't open display: :0
+May 06 12:02:12 ripper clipboard-url-monitor.zsh[99496]: Authorization required, but no authorization protocol specified
+May 06 12:02:12 ripper clipboard-url-monitor.zsh[99496]: Error: Can't open display: :0
+May 06 12:02:13 ripper clipboard-url-monitor.zsh[99499]: Authorization required, but no authorization protocol specified
+May 06 12:02:13 ripper clipboard-url-monitor.zsh[99499]: Error: Can't open display: :0
+May 06 12:02:14 ripper clipboard-url-monitor.zsh[99503]: Authorization required, but no authorization protocol specified
+May 06 12:02:14 ripper clipboard-url-monitor.zsh[99503]: Error: Can't open display: :0
+May 06 12:02:15 ripper clipboard-url-monitor.zsh[99506]: Authorization required, but no authorization protocol specified
+May 06 12:02:15 ripper clipboard-url-monitor.zsh[99506]: Error: Can't open display: :0
+May 06 12:02:16 ripper clipboard-url-monitor.zsh[99509]: Authorization required, but no authorization protocol specified
+May 06 12:02:16 ripper clipboard-url-monitor.zsh[99509]: Error: Can't open display: :0
+May 06 12:02:17 ripper clipboard-url-monitor.zsh[99512]: Authorization required, but no authorization protocol specified
+May 06 12:02:17 ripper clipboard-url-monitor.zsh[99512]: Error: Can't open display: :0
+May 06 12:02:18 ripper clipboard-url-monitor.zsh[99515]: Authorization required, but no authorization protocol specified
+May 06 12:02:18 ripper clipboard-url-monitor.zsh[99515]: Error: Can't open display: :0
+May 06 12:02:19 ripper clipboard-url-monitor.zsh[99518]: Authorization required, but no authorization protocol specified
+May 06 12:02:19 ripper clipboard-url-monitor.zsh[99518]: Error: Can't open display: :0
+May 06 12:02:20 ripper clipboard-url-monitor.zsh[99521]: Authorization required, but no authorization protocol specified
+May 06 12:02:20 ripper clipboard-url-monitor.zsh[99521]: Error: Can't open display: :0
+May 06 12:02:21 ripper clipboard-url-monitor.zsh[99524]: Authorization required, but no authorization protocol specified
+May 06 12:02:21 ripper clipboard-url-monitor.zsh[99524]: Error: Can't open display: :0
+May 06 12:02:22 ripper clipboard-url-monitor.zsh[99527]: Authorization required, but no authorization protocol specified
+May 06 12:02:22 ripper clipboard-url-monitor.zsh[99527]: Error: Can't open display: :0
+May 06 12:02:23 ripper clipboard-url-monitor.zsh[99531]: Authorization required, but no authorization protocol specified
+May 06 12:02:23 ripper clipboard-url-monitor.zsh[99531]: Error: Can't open display: :0
+May 06 12:02:24 ripper clipboard-url-monitor.zsh[99535]: Authorization required, but no authorization protocol specified
+May 06 12:02:24 ripper clipboard-url-monitor.zsh[99535]: Error: Can't open display: :0
+May 06 12:02:25 ripper clipboard-url-monitor.zsh[99538]: Authorization required, but no authorization protocol specified
+May 06 12:02:25 ripper clipboard-url-monitor.zsh[99538]: Error: Can't open display: :0
+May 06 12:02:26 ripper clipboard-url-monitor.zsh[99541]: Authorization required, but no authorization protocol specified
+May 06 12:02:26 ripper clipboard-url-monitor.zsh[99541]: Error: Can't open display: :0
+May 06 12:02:27 ripper clipboard-url-monitor.zsh[99544]: Authorization required, but no authorization protocol specified
+May 06 12:02:27 ripper clipboard-url-monitor.zsh[99544]: Error: Can't open display: :0
+May 06 12:02:28 ripper clipboard-url-monitor.zsh[99547]: Authorization required, but no authorization protocol specified
+May 06 12:02:28 ripper clipboard-url-monitor.zsh[99547]: Error: Can't open display: :0
+May 06 12:02:29 ripper clipboard-url-monitor.zsh[99551]: Authorization required, but no authorization protocol specified
+May 06 12:02:29 ripper clipboard-url-monitor.zsh[99551]: Error: Can't open display: :0
+May 06 12:02:30 ripper clipboard-url-monitor.zsh[99554]: Authorization required, but no authorization protocol specified
+May 06 12:02:30 ripper clipboard-url-monitor.zsh[99554]: Error: Can't open display: :0
+May 06 12:02:32 ripper clipboard-url-monitor.zsh[99566]: Authorization required, but no authorization protocol specified
+May 06 12:02:32 ripper clipboard-url-monitor.zsh[99566]: Error: Can't open display: :0
+May 06 12:02:33 ripper clipboard-url-monitor.zsh[99569]: Authorization required, but no authorization protocol specified
+May 06 12:02:33 ripper clipboard-url-monitor.zsh[99569]: Error: Can't open display: :0
+May 06 12:02:34 ripper clipboard-url-monitor.zsh[99572]: Authorization required, but no authorization protocol specified
+May 06 12:02:34 ripper clipboard-url-monitor.zsh[99572]: Error: Can't open display: :0
+May 06 12:02:35 ripper clipboard-url-monitor.zsh[99575]: Authorization required, but no authorization protocol specified
+May 06 12:02:35 ripper clipboard-url-monitor.zsh[99575]: Error: Can't open display: :0
+May 06 12:02:36 ripper clipboard-url-monitor.zsh[99588]: Authorization required, but no authorization protocol specified
+May 06 12:02:36 ripper clipboard-url-monitor.zsh[99588]: Error: Can't open display: :0
+May 06 12:02:37 ripper clipboard-url-monitor.zsh[99591]: Authorization required, but no authorization protocol specified
+May 06 12:02:37 ripper clipboard-url-monitor.zsh[99591]: Error: Can't open display: :0
+May 06 12:02:38 ripper clipboard-url-monitor.zsh[99604]: Authorization required, but no authorization protocol specified
+May 06 12:02:38 ripper clipboard-url-monitor.zsh[99604]: Error: Can't open display: :0
+May 06 12:02:39 ripper clipboard-url-monitor.zsh[99608]: Authorization required, but no authorization protocol specified
+May 06 12:02:39 ripper clipboard-url-monitor.zsh[99608]: Error: Can't open display: :0
+May 06 12:02:40 ripper clipboard-url-monitor.zsh[99611]: Authorization required, but no authorization protocol specified
+May 06 12:02:40 ripper clipboard-url-monitor.zsh[99611]: Error: Can't open display: :0
+May 06 12:02:41 ripper clipboard-url-monitor.zsh[99615]: Authorization required, but no authorization protocol specified
+May 06 12:02:41 ripper clipboard-url-monitor.zsh[99615]: Error: Can't open display: :0
+May 06 12:02:43 ripper clipboard-url-monitor.zsh[99643]: Authorization required, but no authorization protocol specified
+May 06 12:02:43 ripper clipboard-url-monitor.zsh[99643]: Error: Can't open display: :0
+May 06 12:02:44 ripper clipboard-url-monitor.zsh[99661]: Authorization required, but no authorization protocol specified
+May 06 12:02:44 ripper clipboard-url-monitor.zsh[99661]: Error: Can't open display: :0
+May 06 12:02:45 ripper clipboard-url-monitor.zsh[99664]: Authorization required, but no authorization protocol specified
+May 06 12:02:45 ripper clipboard-url-monitor.zsh[99664]: Error: Can't open display: :0
+May 06 12:02:46 ripper clipboard-url-monitor.zsh[99667]: Authorization required, but no authorization protocol specified
+May 06 12:02:46 ripper clipboard-url-monitor.zsh[99667]: Error: Can't open display: :0
+May 06 12:02:48 ripper clipboard-url-monitor.zsh[99703]: Authorization required, but no authorization protocol specified
+May 06 12:02:48 ripper clipboard-url-monitor.zsh[99703]: Error: Can't open display: :0
+May 06 12:02:49 ripper clipboard-url-monitor.zsh[99725]: Authorization required, but no authorization protocol specified
+May 06 12:02:49 ripper clipboard-url-monitor.zsh[99725]: Error: Can't open display: :0
+May 06 12:02:51 ripper clipboard-url-monitor.zsh[99746]: Authorization required, but no authorization protocol specified
+May 06 12:02:51 ripper clipboard-url-monitor.zsh[99746]: Error: Can't open display: :0
+May 06 12:02:52 ripper clipboard-url-monitor.zsh[99749]: Authorization required, but no authorization protocol specified
+May 06 12:02:52 ripper clipboard-url-monitor.zsh[99749]: Error: Can't open display: :0
+May 06 12:02:53 ripper clipboard-url-monitor.zsh[99754]: Authorization required, but no authorization protocol specified
+May 06 12:02:53 ripper clipboard-url-monitor.zsh[99754]: Error: Can't open display: :0
+May 06 12:02:54 ripper clipboard-url-monitor.zsh[99757]: Authorization required, but no authorization protocol specified
+May 06 12:02:54 ripper clipboard-url-monitor.zsh[99757]: Error: Can't open display: :0
+May 06 12:02:56 ripper clipboard-url-monitor.zsh[99763]: Authorization required, but no authorization protocol specified
+May 06 12:02:56 ripper clipboard-url-monitor.zsh[99763]: Error: Can't open display: :0
+May 06 12:02:59 ripper clipboard-url-monitor.zsh[99780]: Authorization required, but no authorization protocol specified
+May 06 12:02:59 ripper clipboard-url-monitor.zsh[99780]: Error: Can't open display: :0
+May 06 12:03:00 ripper clipboard-url-monitor.zsh[99783]: Authorization required, but no authorization protocol specified
+May 06 12:03:00 ripper clipboard-url-monitor.zsh[99783]: Error: Can't open display: :0
+May 06 12:03:02 ripper clipboard-url-monitor.zsh[99789]: Authorization required, but no authorization protocol specified
+May 06 12:03:02 ripper clipboard-url-monitor.zsh[99789]: Error: Can't open display: :0
+May 06 12:03:04 ripper clipboard-url-monitor.zsh[99809]: Authorization required, but no authorization protocol specified
+May 06 12:03:04 ripper clipboard-url-monitor.zsh[99809]: Error: Can't open display: :0
+May 06 12:03:05 ripper clipboard-url-monitor.zsh[99812]: Authorization required, but no authorization protocol specified
+May 06 12:03:05 ripper clipboard-url-monitor.zsh[99812]: Error: Can't open display: :0
+May 06 12:03:06 ripper clipboard-url-monitor.zsh[99816]: Authorization required, but no authorization protocol specified
+May 06 12:03:06 ripper clipboard-url-monitor.zsh[99816]: Error: Can't open display: :0
+May 06 12:03:09 ripper clipboard-url-monitor.zsh[99825]: Authorization required, but no authorization protocol specified
+May 06 12:03:09 ripper clipboard-url-monitor.zsh[99825]: Error: Can't open display: :0
+May 06 12:03:10 ripper clipboard-url-monitor.zsh[99828]: Authorization required, but no authorization protocol specified
+May 06 12:03:10 ripper clipboard-url-monitor.zsh[99828]: Error: Can't open display: :0
+May 06 12:03:11 ripper clipboard-url-monitor.zsh[99831]: Authorization required, but no authorization protocol specified
+May 06 12:03:11 ripper clipboard-url-monitor.zsh[99831]: Error: Can't open display: :0
+May 06 12:03:13 ripper clipboard-url-monitor.zsh[99850]: Authorization required, but no authorization protocol specified
+May 06 12:03:13 ripper clipboard-url-monitor.zsh[99850]: Error: Can't open display: :0
+May 06 12:03:14 ripper clipboard-url-monitor.zsh[99856]: Authorization required, but no authorization protocol specified
+May 06 12:03:14 ripper clipboard-url-monitor.zsh[99856]: Error: Can't open display: :0
+May 06 12:03:15 ripper clipboard-url-monitor.zsh[99886]: Authorization required, but no authorization protocol specified
+May 06 12:03:15 ripper clipboard-url-monitor.zsh[99886]: Error: Can't open display: :0
+May 06 12:03:16 ripper clipboard-url-monitor.zsh[99889]: Authorization required, but no authorization protocol specified
+May 06 12:03:16 ripper clipboard-url-monitor.zsh[99889]: Error: Can't open display: :0
+May 06 12:03:17 ripper clipboard-url-monitor.zsh[99897]: Authorization required, but no authorization protocol specified
+May 06 12:03:17 ripper clipboard-url-monitor.zsh[99897]: Error: Can't open display: :0
+May 06 12:03:18 ripper clipboard-url-monitor.zsh[99900]: Authorization required, but no authorization protocol specified
+May 06 12:03:18 ripper clipboard-url-monitor.zsh[99900]: Error: Can't open display: :0
+May 06 12:03:19 ripper clipboard-url-monitor.zsh[99909]: Authorization required, but no authorization protocol specified
+May 06 12:03:19 ripper clipboard-url-monitor.zsh[99909]: Error: Can't open display: :0
+May 06 12:03:20 ripper clipboard-url-monitor.zsh[99912]: Authorization required, but no authorization protocol specified
+May 06 12:03:20 ripper clipboard-url-monitor.zsh[99912]: Error: Can't open display: :0
+May 06 12:03:22 ripper clipboard-url-monitor.zsh[99918]: Authorization required, but no authorization protocol specified
+May 06 12:03:22 ripper clipboard-url-monitor.zsh[99918]: Error: Can't open display: :0
+May 06 12:03:23 ripper clipboard-url-monitor.zsh[99924]: Authorization required, but no authorization protocol specified
+May 06 12:03:23 ripper clipboard-url-monitor.zsh[99924]: Error: Can't open display: :0
+May 06 12:03:24 ripper clipboard-url-monitor.zsh[99927]: Authorization required, but no authorization protocol specified
+May 06 12:03:24 ripper clipboard-url-monitor.zsh[99927]: Error: Can't open display: :0
+May 06 12:03:25 ripper clipboard-url-monitor.zsh[99932]: Authorization required, but no authorization protocol specified
+May 06 12:03:25 ripper clipboard-url-monitor.zsh[99932]: Error: Can't open display: :0
+May 06 12:03:28 ripper clipboard-url-monitor.zsh[99941]: Authorization required, but no authorization protocol specified
+May 06 12:03:28 ripper clipboard-url-monitor.zsh[99941]: Error: Can't open display: :0
+May 06 12:03:29 ripper clipboard-url-monitor.zsh[99948]: Authorization required, but no authorization protocol specified
+May 06 12:03:29 ripper clipboard-url-monitor.zsh[99948]: Error: Can't open display: :0
+May 06 12:03:30 ripper clipboard-url-monitor.zsh[99951]: Authorization required, but no authorization protocol specified
+May 06 12:03:30 ripper clipboard-url-monitor.zsh[99951]: Error: Can't open display: :0
+May 06 12:03:31 ripper clipboard-url-monitor.zsh[99960]: Authorization required, but no authorization protocol specified
+May 06 12:03:31 ripper clipboard-url-monitor.zsh[99960]: Error: Can't open display: :0
+May 06 12:03:33 ripper clipboard-url-monitor.zsh[99970]: Authorization required, but no authorization protocol specified
+May 06 12:03:33 ripper clipboard-url-monitor.zsh[99970]: Error: Can't open display: :0
+May 06 12:03:34 ripper clipboard-url-monitor.zsh[99973]: Authorization required, but no authorization protocol specified
+May 06 12:03:34 ripper clipboard-url-monitor.zsh[99973]: Error: Can't open display: :0
+May 06 12:03:35 ripper clipboard-url-monitor.zsh[99976]: Authorization required, but no authorization protocol specified
+May 06 12:03:35 ripper clipboard-url-monitor.zsh[99976]: Error: Can't open display: :0
+May 06 12:03:37 ripper clipboard-url-monitor.zsh[100062]: Authorization required, but no authorization protocol specified
+May 06 12:03:37 ripper clipboard-url-monitor.zsh[100062]: Error: Can't open display: :0
+May 06 12:03:39 ripper clipboard-url-monitor.zsh[100068]: Authorization required, but no authorization protocol specified
+May 06 12:03:39 ripper clipboard-url-monitor.zsh[100068]: Error: Can't open display: :0
+May 06 12:03:40 ripper clipboard-url-monitor.zsh[100071]: Authorization required, but no authorization protocol specified
+May 06 12:03:40 ripper clipboard-url-monitor.zsh[100071]: Error: Can't open display: :0
+May 06 12:03:41 ripper clipboard-url-monitor.zsh[100078]: Authorization required, but no authorization protocol specified
+May 06 12:03:41 ripper clipboard-url-monitor.zsh[100078]: Error: Can't open display: :0
+May 06 12:03:42 ripper clipboard-url-monitor.zsh[100081]: Authorization required, but no authorization protocol specified
+May 06 12:03:42 ripper clipboard-url-monitor.zsh[100081]: Error: Can't open display: :0
+May 06 12:03:43 ripper clipboard-url-monitor.zsh[100084]: Authorization required, but no authorization protocol specified
+May 06 12:03:43 ripper clipboard-url-monitor.zsh[100084]: Error: Can't open display: :0
+May 06 12:03:44 ripper clipboard-url-monitor.zsh[100088]: Authorization required, but no authorization protocol specified
+May 06 12:03:44 ripper clipboard-url-monitor.zsh[100088]: Error: Can't open display: :0
+May 06 12:03:45 ripper clipboard-url-monitor.zsh[100099]: Authorization required, but no authorization protocol specified
+May 06 12:03:45 ripper clipboard-url-monitor.zsh[100099]: Error: Can't open display: :0
+May 06 12:03:46 ripper clipboard-url-monitor.zsh[100102]: Authorization required, but no authorization protocol specified
+May 06 12:03:46 ripper clipboard-url-monitor.zsh[100102]: Error: Can't open display: :0
+May 06 12:03:47 ripper clipboard-url-monitor.zsh[100105]: Authorization required, but no authorization protocol specified
+May 06 12:03:47 ripper clipboard-url-monitor.zsh[100105]: Error: Can't open display: :0
+May 06 12:03:48 ripper clipboard-url-monitor.zsh[100108]: Authorization required, but no authorization protocol specified
+May 06 12:03:48 ripper clipboard-url-monitor.zsh[100108]: Error: Can't open display: :0
+May 06 12:03:49 ripper clipboard-url-monitor.zsh[100130]: Authorization required, but no authorization protocol specified
+May 06 12:03:49 ripper clipboard-url-monitor.zsh[100130]: Error: Can't open display: :0
+May 06 12:03:50 ripper clipboard-url-monitor.zsh[100144]: Authorization required, but no authorization protocol specified
+May 06 12:03:50 ripper clipboard-url-monitor.zsh[100144]: Error: Can't open display: :0
+May 06 12:03:51 ripper clipboard-url-monitor.zsh[100147]: Authorization required, but no authorization protocol specified
+May 06 12:03:51 ripper clipboard-url-monitor.zsh[100147]: Error: Can't open display: :0
+May 06 12:03:52 ripper clipboard-url-monitor.zsh[100150]: Authorization required, but no authorization protocol specified
+May 06 12:03:52 ripper clipboard-url-monitor.zsh[100150]: Error: Can't open display: :0
+May 06 12:03:53 ripper clipboard-url-monitor.zsh[100168]: Authorization required, but no authorization protocol specified
+May 06 12:03:53 ripper clipboard-url-monitor.zsh[100168]: Error: Can't open display: :0
+May 06 12:03:54 ripper clipboard-url-monitor.zsh[100172]: Authorization required, but no authorization protocol specified
+May 06 12:03:54 ripper clipboard-url-monitor.zsh[100172]: Error: Can't open display: :0
+May 06 12:03:55 ripper clipboard-url-monitor.zsh[100175]: Authorization required, but no authorization protocol specified
+May 06 12:03:55 ripper clipboard-url-monitor.zsh[100175]: Error: Can't open display: :0
+May 06 12:03:56 ripper clipboard-url-monitor.zsh[100181]: Authorization required, but no authorization protocol specified
+May 06 12:03:56 ripper clipboard-url-monitor.zsh[100181]: Error: Can't open display: :0
+May 06 12:03:57 ripper clipboard-url-monitor.zsh[100185]: Authorization required, but no authorization protocol specified
+May 06 12:03:57 ripper clipboard-url-monitor.zsh[100185]: Error: Can't open display: :0
+May 06 12:03:58 ripper clipboard-url-monitor.zsh[100190]: Authorization required, but no authorization protocol specified
+May 06 12:03:58 ripper clipboard-url-monitor.zsh[100190]: Error: Can't open display: :0
+May 06 12:03:59 ripper clipboard-url-monitor.zsh[100208]: Authorization required, but no authorization protocol specified
+May 06 12:03:59 ripper clipboard-url-monitor.zsh[100208]: Error: Can't open display: :0
+May 06 12:04:00 ripper clipboard-url-monitor.zsh[100232]: Authorization required, but no authorization protocol specified
+May 06 12:04:00 ripper clipboard-url-monitor.zsh[100232]: Error: Can't open display: :0
+May 06 12:04:01 ripper clipboard-url-monitor.zsh[100250]: Authorization required, but no authorization protocol specified
+May 06 12:04:01 ripper clipboard-url-monitor.zsh[100250]: Error: Can't open display: :0
+May 06 12:04:02 ripper clipboard-url-monitor.zsh[100285]: Authorization required, but no authorization protocol specified
+May 06 12:04:02 ripper clipboard-url-monitor.zsh[100285]: Error: Can't open display: :0
+May 06 12:04:03 ripper clipboard-url-monitor.zsh[100294]: Authorization required, but no authorization protocol specified
+May 06 12:04:03 ripper clipboard-url-monitor.zsh[100294]: Error: Can't open display: :0
+May 06 12:04:04 ripper clipboard-url-monitor.zsh[100302]: Authorization required, but no authorization protocol specified
+May 06 12:04:04 ripper clipboard-url-monitor.zsh[100302]: Error: Can't open display: :0
+May 06 12:04:05 ripper clipboard-url-monitor.zsh[100336]: Authorization required, but no authorization protocol specified
+May 06 12:04:05 ripper clipboard-url-monitor.zsh[100336]: Error: Can't open display: :0
+May 06 12:04:11 ripper clipboard-url-monitor.zsh[100458]: Authorization required, but no authorization protocol specified
+May 06 12:04:11 ripper clipboard-url-monitor.zsh[100458]: Error: Can't open display: :0
+May 06 12:04:12 ripper clipboard-url-monitor.zsh[100461]: Authorization required, but no authorization protocol specified
+May 06 12:04:12 ripper clipboard-url-monitor.zsh[100461]: Error: Can't open display: :0
+May 06 12:04:13 ripper clipboard-url-monitor.zsh[100464]: Authorization required, but no authorization protocol specified
+May 06 12:04:13 ripper clipboard-url-monitor.zsh[100464]: Error: Can't open display: :0
+May 06 12:04:14 ripper clipboard-url-monitor.zsh[100468]: Authorization required, but no authorization protocol specified
+May 06 12:04:14 ripper clipboard-url-monitor.zsh[100468]: Error: Can't open display: :0
+May 06 12:04:17 ripper clipboard-url-monitor.zsh[100497]: Authorization required, but no authorization protocol specified
+May 06 12:04:17 ripper clipboard-url-monitor.zsh[100497]: Error: Can't open display: :0
+May 06 12:04:18 ripper clipboard-url-monitor.zsh[100500]: Authorization required, but no authorization protocol specified
+May 06 12:04:18 ripper clipboard-url-monitor.zsh[100500]: Error: Can't open display: :0
+May 06 12:04:19 ripper clipboard-url-monitor.zsh[100507]: Authorization required, but no authorization protocol specified
+May 06 12:04:19 ripper clipboard-url-monitor.zsh[100507]: Error: Can't open display: :0
+May 06 12:04:20 ripper clipboard-url-monitor.zsh[100510]: Authorization required, but no authorization protocol specified
+May 06 12:04:20 ripper clipboard-url-monitor.zsh[100510]: Error: Can't open display: :0
+May 06 12:04:21 ripper clipboard-url-monitor.zsh[100540]: Authorization required, but no authorization protocol specified
+May 06 12:04:21 ripper clipboard-url-monitor.zsh[100540]: Error: Can't open display: :0
+May 06 12:04:22 ripper clipboard-url-monitor.zsh[100546]: Authorization required, but no authorization protocol specified
+May 06 12:04:22 ripper clipboard-url-monitor.zsh[100546]: Error: Can't open display: :0
+May 06 12:04:23 ripper clipboard-url-monitor.zsh[100593]: Authorization required, but no authorization protocol specified
+May 06 12:04:23 ripper clipboard-url-monitor.zsh[100593]: Error: Can't open display: :0
+May 06 12:04:24 ripper clipboard-url-monitor.zsh[100617]: Authorization required, but no authorization protocol specified
+May 06 12:04:24 ripper clipboard-url-monitor.zsh[100617]: Error: Can't open display: :0
+May 06 12:04:29 ripper clipboard-url-monitor.zsh[100691]: Authorization required, but no authorization protocol specified
+May 06 12:04:29 ripper clipboard-url-monitor.zsh[100691]: Error: Can't open display: :0
+May 06 12:04:30 ripper clipboard-url-monitor.zsh[100704]: Authorization required, but no authorization protocol specified
+May 06 12:04:30 ripper clipboard-url-monitor.zsh[100704]: Error: Can't open display: :0
+May 06 12:04:34 ripper clipboard-url-monitor.zsh[100761]: Authorization required, but no authorization protocol specified
+May 06 12:04:34 ripper clipboard-url-monitor.zsh[100761]: Error: Can't open display: :0
+May 06 12:04:35 ripper clipboard-url-monitor.zsh[100784]: Authorization required, but no authorization protocol specified
+May 06 12:04:35 ripper clipboard-url-monitor.zsh[100784]: Error: Can't open display: :0
+May 06 12:04:36 ripper clipboard-url-monitor.zsh[100793]: Authorization required, but no authorization protocol specified
+May 06 12:04:36 ripper clipboard-url-monitor.zsh[100793]: Error: Can't open display: :0
+May 06 12:04:37 ripper clipboard-url-monitor.zsh[100799]: Authorization required, but no authorization protocol specified
+May 06 12:04:37 ripper clipboard-url-monitor.zsh[100799]: Error: Can't open display: :0
+May 06 12:04:38 ripper clipboard-url-monitor.zsh[100811]: Authorization required, but no authorization protocol specified
+May 06 12:04:38 ripper clipboard-url-monitor.zsh[100811]: Error: Can't open display: :0
+May 06 12:04:39 ripper clipboard-url-monitor.zsh[100817]: Authorization required, but no authorization protocol specified
+May 06 12:04:39 ripper clipboard-url-monitor.zsh[100817]: Error: Can't open display: :0
+May 06 12:04:41 ripper clipboard-url-monitor.zsh[100820]: Authorization required, but no authorization protocol specified
+May 06 12:04:41 ripper clipboard-url-monitor.zsh[100820]: Error: Can't open display: :0
+May 06 12:04:42 ripper clipboard-url-monitor.zsh[100830]: Authorization required, but no authorization protocol specified
+May 06 12:04:42 ripper clipboard-url-monitor.zsh[100830]: Error: Can't open display: :0
