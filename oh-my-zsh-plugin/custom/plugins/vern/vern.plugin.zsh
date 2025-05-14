@@ -39,7 +39,7 @@ function rprint {
 	INGREDIENTS=$@
 	echo $BASENAME
 	echo $INGREDIENTS
-	$VERN --use-sys recipe-generator --no-markdown $INGREDIENTS | tee $BASENAME.latex && pdflatex $BASENAME.latex && lpr -P $PRINTER $BASENAME.pdf
+	vern --use-sys recipe-generator --no-markdown $INGREDIENTS | tee $BASENAME.latex && pdflatex $BASENAME.latex && lpr -P $PRINTER $BASENAME.pdf
 }
 
 function rprint-edit {
@@ -48,10 +48,10 @@ function rprint-edit {
 		echo "set default printer with, ex: 'sudo lpadmin -p Brother_HL_L8360CDW_series -d Brother_HL_L8360CDW_series'"
 	fi
 	BASENAME=$1
-	$VERN --use-sys recipe-generator --no-markdown --edit | tee $BASENAME.latex && pdflatex $BASENAME.latex && lpr -P $PRINTER $BASENAME.pdf
+	vern --use-sys recipe-generator --no-markdown --edit | tee $BASENAME.latex && pdflatex $BASENAME.latex && lpr -P $PRINTER $BASENAME.pdf
 }
 
 
 function vr {
-	$VERN --use-sys recipe-generator "$@"
+	vern --use-sys recipe-generator "$@"
 }
