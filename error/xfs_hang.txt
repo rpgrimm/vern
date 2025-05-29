@@ -1,0 +1,33 @@
+
+[74341.926028] INFO: task kworker/1:1:99177 blocked for more than 122 seconds.
+[74341.926036]       Tainted: G           OE      6.14.0-15-generic #15-Ubuntu
+[74341.926038] "echo 0 > /proc/sys/kernel/hung_task_timeout_secs" disables this message.
+[74341.926040] task:kworker/1:1     state:D stack:0     pid:99177 tgid:99177 ppid:2      task_flags:0x4208060 flags:0x00004000
+[74341.926045] Workqueue: xfs-sync/dm-3 xfs_log_worker [xfs]
+[74341.926128] Call Trace:
+[74341.926130]  <TASK>
+[74341.926134]  __schedule+0x2c2/0x660
+[74341.926140]  schedule+0x29/0xd0
+[74341.926143]  schedule_timeout+0xd1/0x110
+[74341.926147]  __wait_for_common+0x91/0x190
+[74341.926149]  ? __pfx_schedule_timeout+0x10/0x10
+[74341.926152]  wait_for_completion+0x24/0x40
+[74341.926155]  __flush_workqueue+0x148/0x3d0
+[74341.926161]  xlog_cil_push_now.isra.0+0x73/0xb0 [xfs]
+[74341.926219]  xlog_cil_force_seq+0x6c/0x2c0 [xfs]
+[74341.926256]  ? srso_alias_return_thunk+0x5/0xfbef5
+[74341.926260]  xfs_log_force+0x98/0x290 [xfs]
+[74341.926296]  xfs_log_worker+0x3e/0xd0 [xfs]
+[74341.926330]  process_one_work+0x174/0x350
+[74341.926334]  worker_thread+0x34a/0x480
+[74341.926336]  ? srso_alias_return_thunk+0x5/0xfbef5
+[74341.926338]  ? _raw_spin_lock_irqsave+0xe/0x20
+[74341.926340]  ? __pfx_worker_thread+0x10/0x10
+[74341.926342]  kthread+0xf9/0x230
+[74341.926345]  ? __pfx_kthread+0x10/0x10
+[74341.926348]  ret_from_fork+0x44/0x70
+[74341.926351]  ? __pfx_kthread+0x10/0x10
+[74341.926353]  ret_from_fork_asm+0x1a/0x30
+[74341.926358]  </TASK>
+[74914.226876] kauditd_printk_skb: 8 callbacks suppressed
+
