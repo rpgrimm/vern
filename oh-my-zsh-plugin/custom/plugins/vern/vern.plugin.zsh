@@ -3,15 +3,15 @@
 SRC_DIR=~/code/dev/vern
 
 export PYTHON3=$SRC_DIR/venv/bin/python3
+export VERN_DIR="$HOME/.local/share/vern/.ppid/session-ppid-$$"
 
 vern() { $PYTHON3 $SRC_DIR/vern/vern_client.py "$@" }
 v() { vern "$@" }
 v4()  { vern --model gpt-4o "$@" }
-vcp() { cat ~/.local/share/vern/.ppid/session-ppid-$$/config.yaml && cat ~/.local/share/vern/.ppid/session-ppid-$$/system.json }
+vcp() { echo $VERN_DIR && cat $VERN_DIR/system.json && cat $VERN_DIR/conversation.json } 
 vc() { vern --use-sys code-generator "$@" }
 
 function vern-code-gen { vern --use-sys code-generator "$@" }
-
 
 function ve {
 	tempfile=$(mktemp /tmp/editor.XXXXXX)
@@ -21,8 +21,6 @@ function ve {
 }
 
 function vs { vern --use-sys sophisticated "$@" }
-
-
 
 function vl {
 	$VERN --use-sys latex-generator "$@"
@@ -50,7 +48,6 @@ function rprint-edit {
 	BASENAME=$1
 	vern --use-sys recipe-generator --no-markdown --edit | tee $BASENAME.latex && pdflatex $BASENAME.latex && lpr -P $PRINTER $BASENAME.pdf
 }
-
 
 function vr {
 	vern --use-sys recipe-generator "$@"
